@@ -1,0 +1,52 @@
+name: iOS - TestFlight'a yükle
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ios:
+    runs-on: macos-latest
+    timeout-minutes: 45
+    env:
+      BUNDLE_ID: com.yazboz101.app
+      APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      APP_STORE_CONNECT_KEY_IDENTIFIER: ${{ secrets.ASC_KEY_ID }}
+      APP_STORE_CONNECT_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+      CERTIFICATE_PRIVATE_KEY: ${{ secrets.IOS_CERTIFICATE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Araçları kur
+        run: pip install codemagic-cli-tools
+
+      - name: Sertifika ve profil
+        run: |
+          keychain initialize
+          app-store-connect fetch-signing-files "$BUNDLE_ID" --type IOS_APP_STORE --create
+          keychain add-certificates
+          xcode-project use-profiles
+
+      - name: Derleme numarası
+        run: |
+          N=$((GITHUB_RUN_NUMBER + 10))
+          sed -i '' "s/CURRENT_PROJECT_VERSION = [0-9]*;/CURRENT_PROJECT_VERSION = $N;/g" ios/Yazboz101.xcodeproj/project.pbxproj
+          echo "Derleme numarası: $N"
+
+      - name: Derle
+        run: xcode-project build-ipa --project ios/Yazboz101.xcodeproj --scheme Yazboz101
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Yazboz101-ios
+          path: build/ios/ipa/*.ipa
+
+      - name: App Store Connect'e yükle
+        run: app-store-connect publish --path build/ios/ipa/*.ipa
