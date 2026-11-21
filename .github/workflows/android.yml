@@ -1,0 +1,48 @@
+name: Android paketi
+
+on:
+  workflow_dispatch:
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.13'
+
+      - name: İmza anahtarını hazırla
+        env:
+          KEYSTORE_B64: ${{ secrets.YAZBOZ_KEYSTORE_B64 }}
+        run: |
+          if [ -z "$KEYSTORE_B64" ]; then echo "::error::YAZBOZ_KEYSTORE_B64 gizli değişkeni eklenmemiş"; exit 1; fi
+          printf '%s' "$KEYSTORE_B64" | tr -d '\r\n ' | base64 -d > "$RUNNER_TEMP/yazboz101.p12"
+          echo "YAZBOZ_KEYSTORE=$RUNNER_TEMP/yazboz101.p12" >> "$GITHUB_ENV"
+
+      - name: Derle
+        working-directory: android
+        env:
+          YAZBOZ_KEYSTORE_PASSWORD: ${{ secrets.YAZBOZ_KEYSTORE_PASSWORD }}
+        run: |
+          export YAZBOZ_VERSION_CODE=$((GITHUB_RUN_NUMBER + 10))
+          echo "Sürüm kodu: $YAZBOZ_VERSION_CODE"
+          gradle --no-daemon bundleRelease assembleRelease
+
+      - name: Dosyaları topla
+        run: |
+          mkdir -p cikti
+          cp android/app/build/outputs/bundle/release/app-release.aab cikti/Yazboz101.aab
+          cp android/app/build/outputs/apk/release/app-release.apk cikti/Yazboz101.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Yazboz101-android
+          path: cikti/
