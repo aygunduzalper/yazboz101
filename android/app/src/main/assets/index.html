@@ -1647,6 +1647,9 @@ const APP_VER = '1.0.0';
 const SITE_HOME = 'https://yazboz101.com';
 const siteLink = p => (siteBase() || SITE_HOME) + p;
 /* Telefon uygulaması (Android/iOS kabuğu) mı? Sayfa yerel dosyadan açılır. */
+// Firebase'in varsayılan adresleri (….web.app / ….firebaseapp.com) asıl alan adına yönlensin: QR ve uygulama bağlantıları hep yazboz101.com olsun
+// (Bu adreste yarım kalmış bir oyun varsa yönlendirme oyun bitene kadar bekler: kayıtlar adrese özel)
+if (/^yazboz101-359a3\.(web\.app|firebaseapp\.com)$/.test(location.hostname) && !(() => { try { return localStorage.getItem('yb.game'); } catch (e) { return null; } })()) location.replace('https://yazboz101.com' + location.pathname + location.search + location.hash);
 const NATIVE = location.protocol === 'file:' || !!window.YazbozAndroid || !!(window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.yazboz);
 /* Uygulamanın açılırken verdiği bilgiler: #t=dark&yz=yazboz101://masa/K7P2?s=site */
 const BOOT = (() => { const h = location.hash || '', o = {}; if (!/^#(t|yz)=/.test(h)) return o;
@@ -2507,7 +2510,14 @@ function fbDB(F) {
     return {
       async set(d) { if (!F.uid()) await F.token(); await F.put(pth, {v: d.v || 2, adminId: F.uid(), at: Date.now(), g: JSON.stringify(d.game)}); },
       async get() { return snap(await F.get(pth)); },
-      onSnapshot(cb, err) { return F.stream(pth, v => cb(snap(v)), err); }
+      onSnapshot(cb, err) {
+        // Canlı akış (SSE) ilk veriyi bir yönlendirme ve yeni bağlantıdan sonra getiriyor; düz bir okuma çoğu zaman
+        // daha önce döner. İkisi birlikte başlar, akıştan veri geldiyse eski okuma yok sayılır.
+        let live = false;
+        const un = F.stream(pth, v => { live = true; cb(snap(v)); }, err);
+        F.get(pth).then(v => { if (!live) cb(snap(v)); }, () => {});
+        return un;
+      }
     };
   }};
 }
@@ -2535,7 +2545,10 @@ async function useFB(c) {
   CFG = Object.assign({}, CFG || {}, c);
   FB = makeFB(c);
   Object.assign(cap, {db: fbDB(FB), room: fbRoom(FB), fb: true});
-  try { await FB.token(); cap.uid = FB.uid(); } catch (e) { cap.uid = FB.uid() || null; }
+  cap.uid = FB.uid() || null; // önceki oturumdan kalan kimlik
+  // İsimsiz oturum arka planda açılır: skoru izlemek için oturum gerekmez, masaya bağlanma bunu beklemesin.
+  // Yazma işlemleri (skor gönderme, çevrim içi bilgisi) zaten kendi içinde oturumu bekliyor.
+  FB.token().then(() => { cap.uid = FB.uid(); }, () => {});
 }
 const liveReady = () => !!cap.db;
 const siteBase = () => { let u = (CFG && CFG.siteUrl) || ''; if (!u && /^https?:$/.test(location.protocol) && !window.claude) u = location.origin; return u.replace(/\/+$/, ''); };
@@ -2559,9 +2572,10 @@ function appBanner() {
   const a = (CFG && CFG.android) || {}, i = (CFG && CFG.ios) || {}, ua = navigator.userAgent || '';
   const isA = /Android/i.test(ua), isI = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   let btns = '';
-  if (isA && a.package) {
+  // Paket adı yazılmıyor: hem Play sürümü (com.aygunduz.yazboz101) hem eski APK (com.yazboz101.app) yazboz101:// bağlantısını açabiliyor
+  if (isA && (a.package || a.apk)) {
     const apk = a.apk ? new URL(a.apk, location.href).href : '';
-    const it = `intent://masa/${joinCode.toLowerCase()}?s=${encodeURIComponent(siteHost())}#Intent;scheme=${a.scheme || 'yazboz101'};package=${a.package};${apk ? 'S.browser_fallback_url=' + encodeURIComponent(apk) + ';' : ''}end`;
+    const it = `intent://masa/${joinCode.toLowerCase()}?s=${encodeURIComponent(siteHost())}#Intent;scheme=${a.scheme || 'yazboz101'};${apk ? 'S.browser_fallback_url=' + encodeURIComponent(apk) + ';' : ''}end`;
     btns = `<a class="btn sm pri" href="${esc(it)}">Uygulamada aç</a>${apk ? `<a class="btn sm" href="${esc(apk)}" download>İndir</a>` : ''}`;
   } else if (isI && i.url) btns = `<a class="btn sm pri" href="${esc(i.url)}">Uygulamayı al</a>`;
   if (!btns) return '';
