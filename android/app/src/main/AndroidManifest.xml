@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove" />
 
     <application
         android:label="Yazboz 101"
@@ -10,7 +13,6 @@
         android:allowBackup="true"
         android:enableOnBackInvokedCallback="true">
 
-        <!-- Fotoğrafla saymanın yazı tanıma modeli uygulamayla birlikte Play'den insin (ilk kullanımda beklemesin) -->
         <meta-data
             android:name="com.google.mlkit.vision.DEPENDENCIES"
             android:value="ocr" />
@@ -26,14 +28,12 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <!-- Siteden "Uygulamada aç": yazboz101://masa/KOD -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="yazboz101" />
             </intent-filter>
-            <!-- QR bağlantısı uygulama yüklüyse doğrudan uygulamada açılır (sitede .well-known/assetlinks.json gerekir) -->
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -42,7 +42,6 @@
             </intent-filter>
         </activity>
 
-        <!-- Kameranın çektiği fotoğrafı uygulamanın geçici klasörüne yazabilmesi için -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.dosya"
