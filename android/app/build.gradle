@@ -11,7 +11,7 @@ android {
     compileSdk 36
 
     defaultConfig {
-        applicationId 'com.yazboz101.app'
+        applicationId 'com.aygunduz.yazboz101'
         minSdk 24
         targetSdk 36
         // GitHub'da her derlemede kendiliğinden artar (10 + çalıştırma no)
