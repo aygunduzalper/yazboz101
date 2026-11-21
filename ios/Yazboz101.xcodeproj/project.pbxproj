@@ -1,0 +1,256 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		75832E875FEA36683B41E20A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242F701073F2887D0DC80D47 /* AppDelegate.swift */; };
+		ABE8277E5791AC7EFC5E0154 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77B6D27E28A637BCE965CDC /* WebViewController.swift */; };
+		73EC906678F06B0611143396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D40126822D0756BB2C22C0E3 /* Assets.xcassets */; };
+		52413F5A4588BB849BF246A1 /* Web in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FD304C27D8840F5CC77C0 /* Web */; };
+		6D2B8F4EAC315A7B9E3F2D51 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 5C1A7E3D9B204F6A8D2E1C40 /* PrivacyInfo.xcprivacy */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F2AAA8631D38FAF699B78BA9 /* Yazboz101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yazboz101.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		242F701073F2887D0DC80D47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B77B6D27E28A637BCE965CDC /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		E34671B84360ABBFBBB0C5D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D40126822D0756BB2C22C0E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1B0FD304C27D8840F5CC77C0 /* Web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Web; sourceTree = "<group>"; };
+		E97EF2F23DE66B7EF4C7A83B /* Yazboz101.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Yazboz101.entitlements; sourceTree = "<group>"; };
+		5C1A7E3D9B204F6A8D2E1C40 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA6BB2E26A0CCFEF79A2DF42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B19911C44BD755AB4F173858 = {
+			isa = PBXGroup;
+			children = (
+				107135D82C0898ACC5295C33 /* Yazboz101 */,
+				3936A56E033FE156B0D38F79 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3936A56E033FE156B0D38F79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2AAA8631D38FAF699B78BA9 /* Yazboz101.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		107135D82C0898ACC5295C33 /* Yazboz101 */ = {
+			isa = PBXGroup;
+			children = (
+				242F701073F2887D0DC80D47 /* AppDelegate.swift */,
+				B77B6D27E28A637BCE965CDC /* WebViewController.swift */,
+				1B0FD304C27D8840F5CC77C0 /* Web */,
+				D40126822D0756BB2C22C0E3 /* Assets.xcassets */,
+				E34671B84360ABBFBBB0C5D2 /* Info.plist */,
+				E97EF2F23DE66B7EF4C7A83B /* Yazboz101.entitlements */,
+				5C1A7E3D9B204F6A8D2E1C40 /* PrivacyInfo.xcprivacy */,
+			);
+			path = Yazboz101;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42AEFBAE01D2DFD981F7DA7D /* Yazboz101 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EA4497A250DAA79A5DFA797 /* Build configuration list for PBXNativeTarget "Yazboz101" */;
+			buildPhases = (
+				F37F801ADEA753D69F245CAA /* Sources */,
+				FA6BB2E26A0CCFEF79A2DF42 /* Frameworks */,
+				33F142212957EABBFDC6831F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yazboz101;
+			productName = Yazboz101;
+			productReference = F2AAA8631D38FAF699B78BA9 /* Yazboz101.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46F86FAA6BBF9AC94A7E4595 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					42AEFBAE01D2DFD981F7DA7D = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 2D6CADEF21B99EA5E890ABE8 /* Build configuration list for PBXProject "Yazboz101" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = tr;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				tr,
+				Base,
+			);
+			mainGroup = B19911C44BD755AB4F173858;
+			productRefGroup = 3936A56E033FE156B0D38F79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42AEFBAE01D2DFD981F7DA7D /* Yazboz101 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33F142212957EABBFDC6831F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73EC906678F06B0611143396 /* Assets.xcassets in Resources */,
+				52413F5A4588BB849BF246A1 /* Web in Resources */,
+				6D2B8F4EAC315A7B9E3F2D51 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F37F801ADEA753D69F245CAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75832E875FEA36683B41E20A /* AppDelegate.swift in Sources */,
+				ABE8277E5791AC7EFC5E0154 /* WebViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4ED3C4B22349DD5A28B27128 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		293A5B816A2FADE15A3C7B02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		981A7673EDCC40225DDFC7BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Yazboz101/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yazboz101.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		30F33F93A3C7974A1B5FCB33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Yazboz101/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yazboz101.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D6CADEF21B99EA5E890ABE8 /* Build configuration list for PBXProject "Yazboz101" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ED3C4B22349DD5A28B27128 /* Debug */,
+				293A5B816A2FADE15A3C7B02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EA4497A250DAA79A5DFA797 /* Build configuration list for PBXNativeTarget "Yazboz101" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				981A7673EDCC40225DDFC7BF /* Debug */,
+				30F33F93A3C7974A1B5FCB33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46F86FAA6BBF9AC94A7E4595 /* Project object */;
+}

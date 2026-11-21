@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.application'
+}
+
+// İmza anahtarı: bilgisayarda imza/yazboz101.p12 dosyasından; GitHub'da gizli değişkenlerden (YAZBOZ_KEYSTORE…) gelir.
+// Bu dosyayı ve şifreyi kimseyle paylaşma, herkese açık bir depoya koyma. Kaybolursa güncelleme yüklenemez.
+def ksFile = System.getenv('YAZBOZ_KEYSTORE') ?: rootProject.file('imza/yazboz101.p12').path
+def ksPass = System.getenv('YAZBOZ_KEYSTORE_PASSWORD') ?: 'yazboz101'
+
+android {
+    namespace 'com.yazboz101.app'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'com.yazboz101.app'
+        minSdk 24
+        targetSdk 36          // Google Play: 31 Ağustos 2026'dan beri yeni uygulamalar ve güncellemeler için en az 36
+        // GitHub'da her derlemede kendiliğinden artar (10 + çalıştırma no). Android Studio'da elle derlersen bu sayıyı artır.
+        versionCode((System.getenv('YAZBOZ_VERSION_CODE') ?: '10') as int)
+        versionName '1.0'
+        // QR bağlantıları (https://yazboz101.com/m/KOD) uygulama yüklüyse doğrudan uygulamada açılsın
+        manifestPlaceholders = [siteHost: 'yazboz101.com']
+    }
+
+    signingConfigs {
+        yazboz {
+            storeFile file(ksFile)
+            storePassword ksPass
+            keyAlias 'yazboz101'
+            keyPassword ksPass
+            storeType 'pkcs12'
+        }
+    }
+    buildTypes {
+        debug { signingConfig signingConfigs.yazboz }
+        release { minifyEnabled false; signingConfig signingConfigs.yazboz }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    // Google ML Kit metin tanıma (Google Play hizmetleri sürümü): uygulama küçük kalır, model telefona
+    // Play'den bir kez iner, sonra internetsiz ve ücretsiz çalışır (AndroidManifest'teki "ocr" satırı).
+    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:19.0.1'
+    implementation 'androidx.core:core:1.13.1'
+    implementation 'androidx.exifinterface:exifinterface:1.3.7'
+}

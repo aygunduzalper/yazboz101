@@ -1,0 +1,21 @@
+# İsteğe bağlı: Xcode projesini XcodeGen ile yeniden üretmek için (brew install xcodegen && xcodegen)
+name: Yazboz101
+options:
+  deploymentTarget: { iOS: "15.0" }
+targets:
+  Yazboz101:
+    type: application
+    platform: iOS
+    sources:
+      - path: Yazboz101
+        excludes: [Web]
+      - path: Yazboz101/Web
+        type: folder
+        buildPhase: resources
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.yazboz101.app
+      INFOPLIST_FILE: Yazboz101/Info.plist
+      MARKETING_VERSION: "1.0"
+      CURRENT_PROJECT_VERSION: "10"
+      TARGETED_DEVICE_FAMILY: "1"
+      ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
