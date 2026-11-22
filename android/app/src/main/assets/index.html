@@ -10,7 +10,8 @@
 <title>Yazboz 101</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+<!-- Yazı tipleri sayfanın açılmasını bekletmesin: önce telefonun kendi yazı tipiyle açılır, Inter/Outfit gelince yerine geçer -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
 /* VOICE everyday tool for a late-night okey table: calm, quick, a little warmth
    IDEA the okey table itself: a green felt band holding the players' totals as ivory tiles, the paper yazboz grid below
@@ -3513,7 +3514,7 @@ function openSettings() {
       <div class="lbl">Masa</div>
       <div class="menu"><button class="mi" data-a="book"><span class="mic" style="--k:var(--pri)">${ic('book')}</span><span class="t">Kural kitapçığı</span>${ic('chev')}</button>
         ${role !== 'viewer' ? `<button class="mi" data-a="vals"><span class="mic" style="--k:var(--gold)">${ic('odul')}</span><span class="t">Değerleri ayarla</span>${ic('chev')}</button>` : ''}
-        ${NATIVE ? `<button class="mi" data-a="live"><span class="mic" style="--k:var(--blue)">${ic('qr')}</span><span class="t">Canlı paylaşım<small style="display:block;font-weight:400;color:var(--mute);font-size:13px">${cap.fb ? 'Bağlı: ' + esc(siteHost()) : 'Bağlı değil'}</small></span>${ic('chev')}</button>` : ''}
+        ${NATIVE && !cap.fb ? `<button class="mi" data-a="live"><span class="mic" style="--k:var(--blue)">${ic('qr')}</span><span class="t">QR ile paylaşım<small style="display:block;font-weight:400;color:var(--mute);font-size:13px">İnternete bağlanınca açılır · tekrar dene</small></span>${ic('chev')}</button>` : ''}
         <button class="mi" data-a="onb"><span class="mic" style="--k:var(--blue)">${ic('info')}</span><span class="t">Tanıtımı tekrar göster</span>${ic('chev')}</button>
         ${role !== 'viewer' ? `<button class="mi" data-a="coach"><span class="mic" style="--k:var(--blue)">${ic('play')}</span><span class="t">Oyun ekranı ipuçları</span>${ic('chev')}</button>` : ''}</div>
       <div class="lbl">Hakkında</div>
@@ -3712,6 +3713,7 @@ function start(data) {
   try { new MutationObserver(() => applyTheme()).observe(document.documentElement, {attributes: true, attributeFilter: ['data-theme']}); } catch (e) {}
   try { darkMQ && darkMQ.addEventListener('change', () => applyTheme()); } catch (e) {}
   initCaps();
+  try { if (window.YazbozAndroid && YazbozAndroid.ready) YazbozAndroid.ready(); } catch (e) {}
 }
 if (window.claude && window.claude.hot && typeof window.claude.hot.snapshot === 'function') window.claude.hot.snapshot(() => ({game, role, joinCode, view}));
 if (window.claude && window.claude.hot && window.claude.hot.ready) window.claude.hot.ready(start); else start((window.claude && window.claude.hot && window.claude.hot.data) || {});
