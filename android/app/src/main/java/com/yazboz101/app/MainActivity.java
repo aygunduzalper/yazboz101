@@ -3,6 +3,8 @@ package com.yazboz101.app;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.pm.PackageInfo;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -22,7 +24,10 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowInsets;
 import android.view.WindowInsetsController;
+import android.webkit.ConsoleMessage;
 import android.webkit.JavascriptInterface;
+import android.webkit.WebResourceError;
+import android.webkit.RenderProcessGoneDetail;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
@@ -74,6 +79,9 @@ public class MainActivity extends Activity {
     private String barTheme;
     private Object backCb;      // API 33+: OnBackInvokedCallback (eski telefonlarda sınıf yüklenmesin diye Object)
     private boolean backOn;
+    private volatile boolean pageReady; // sayfa açılınca YazbozAndroid.ready() ile gelir
+    private boolean reloaded, pageFinished;
+    private final StringBuilder diag = new StringBuilder(); // açılmazsa gösterilecek hata notları
 
     @SuppressLint({"SetJavaScriptEnabled", "AddJavascriptInterface"})
     @Override
@@ -86,6 +94,7 @@ public class MainActivity extends Activity {
         WebSettings s = web.getSettings();
         s.setJavaScriptEnabled(true);
         s.setDomStorageEnabled(true);
+        s.setAllowFileAccess(true);
         s.setAllowUniversalAccessFromFileURLs(true); // canlı skor sunucusuna (Firebase) yerel dosyadan bağlanabilmek için
         web.addJavascriptInterface(new Bridge(), "YazbozAndroid");
         web.setWebViewClient(new WebViewClient() {
@@ -94,8 +103,26 @@ public class MainActivity extends Activity {
 
             @Override
             public void doUpdateVisitedHistory(WebView v, String url, boolean reload) { syncBack(); }
+
+            // Sayfayı çizen süreç çökerse uygulama kapanmasın, ekranı baştan kur
+            @Override
+            public boolean onRenderProcessGone(WebView v, RenderProcessGoneDetail d) { note("Çizim süreci kapandı"); recreate(); return true; }
+
+            @Override
+            public void onPageFinished(WebView v, String url) { pageFinished = true; }
+
+            @Override
+            public void onReceivedError(WebView v, WebResourceRequest r, WebResourceError e) {
+                if (r.isForMainFrame()) note("Sayfa yüklenemedi: " + e.getDescription() + " (" + e.getErrorCode() + ")");
+            }
         });
         web.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public boolean onConsoleMessage(ConsoleMessage m) {
+                if (m.messageLevel() == ConsoleMessage.MessageLevel.ERROR) note("JS: " + m.message() + " @" + m.lineNumber());
+                return false;
+            }
+
             @Override
             public boolean onShowFileChooser(WebView v, ValueCallback<Uri[]> cb, FileChooserParams p) {
                 if (fileCb != null) fileCb.onReceiveValue(null);
@@ -118,6 +145,37 @@ public class MainActivity extends Activity {
         Uri d = getIntent() != null ? getIntent().getData() : null;
         if (d != null) url += "&yz=" + Uri.encode(d.toString());
         web.loadUrl(url);
+        // Gözcü: sayfa 10 saniyede açıldığını bildirmezse bir kez yeniden yükle; yine açılmazsa nedenini göster
+        web.postDelayed(this::watchdog, 10000);
+    }
+
+    private void note(String m) {
+        synchronized (diag) { if (diag.length() < 1500) diag.append("• ").append(m).append('\n'); }
+    }
+
+    private void watchdog() {
+        if (pageReady || web == null || isFinishing()) return;
+        if (!reloaded) { reloaded = true; web.reload(); web.postDelayed(this::watchdog, 10000); return; }
+        String wv = "?";
+        if (Build.VERSION.SDK_INT >= 26) wv = webViewVersion();
+        String text;
+        synchronized (diag) {
+            text = "Uygulama ekranı yüklenemedi. Bu pencerenin ekran görüntüsünü destek@yazboz101.com adresine gönderirsen düzeltebiliriz.\n\n"
+                    + "Sayfa bitti: " + pageFinished + " · Android " + Build.VERSION.SDK_INT + " · WebView " + wv + " · Sürüm 1.0.1\n"
+                    + (diag.length() > 0 ? diag.toString() : "• Hata kaydı yok");
+        }
+        new AlertDialog.Builder(this)
+                .setTitle("Yazboz 101 açılamadı")
+                .setMessage(text)
+                .setPositiveButton("Tekrar dene", (d, w) -> { pageReady = false; web.reload(); web.postDelayed(this::watchdog, 10000); })
+                .setNegativeButton("Kapat", null)
+                .show();
+    }
+
+    @TargetApi(26)
+    private static String webViewVersion() {
+        try { PackageInfo p = WebView.getCurrentWebViewPackage(); return p == null ? "yok" : p.packageName + " " + p.versionName; }
+        catch (Throwable t) { return "?"; }
     }
 
     private boolean night() {
@@ -145,11 +203,12 @@ public class MainActivity extends Activity {
         root.setOnApplyWindowInsetsListener((v, ins) -> {
             Insets b = ins.getInsets(WindowInsets.Type.systemBars() | WindowInsets.Type.displayCutout() | WindowInsets.Type.ime());
             FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) web.getLayoutParams();
-            lp.setMargins(b.left, b.top, b.right, b.bottom);
-            web.setLayoutParams(lp);
+            if (lp.leftMargin != b.left || lp.topMargin != b.top || lp.rightMargin != b.right || lp.bottomMargin != b.bottom) {
+                lp.setMargins(b.left, b.top, b.right, b.bottom);
+                web.setLayoutParams(lp);
+            }
             ViewGroup.LayoutParams tp = topBar.getLayoutParams();
-            tp.height = b.top;
-            topBar.setLayoutParams(tp);
+            if (tp.height != b.top) { tp.height = b.top; topBar.setLayoutParams(tp); }
             return WindowInsets.CONSUMED;
         });
     }
@@ -235,7 +294,8 @@ public class MainActivity extends Activity {
         @JavascriptInterface public void scan(String source) { runOnUiThread(() -> startScan(source)); }
         @JavascriptInterface public void ocr(String dataUrl) { new Thread(() -> ocrImage(dataUrl)).start(); }
         @JavascriptInterface public void bars(String theme) { runOnUiThread(() -> applyBars("dark".equals(theme) ? "dark" : "light")); }
-        @JavascriptInterface public String version() { return "1.0"; }
+        @JavascriptInterface public String version() { return "1.0.1"; }
+        @JavascriptInterface public void ready() { pageReady = true; }
     }
 
     // ---------- fotoğrafla sayma ----------
