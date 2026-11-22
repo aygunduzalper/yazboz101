@@ -10,7 +10,8 @@
 <title>Yazboz 101</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+<!-- Yazı tipleri sayfanın açılmasını bekletmesin: önce telefonun kendi yazı tipiyle açılır, Inter/Outfit gelince yerine geçer -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
 /* VOICE everyday tool for a late-night okey table: calm, quick, a little warmth
    IDEA the okey table itself: a green felt band holding the players' totals as ivory tiles, the paper yazboz grid below
@@ -320,6 +321,9 @@ table.yz{width:100%;border-collapse:collapse;table-layout:fixed}
 .menu{display:grid;gap:8px}
 .mi{display:flex;align-items:center;gap:12px;min-height:58px;padding:0 12px;border-radius:16px;background:var(--s1);font-weight:600;text-align:left;width:100%}
 a.mi{color:inherit;text-decoration:none}
+.homefoot{display:flex;justify-content:center;gap:18px;margin:22px 0 4px;font-size:13px}
+.homefoot a{color:var(--mute);text-decoration:none}
+.homefoot a:hover{text-decoration:underline}
 .mi span.t{flex:1}
 .mi>.ic:last-child{color:var(--mute)}
 .mi.dg{color:var(--red)}
@@ -1647,6 +1651,9 @@ const APP_VER = '1.0.0';
 const SITE_HOME = 'https://yazboz101.com';
 const siteLink = p => (siteBase() || SITE_HOME) + p;
 /* Telefon uygulaması (Android/iOS kabuğu) mı? Sayfa yerel dosyadan açılır. */
+// Firebase'in varsayılan adresleri (….web.app / ….firebaseapp.com) asıl alan adına yönlensin: QR ve uygulama bağlantıları hep yazboz101.com olsun
+// (Bu adreste yarım kalmış bir oyun varsa yönlendirme oyun bitene kadar bekler: kayıtlar adrese özel)
+if (/^yazboz101-359a3\.(web\.app|firebaseapp\.com)$/.test(location.hostname) && !(() => { try { return localStorage.getItem('yb.game'); } catch (e) { return null; } })()) location.replace('https://yazboz101.com' + location.pathname + location.search + location.hash);
 const NATIVE = location.protocol === 'file:' || !!window.YazbozAndroid || !!(window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.yazboz);
 /* Uygulamanın açılırken verdiği bilgiler: #t=dark&yz=yazboz101://masa/K7P2?s=site */
 const BOOT = (() => { const h = location.hash || '', o = {}; if (!/^#(t|yz)=/.test(h)) return o;
@@ -1948,7 +1955,8 @@ function homeView() {
   const mi = (act, icon, color, text) => `<button class="mi" data-act="${act}"><span class="mic" style="--k:${color}">${ic(icon)}</span><span class="t">${text}</span>${ic('chev')}</button>`;
   return `<div class="home">${resume}
     <button class="btn ${g ? '' : 'pri'} wide big-btn" data-act="newgame" style="margin-bottom:12px">${ic('plus')}Yeni oyun</button>
-    <div class="menu">${!NATIVE || cap.fb ? mi('join', 'qr', 'var(--blue)', 'Masaya katıl') : ''}${mi('book', 'book', 'var(--pri)', 'Kural kitapçığı')}${mi('vals', 'odul', 'var(--gold)', 'Değerleri ayarla')}${mi('settings', 'sliders', 'var(--mute)', 'Ayarlar')}${!NATIVE && cap.fb && CFG && CFG.android && CFG.android.apk && !/iPhone|iPad|iPod/i.test(navigator.userAgent) ? mi('getapp', 'phone', 'var(--pri)', 'Android uygulamasını indir') : ''}</div></div>`;
+    <div class="menu">${!NATIVE || cap.fb ? mi('join', 'qr', 'var(--blue)', 'Masaya katıl') : ''}${mi('book', 'book', 'var(--pri)', 'Kural kitapçığı')}${mi('vals', 'odul', 'var(--gold)', 'Değerleri ayarla')}${mi('settings', 'sliders', 'var(--mute)', 'Ayarlar')}${!NATIVE && cap.fb && CFG && CFG.android && CFG.android.apk && !/iPhone|iPad|iPod/i.test(navigator.userAgent) ? mi('getapp', 'phone', 'var(--pri)', 'Android uygulamasını indir') : ''}</div>
+    <p class="homefoot"><a href="${siteLink('/destek')}" target="_blank" rel="noopener">Yardım</a><a href="${siteLink('/gizlilik')}" target="_blank" rel="noopener">Gizlilik</a><a href="${siteLink('/veri-silme')}" target="_blank" rel="noopener">Veri silme</a></p></div>`;
 }
 
 function gameView(g, admin) {
@@ -2507,7 +2515,14 @@ function fbDB(F) {
     return {
       async set(d) { if (!F.uid()) await F.token(); await F.put(pth, {v: d.v || 2, adminId: F.uid(), at: Date.now(), g: JSON.stringify(d.game)}); },
       async get() { return snap(await F.get(pth)); },
-      onSnapshot(cb, err) { return F.stream(pth, v => cb(snap(v)), err); }
+      onSnapshot(cb, err) {
+        // Canlı akış (SSE) ilk veriyi bir yönlendirme ve yeni bağlantıdan sonra getiriyor; düz bir okuma çoğu zaman
+        // daha önce döner. İkisi birlikte başlar, akıştan veri geldiyse eski okuma yok sayılır.
+        let live = false;
+        const un = F.stream(pth, v => { live = true; cb(snap(v)); }, err);
+        F.get(pth).then(v => { if (!live) cb(snap(v)); }, () => {});
+        return un;
+      }
     };
   }};
 }
@@ -2535,7 +2550,10 @@ async function useFB(c) {
   CFG = Object.assign({}, CFG || {}, c);
   FB = makeFB(c);
   Object.assign(cap, {db: fbDB(FB), room: fbRoom(FB), fb: true});
-  try { await FB.token(); cap.uid = FB.uid(); } catch (e) { cap.uid = FB.uid() || null; }
+  cap.uid = FB.uid() || null; // önceki oturumdan kalan kimlik
+  // İsimsiz oturum arka planda açılır: skoru izlemek için oturum gerekmez, masaya bağlanma bunu beklemesin.
+  // Yazma işlemleri (skor gönderme, çevrim içi bilgisi) zaten kendi içinde oturumu bekliyor.
+  FB.token().then(() => { cap.uid = FB.uid(); }, () => {});
 }
 const liveReady = () => !!cap.db;
 const siteBase = () => { let u = (CFG && CFG.siteUrl) || ''; if (!u && /^https?:$/.test(location.protocol) && !window.claude) u = location.origin; return u.replace(/\/+$/, ''); };
@@ -2559,9 +2577,10 @@ function appBanner() {
   const a = (CFG && CFG.android) || {}, i = (CFG && CFG.ios) || {}, ua = navigator.userAgent || '';
   const isA = /Android/i.test(ua), isI = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   let btns = '';
-  if (isA && a.package) {
+  // Paket adı yazılmıyor: hem Play sürümü (com.aygunduz.yazboz101) hem eski APK (com.yazboz101.app) yazboz101:// bağlantısını açabiliyor
+  if (isA && (a.package || a.apk)) {
     const apk = a.apk ? new URL(a.apk, location.href).href : '';
-    const it = `intent://masa/${joinCode.toLowerCase()}?s=${encodeURIComponent(siteHost())}#Intent;scheme=${a.scheme || 'yazboz101'};package=${a.package};${apk ? 'S.browser_fallback_url=' + encodeURIComponent(apk) + ';' : ''}end`;
+    const it = `intent://masa/${joinCode.toLowerCase()}?s=${encodeURIComponent(siteHost())}#Intent;scheme=${a.scheme || 'yazboz101'};${apk ? 'S.browser_fallback_url=' + encodeURIComponent(apk) + ';' : ''}end`;
     btns = `<a class="btn sm pri" href="${esc(it)}">Uygulamada aç</a>${apk ? `<a class="btn sm" href="${esc(apk)}" download>İndir</a>` : ''}`;
   } else if (isI && i.url) btns = `<a class="btn sm pri" href="${esc(i.url)}">Uygulamayı al</a>`;
   if (!btns) return '';
@@ -3495,12 +3514,13 @@ function openSettings() {
       <div class="lbl">Masa</div>
       <div class="menu"><button class="mi" data-a="book"><span class="mic" style="--k:var(--pri)">${ic('book')}</span><span class="t">Kural kitapçığı</span>${ic('chev')}</button>
         ${role !== 'viewer' ? `<button class="mi" data-a="vals"><span class="mic" style="--k:var(--gold)">${ic('odul')}</span><span class="t">Değerleri ayarla</span>${ic('chev')}</button>` : ''}
-        ${NATIVE ? `<button class="mi" data-a="live"><span class="mic" style="--k:var(--blue)">${ic('qr')}</span><span class="t">Canlı paylaşım<small style="display:block;font-weight:400;color:var(--mute);font-size:13px">${cap.fb ? 'Bağlı: ' + esc(siteHost()) : 'Bağlı değil'}</small></span>${ic('chev')}</button>` : ''}
+        ${NATIVE && !cap.fb ? `<button class="mi" data-a="live"><span class="mic" style="--k:var(--blue)">${ic('qr')}</span><span class="t">QR ile paylaşım<small style="display:block;font-weight:400;color:var(--mute);font-size:13px">İnternete bağlanınca açılır · tekrar dene</small></span>${ic('chev')}</button>` : ''}
         <button class="mi" data-a="onb"><span class="mic" style="--k:var(--blue)">${ic('info')}</span><span class="t">Tanıtımı tekrar göster</span>${ic('chev')}</button>
         ${role !== 'viewer' ? `<button class="mi" data-a="coach"><span class="mic" style="--k:var(--blue)">${ic('play')}</span><span class="t">Oyun ekranı ipuçları</span>${ic('chev')}</button>` : ''}</div>
       <div class="lbl">Hakkında</div>
       <div class="menu"><a class="mi" href="${siteLink('/destek')}" target="_blank" rel="noopener"><span class="mic" style="--k:var(--pri)">${ic('info')}</span><span class="t">Yardım ve destek</span>${ic('chev')}</a>
-        <a class="mi" href="${siteLink('/gizlilik')}" target="_blank" rel="noopener"><span class="mic" style="--k:var(--mute)">${ic('info')}</span><span class="t">Gizlilik politikası</span>${ic('chev')}</a></div>
+        <a class="mi" href="${siteLink('/gizlilik')}" target="_blank" rel="noopener"><span class="mic" style="--k:var(--mute)">${ic('info')}</span><span class="t">Gizlilik politikası</span>${ic('chev')}</a>
+        <a class="mi" href="${siteLink('/veri-silme')}" target="_blank" rel="noopener"><span class="mic" style="--k:var(--mute)">${ic('info')}</span><span class="t">Veri silme isteği</span>${ic('chev')}</a></div>
       <p class="fine">${NATIVE ? `Yazboz 101 · telefon sürümü ${APP_VER}. Skorlar bu telefonda saklanır.` : cap.fb ? 'Yazboz 101 · Skor bu cihazda saklanır, masa site üzerinden canlı paylaşılır.' : 'Yazboz 101 · deneme sürümü. Skor bu cihazda saklanır; Claude’da açıkken masa canlı paylaşılabilir.'}</p>`;
   }
   s.body.addEventListener('click', e => {
@@ -3693,6 +3713,7 @@ function start(data) {
   try { new MutationObserver(() => applyTheme()).observe(document.documentElement, {attributes: true, attributeFilter: ['data-theme']}); } catch (e) {}
   try { darkMQ && darkMQ.addEventListener('change', () => applyTheme()); } catch (e) {}
   initCaps();
+  try { if (window.YazbozAndroid && YazbozAndroid.ready) YazbozAndroid.ready(); } catch (e) {}
 }
 if (window.claude && window.claude.hot && typeof window.claude.hot.snapshot === 'function') window.claude.hot.snapshot(() => ({game, role, joinCode, view}));
 if (window.claude && window.claude.hot && window.claude.hot.ready) window.claude.hot.ready(start); else start((window.claude && window.claude.hot && window.claude.hot.data) || {});
