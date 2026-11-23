@@ -1,0 +1,140 @@
+# Uygulamayı GitHub'ın bilgisayarlarında gerçek bir Android emülatöründe ve iPhone simülatöründe dener.
+# Kendiliğinden çalışır: android/, ios/ ya da test/ klasöründe bir dosya değişince (ör. yeni index.html yükleyince).
+# Elle çalıştırmak için: Actions > "Uygulama denemesi" > Run workflow.
+# Sonuçlar (özet, ekran görüntüleri, hata kayıtları) "test-sonuclari" dalına yazılır; Claude oradan okur.
+# Gizli değişken gerekmez: deneme sürümü geçici bir imzayla derlenir, mağaza imzasına dokunulmaz.
+name: Uygulama denemesi
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+    paths: ['android/**', 'ios/**', 'test/**', '.github/workflows/test.yml']
+
+concurrency:
+  group: deneme-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  android:
+    name: Android ${{ matrix.api }} (${{ matrix.profile }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - api: 35
+            profile: pixel_7
+          - api: 33
+            profile: Nexus 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Emülatör hızlandırma (KVM)
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.13'
+
+      - name: Geçici deneme imzası
+        run: |
+          keytool -genkeypair -storetype pkcs12 -keystore "$RUNNER_TEMP/deneme.p12" -alias yazboz101 \
+            -storepass deneme123 -keypass deneme123 -keyalg RSA -keysize 2048 -validity 30 -dname "CN=Yazboz Deneme"
+          echo "YAZBOZ_KEYSTORE=$RUNNER_TEMP/deneme.p12" >> "$GITHUB_ENV"
+          echo "YAZBOZ_KEYSTORE_PASSWORD=deneme123" >> "$GITHUB_ENV"
+
+      - name: Deneme sürümünü derle
+        working-directory: android
+        run: gradle --no-daemon assembleDebug
+
+      - name: Emülatörde dene
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api }}
+          target: google_apis
+          arch: x86_64
+          profile: ${{ matrix.profile }}
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: node test/android.mjs android/app/build/outputs/apk/debug/app-debug.apk sonuc/android-${{ matrix.api }}
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deneme-android-${{ matrix.api }}
+          path: sonuc/
+          if-no-files-found: ignore
+
+  ios:
+    name: iPhone simülatörü
+    runs-on: macos-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Simülatörde dene
+        run: bash test/ios.sh sonuc
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deneme-ios
+          path: sonuc/
+          if-no-files-found: ignore
+
+  ozet:
+    name: Özet ve yayın
+    needs: [android, ios]
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: deneme-*
+          path: sonuc
+          merge-multiple: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Özeti hazırla
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          ANDROID_SONUC: ${{ needs.android.result }}
+          IOS_SONUC: ${{ needs.ios.result }}
+        run: |
+          pip install --quiet pillow
+          python test/ozet.py sonuc
+          cat sonuc/OZET.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Sonuçları test-sonuclari dalına yaz
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          cd sonuc
+          git init -q -b test-sonuclari
+          git config user.name "yazboz-deneme"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          echo "Deneme #${{ github.run_number }} · $(date -u '+%Y-%m-%d %H:%M UTC') · ${{ github.sha }}" > SURUM.txt
+          git add -A
+          git commit -qm "Deneme #${{ github.run_number }}"
+          git push -qf "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git" HEAD:test-sonuclari
