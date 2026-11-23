@@ -13,15 +13,25 @@ final class WebViewController: UIViewController, WKScriptMessageHandler, WKNavig
     private var loaded = false
     private var queued: [String] = []
     var pendingLink: String?
+    #if DEBUG
+    private var testStarted = false
+    #endif
 
     override func loadView() {
         let conf = WKWebViewConfiguration()
         conf.userContentController.add(WeakHandler(self), name: "yazboz")
+        #if DEBUG
+        // Sadece test sürümünde: sayfadaki hatalar kayda geçer (mağaza sürümüne girmez)
+        conf.userContentController.addUserScript(WKUserScript(source: Self.consoleHook, injectionTime: .atDocumentStart, forMainFrameOnly: true))
+        #endif
         // Yerel dosyadan canlı skor sunucusuna (Firebase) bağlanabilmek için
         conf.preferences.setValue(true, forKey: "allowFileAccessFromFileURLs")
         conf.setValue(true, forKey: "allowUniversalAccessFromFileURLs")
         webView = WKWebView(frame: .zero, configuration: conf)
         webView.navigationDelegate = self
+        #if DEBUG
+        if #available(iOS 16.4, *) { webView.isInspectable = true }
+        #endif
         webView.scrollView.contentInsetAdjustmentBehavior = .never
         webView.scrollView.bounces = false
         webView.isOpaque = false
@@ -76,6 +86,9 @@ final class WebViewController: UIViewController, WKScriptMessageHandler, WKNavig
         loaded = true
         queued.forEach { webView.evaluateJavaScript("window.ybNative && " + $0, completionHandler: nil) }
         queued.removeAll()
+        #if DEBUG
+        startTestIfNeeded()
+        #endif
     }
 
     /// Dış bağlantılar (indirme sayfası vb.) Safari'de açılır
@@ -90,6 +103,10 @@ final class WebViewController: UIViewController, WKScriptMessageHandler, WKNavig
 
     func userContentController(_ c: WKUserContentController, didReceive m: WKScriptMessage) {
         guard let b = m.body as? [String: Any], let cmd = b["cmd"] as? String else { return }
+        #if DEBUG
+        if cmd == "log" { testLog(b["msg"] as? String ?? ""); return }
+        if cmd == "shot", let n = b["name"] as? String { testShot(n); return }
+        #endif
         if cmd == "scan" { scan(source: b["source"] as? String ?? "gallery") }
         else if cmd == "ocr", let s = b["img"] as? String { ocr(dataURL: s) }
     }
@@ -192,3 +209,53 @@ private final class WeakHandler: NSObject, WKScriptMessageHandler {
     init(_ t: WKScriptMessageHandler) { target = t }
     func userContentController(_ c: WKUserContentController, didReceive m: WKScriptMessage) { target?.userContentController(c, didReceive: m) }
 }
+
+#if DEBUG
+/// Otomatik test (GitHub'daki iPhone simülatörü): YAZBOZ_TEST ortam değişkeniyle gelen senaryoyu çalıştırır,
+/// ekran görüntülerini ve sonucu uygulamanın Belgeler/test klasörüne yazar. Mağaza (Release) sürümüne girmez.
+extension WebViewController {
+    static let consoleHook = """
+    (function(){function p(k,a){try{window.webkit.messageHandlers.yazboz.postMessage({cmd:'log',msg:k+': '+Array.prototype.map.call(a,function(x){try{return x&&x.stack?x.stack:(typeof x==='object'?JSON.stringify(x):String(x))}catch(e){return String(x)}}).join(' ')})}catch(e){}}
+    ['error','warn'].forEach(function(k){var o=console[k];console[k]=function(){p(k,arguments);return o.apply(console,arguments)}});
+    addEventListener('error',function(e){p('hata',[e.message+' @'+e.filename+':'+e.lineno])});
+    addEventListener('unhandledrejection',function(e){p('promise',[e.reason])});})();
+    """
+
+    private var testDir: URL {
+        let d = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("test")
+        try? FileManager.default.createDirectory(at: d, withIntermediateDirectories: true)
+        return d
+    }
+
+    fileprivate func testLog(_ s: String) {
+        NSLog("YAZBOZ %@", s)
+        let f = testDir.appendingPathComponent("konsol.txt")
+        let line = Data((s + "\n").utf8)
+        if let h = try? FileHandle(forWritingTo: f) { h.seekToEndOfFile(); h.write(line); h.closeFile() } else { try? line.write(to: f) }
+    }
+
+    fileprivate func testShot(_ name: String) {
+        let cfg = WKSnapshotConfiguration()
+        cfg.afterScreenUpdates = true
+        webView.takeSnapshot(with: cfg) { img, _ in
+            let safe = name.replacingOccurrences(of: "/", with: "-")
+            if let d = img?.pngData() { try? d.write(to: self.testDir.appendingPathComponent(safe + ".png")) }
+            self.webView.evaluateJavaScript("window.__ybShotDone && window.__ybShotDone(" + self.jsString(name) + ")", completionHandler: nil)
+        }
+    }
+
+    fileprivate func startTestIfNeeded() {
+        guard !testStarted, let sc = ProcessInfo.processInfo.environment["YAZBOZ_TEST"], !sc.isEmpty else { return }
+        testStarted = true
+        let body = sc + "\n;return await window.__ybRun('ios', function (n) { window.webkit.messageHandlers.yazboz.postMessage({cmd: 'shot', name: n}); });"
+        webView.callAsyncJavaScript(body, arguments: [:], in: nil, in: .page) { r in
+            var text = "{\"ok\":false,\"hata\":\"sonuç boş\"}"
+            switch r {
+            case .success(let v): if let t = v as? String { text = t }
+            case .failure(let e): text = "{\"ok\":false,\"hata\":" + self.jsString(e.localizedDescription) + "}"
+            }
+            try? text.write(to: self.testDir.appendingPathComponent("sonuc.json"), atomically: true, encoding: .utf8)
+        }
+    }
+}
+#endif
