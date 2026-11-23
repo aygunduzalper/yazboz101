@@ -1,3 +1,10 @@
+# iPhone sürümünü Mac olmadan, GitHub'ın bulut Mac'inde derler ve App Store Connect'e (TestFlight) yükler.
+# Çalıştırmak için: GitHub'da depo > Actions > "iOS - TestFlight'a yükle" > Run workflow.
+# Gerekli gizli değişkenler (Settings > Secrets and variables > Actions):
+#   ASC_ISSUER_ID        App Store Connect > Kullanıcılar ve Erişim > Entegrasyonlar > Issuer ID
+#   ASC_KEY_ID           aynı sayfada oluşturduğun API anahtarının Key ID'si (Admin yetkili)
+#   ASC_PRIVATE_KEY      indirdiğin AuthKey_XXXX.p8 dosyasının tüm içeriği
+#   IOS_CERTIFICATE_KEY  dağıtım sertifikası için özel anahtar (ios-sertifika-anahtari.txt dosyasındaki metin)
 name: iOS - TestFlight'a yükle
 
 on:
@@ -8,7 +15,7 @@ jobs:
     runs-on: macos-latest
     timeout-minutes: 45
     env:
-      BUNDLE_ID: com.yazboz101.app
+      BUNDLE_ID: com.aygunduz.yazboz101
       APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
       APP_STORE_CONNECT_KEY_IDENTIFIER: ${{ secrets.ASC_KEY_ID }}
       APP_STORE_CONNECT_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
@@ -16,6 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Apple, Nisan 2026'dan beri Xcode 26 ile derlenmiş uygulamaları kabul ediyor
       - uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: latest-stable
