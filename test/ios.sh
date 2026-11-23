@@ -5,7 +5,7 @@
 # ilk açılış + senaryo, kapat-aç, sil-yükle-aç ve gece modunu dener; ekran görüntülerini toplar.
 set -uo pipefail
 OUT="${1:-sonuc}"
-BID=com.yazboz101.app
+BID=com.aygunduz.yazboz101
 mkdir -p "$OUT"
 
 echo "::group::Derleme"

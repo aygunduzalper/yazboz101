@@ -97,6 +97,9 @@
       });
     }
     await shot('07-oyun');
+    await sleep(1500);
+    try { R.bilgi.canli = window.ybDurum ? window.ybDurum() : { hata: 'ybDurum yok (eski sürüm)' }; }
+    catch (e) { R.bilgi.canli = { hata: 'okunamadı: ' + e.message }; }
 
     await run('ceza penceresi', async () => {
       await tap('[data-act=ceza]');
@@ -122,6 +125,29 @@
       await sleep(300);
       await shot('10-ayarlar');
       closeAll();
+    });
+
+    await run('oyunu erken bitir', async () => {
+      await tap('[data-act=menu]');
+      await tap(S + '[data-a=end]');
+      await tap(S + '[data-a=yes]');
+      await waitFor(() => vis($('#win')), 4000, 'kazanan ekranı');
+      await sleep(900);
+      await shot('11-kazanan');
+      await tap('#win [data-w=ok]');
+      await sleep(400);
+      closeAll();
+    });
+
+    await run('oyun geçmişi', async () => {
+      await tap('[data-act=home]');
+      await tap('[data-act=hist]');
+      await sleep(300);
+      await shot('12-gecmis');
+      await tap('[data-act=htab][data-v=stats]');
+      await sleep(300);
+      await shot('13-istatistik');
+      await tap('[data-act=home]');
     });
 
     R.bilgi.toplamMs = Math.round(performance.now() - t0);

@@ -147,6 +147,19 @@ async function main() {
       });
       S.senaryo = r.result && typeof r.result.value === 'string' ? JSON.parse(r.result.value) : { ok: false, hata: JSON.stringify(r.exceptionDetails || r.result) };
     } catch (e) { S.senaryo = { ok: false, hata: String(e.message || e) }; }
+    // Uygulamanın açtığı masa gerçekten sunucuya yazıldı mı? (izleyicilerin "masa bulunamadı" sorunu)
+    try {
+      const r = await c.send('Runtime.evaluate', { expression: "localStorage.getItem('yb.cfg')", returnByValue: true });
+      const cfg = JSON.parse(r.result.value || 'null');
+      const kod = S.senaryo && S.senaryo.bilgi && S.senaryo.bilgi.canli && S.senaryo.bilgi.canli.kod;
+      if (cfg && kod) {
+        S.db = cfg.firebase.databaseURL.replace(/\/+$/, '');
+        S.masaKodu = kod;
+        const t = await (await fetch(`${S.db}/tables/${kod}.json`)).json();
+        asama('1b masa sunucuda', { kod, var: !!t });
+        if (!t) S.sorunlar.push('Uygulamanın açtığı masa sunucuya yazılmamış (izleyiciler "masa bulunamadı" görür)');
+      } else asama('1b masa sunucuda', { kod: kod || null, ayar: !!cfg, not: 'canlı paylaşım ayarı yok' });
+    } catch (e) { asama('1b masa sunucuda', { hata: String(e.message || e) }); }
     c.close();
   } else S.sorunlar.push('İlk açılışta sayfaya bağlanılamadı (beyaz ekran olabilir)');
   if (S.senaryo && !S.senaryo.ok) S.sorunlar.push('Senaryoda başarısız adım var');
@@ -191,6 +204,26 @@ async function main() {
   asama('4 gece modu', await durum(c));
   if (c) c.close();
   adb('shell', 'cmd', 'uimode', 'night', 'no');
+
+  // 4b) Başka bir telefon gibi masaya katıl: veriyi sil, QR bağlantısıyla aç, masa görünmeli
+  if (S.masaKodu) {
+    adb('shell', 'pm', 'clear', PKG);
+    adb('shell', 'am', 'start', '-W', '-a', 'android.intent.action.VIEW', '-d', `yazboz101://masa/${S.masaKodu.toLowerCase()}?s=yazboz101.com`, '-n', ACT);
+    c = await baglan('izleyici');
+    let v = null;
+    for (let i = 0; i < 20 && c; i++) {
+      await sleep(500);
+      try {
+        const r = await c.send('Runtime.evaluate', { expression: "JSON.stringify(window.ybDurum ? window.ybDurum() : {})", returnByValue: true });
+        v = JSON.parse(r.result.value);
+        if (v.izleyici === 'ok') break;
+      } catch (e) { /* sayfa yenileniyor */ }
+    }
+    shot('f-izleyici-qr-ile');
+    asama('4b QR ile katılma', v || { baglanti: 'kurulamadı' });
+    if (!v || v.izleyici !== 'ok') S.sorunlar.push('QR bağlantısıyla masaya katılınamadı (durum: ' + (v && v.izleyici) + ')');
+    if (c) c.close();
+  }
 
   // 5) İnternetsiz açılış
   adb('shell', 'svc', 'wifi', 'disable');

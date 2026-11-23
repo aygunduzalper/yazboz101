@@ -68,7 +68,7 @@ import java.io.InputStream;
 public class MainActivity extends Activity {
     private static final int REQ_SCAN = 11, REQ_FILE = 12;
     // Uygulamadaki renklerle aynı: --felt1 (üst şerit) ve --bg (zemin)
-    private static final int FELT_LIGHT = 0xff15805c, FELT_DARK = 0xff125a44, BG_LIGHT = 0xffebe8e0, BG_DARK = 0xff0e1211;
+    private static final int FELT_LIGHT = 0xff226b4c, FELT_DARK = 0xff15442f, BG_LIGHT = 0xffefe7d4, BG_DARK = 0xff000000;
 
     private WebView web;
     private FrameLayout root;
@@ -231,6 +231,19 @@ public class MainActivity extends Activity {
         getWindow().setStatusBarColor(felt);
     }
 
+    private void applyNav(String hex) {
+        int c;
+        try { c = android.graphics.Color.parseColor(hex); } catch (Exception e) { return; }
+        root.setBackgroundColor(c);
+        if (Build.VERSION.SDK_INT >= 30) {
+            WindowInsetsController ic = getWindow().getInsetsController();
+            if (ic == null) return;
+            double l = (0.299 * android.graphics.Color.red(c) + 0.587 * android.graphics.Color.green(c) + 0.114 * android.graphics.Color.blue(c)) / 255;
+            int nav = WindowInsetsController.APPEARANCE_LIGHT_NAVIGATION_BARS;
+            ic.setSystemBarsAppearance(l > 0.6 ? nav : 0, nav);
+        }
+    }
+
     @TargetApi(30)
     @SuppressWarnings("deprecation")
     private void bars30(boolean dark) {
@@ -296,8 +309,10 @@ public class MainActivity extends Activity {
         @JavascriptInterface public void scan(String source) { runOnUiThread(() -> startScan(source)); }
         @JavascriptInterface public void ocr(String dataUrl) { new Thread(() -> ocrImage(dataUrl)).start(); }
         @JavascriptInterface public void bars(String theme) { runOnUiThread(() -> applyBars("dark".equals(theme) ? "dark" : "light")); }
-        @JavascriptInterface public String version() { return "1.0.1"; }
+        @JavascriptInterface public String version() { return "1.1.0"; }
         @JavascriptInterface public void ready() { pageReady = true; }
+        /** Sayfanın altındaki renk (oyun ekranında ahşap şerit, diğer ekranlarda kâğıt): sistem gezinme çubuğu da aynı renkte olsun */
+        @JavascriptInterface public void navColor(String hex) { runOnUiThread(() -> applyNav(hex)); }
     }
 
     // ---------- fotoğrafla sayma ----------

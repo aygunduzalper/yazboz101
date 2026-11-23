@@ -2,8 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<!-- Ücretli Apple geliştirici hesabıyla: QR bağlantıları uygulamada açılsın. Alan adını yaz, sonra Xcode'da
-	     Signing & Capabilities > + Capability > Associated Domains ekle ve bu dosyayı seç. -->
+	<!-- QR bağlantıları (https://yazboz101.com/m/KOD) iPhone'da doğrudan uygulamada açılsın. Apple'da bu uygulamanın
+	     kimliğinde (Identifier) "Associated Domains" açık olmalı; sitede .well-known/apple-app-site-association dosyası var. -->
 	<key>com.apple.developer.associated-domains</key>
 	<array>
 		<string>applinks:yazboz101.com</string>

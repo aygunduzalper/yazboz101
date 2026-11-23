@@ -20,13 +20,9 @@
    TYPE Outfit for numerals and titles + Inter for text
    LAYOUT one-screen phone app: felt band (header + tiles), scrolling grid, coloured action bar; centred 620px column on laptops */
 :root{color-scheme:light;
---bg:#ebe8e0;--s1:#e0dcd2;--s2:#d2cdc1;--line:#d5d0c5;--ink:#22231f;--mute:#67645b;
---red:#c13a2e;--redbg:#f1dcd5;--green:#17743e;--gold:#946100;--goldbg:#efe0bd;--blue:#2a5bc9;
---felt1:#15805c;--felt2:#0c5640;--pri:#0f6b4f;--cur:#d9e6dc;--tile:#f6f1e4;--tileEdge:#d4cab4;--scrim:rgba(20,22,18,.45)}
+--bg:#efe7d4;--s1:#e6dcc6;--s2:#d9ccb0;--line:#d6c8ab;--ink:#2a241b;--mute:#7a6f59;--red:#a3322a;--redbg:#efd8cf;--green:#1e6b47;--gold:#8a5a00;--goldbg:#efe0bd;--blue:#1d4f9c;--felt1:#226b4c;--felt2:#174f38;--pri:#1e5e43;--cur:rgba(30,94,67,.10);--tile:#f7f1e1;--tileEdge:#cfc3a4;--scrim:rgba(20,22,18,.45);--rule:#c9b796;--ruleStrong:#8f7a55;--wood:#8a5a33;--bar:#7a4e2c}
 @media(prefers-color-scheme:dark){:root{color-scheme:dark;
---bg:#0e1211;--s1:#172019;--s2:#222c27;--line:#29332e;--ink:#eef2ef;--mute:#9aa6a0;
---red:#ff7d70;--redbg:#3a1a17;--green:#5fd896;--gold:#f3c35a;--goldbg:#2e2612;--blue:#86acff;
---felt1:#125a44;--felt2:#0a3226;--pri:#1c9a71;--cur:#14261f;--tile:#f6f0e2;--tileEdge:#cdc4af;--scrim:rgba(0,0,0,.6)}}
+--bg:#000000;--s1:#141414;--s2:#232323;--line:#2c2a25;--ink:#f2f2f2;--mute:#b5a684;--red:#ff8a7a;--redbg:#3a1a17;--green:#86dba2;--gold:#f3c35a;--goldbg:#2e2612;--blue:#86acff;--felt1:#15442f;--felt2:#0c2a1f;--pri:#2a7a57;--cur:rgba(214,178,98,.10);--tile:#e6dcc4;--tileEdge:#a89c7e;--scrim:rgba(0,0,0,.66);--rule:rgba(214,178,98,.30);--ruleStrong:rgba(224,190,110,.78);--wood:#4a3220;--bar:#0b0b0b}}
 *{box-sizing:border-box;min-width:0}
 html,body{height:100%;margin:0}
 body{background:var(--bg);color:var(--ink);font:16px/1.45 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow:hidden;-webkit-tap-highlight-color:transparent}
@@ -364,10 +360,88 @@ body.has-sheet #toast.on{transform:translate(-50%,0)}
 .ob-art svg{width:88%;max-width:340px;height:auto;max-height:92%}
 .ob h2{font:600 32px/1.08 Outfit,sans-serif;letter-spacing:-.02em;margin:18px 0 10px}
 .ob p{font-size:17px;color:var(--mute);margin:0;min-height:5.2em}
+.ob-slide{flex:1;display:flex;flex-direction:column;min-height:0;touch-action:pan-y;will-change:transform}
+.ob-slide.in-r{animation:obInR .3s cubic-bezier(.2,.7,.3,1)}
+.ob-slide.in-l{animation:obInL .3s cubic-bezier(.2,.7,.3,1)}
+@keyframes obInR{from{opacity:0;transform:translateX(48px)}to{opacity:1;transform:none}}
+@keyframes obInL{from{opacity:0;transform:translateX(-48px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.ob-slide.in-r,.ob-slide.in-l{animation:none}}
 .ob-dots{display:flex;gap:6px;margin:16px 0}
 .ob-dots i{width:8px;height:8px;border-radius:4px;background:var(--s2);transition:width .2s}
 .ob-dots i.on{width:22px;background:var(--pri)}
 textarea.cp{width:100%;height:120px;border-radius:12px;border:1.5px solid var(--line);background:var(--s1);padding:10px;font:14px/1.4 Inter,sans-serif;margin-top:10px;color:var(--ink)}
+
+/* El yazısı rakamlar (Kalam, SIL OFL): sadece rakam ve işaretler, internet olmadan da çalışsın diye gömülü */
+@font-face{font-family:Kalam;font-style:normal;font-weight:700;font-display:swap;src:url(data:font/woff2;base64,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) format('woff2');unicode-range:U+2B-2E,U+30-39,U+D7,U+2014,U+2212}
+/* ---------- Kahvehane masası görünümü: çuha başlık, ahşap şerit, defter çizgili tablo, taş düğmeler ---------- */
+.band{border-radius:0;box-shadow:none;padding-bottom:28px;background:
+  linear-gradient(transparent 11px,rgba(0,0,0,.25) 11px) bottom/100% 14px no-repeat,
+  repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 3px,transparent 3px 11px) bottom/100% 14px no-repeat,
+  linear-gradient(var(--wood),var(--wood)) bottom/100% 14px no-repeat,
+  repeating-linear-gradient(45deg,rgba(255,255,255,.025) 0 2px,transparent 2px 5px),
+  radial-gradient(140% 120% at 50% -20%,var(--felt1),var(--felt2))}
+.trow{gap:10px;padding:12px 6px 2px}
+.ttw{display:flex;flex-direction:column;align-items:center;gap:7px;min-width:0}
+.ttw>.nm{display:block;max-width:100%;font:600 14px/1.2 Outfit,Inter,sans-serif;color:#f3e9cf;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tt{width:100%;max-width:86px;border-radius:9px;padding:13px 4px 10px;box-shadow:0 6px 0 var(--tileEdge),0 9px 12px rgba(0,0,0,.38)}
+.tt .v{margin-top:0;font:700 clamp(21px,6.4vw,30px)/1.05 Outfit,sans-serif}
+.tt .dt{margin:6px auto 0}
+.tt.top1{box-shadow:0 6px 0 var(--tileEdge),0 0 0 3px #f2c14e,0 9px 14px rgba(0,0,0,.4)}
+.ttw>.nm .crown{position:static;transform:none;display:inline-block;width:18px;height:14px;vertical-align:-1px;margin-right:4px}
+.fk{margin-top:5px;font:700 11px/1 Inter,sans-serif;color:#f3e9cf;background:rgba(0,0,0,.28);padding:4px 7px;border-radius:20px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.fk.up{color:#bff0cf}
+.fk.pay{color:#ffb4a8}
+.tw{border:0;border-radius:0;overflow:visible}
+.yz th{background:transparent;border-left:1px solid var(--rule);border-bottom:1px solid var(--rule);font:600 14px/1.2 Outfit,Inter,sans-serif;color:var(--mute)}
+.yz td{border-left:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.yz th.hn,.yz td.hn{border-left:0;border-right:2px solid var(--rule)}
+.yz td b{font:700 21px/1.15 Kalam,"Segoe Print","Comic Sans MS",cursive;letter-spacing:0}
+.yz tr.sum td,.yz tr.ext td{background:transparent}
+.yz tr.first-sum td{border-top:3px solid var(--ruleStrong)}
+.bd{font:700 17px/1 Kalam,"Segoe Print","Comic Sans MS",cursive;padding:4px 5px 2px}
+#bar{border-top:0;grid-template-columns:1fr 1.4fr 1fr 1fr;background:repeating-linear-gradient(90deg,rgba(0,0,0,.07) 0 3px,transparent 3px 13px),var(--bar);box-shadow:inset 0 4px 0 rgba(255,255,255,.08)}
+.bb{border-radius:9px;background:var(--tile);color:#2a241b;box-shadow:0 4px 0 var(--tileEdge)}
+.bb.c{background:var(--tile);color:#a3322a}
+.bb.o{background:var(--tile);color:#8a5a00}
+.bb.pri{background:var(--pri);color:#fff;box-shadow:0 4px 0 color-mix(in srgb,var(--pri) 55%,#000)}
+.bb:active{transform:translateY(2px);box-shadow:0 2px 0 var(--tileEdge)}
+.bb.pri:active{box-shadow:0 2px 0 color-mix(in srgb,var(--pri) 55%,#000)}
+
+/* oyun geçmişi */
+.htiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:12px 6px 2px}
+.htile{background:var(--tile);color:#2a241b;border-radius:9px;box-shadow:0 5px 0 var(--tileEdge),0 8px 10px rgba(0,0,0,.35);padding:10px 4px 8px;text-align:center;min-width:0}
+.htile b{display:block;font:700 22px/1.1 Outfit,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.htile small{display:block;font-size:11px;font-weight:600;color:#7a6f59;margin-top:2px}
+.hper{display:flex;gap:8px;padding:12px 6px 2px;flex-wrap:wrap}
+.hper button{min-height:36px;padding:0 14px;border-radius:8px;font-weight:600;font-size:13px;background:rgba(0,0,0,.22);color:#f3e9cf}
+.hper button.on{background:var(--tile);color:#2a241b;box-shadow:0 3px 0 var(--tileEdge)}
+.hgrp{font-size:12px;font-weight:700;color:var(--mute);letter-spacing:.04em;text-transform:uppercase;margin:18px 2px 8px}
+.hcard{display:flex;flex-direction:column;gap:8px;width:100%;text-align:left;background:var(--s1);border-radius:12px;padding:12px 14px;margin-bottom:10px;box-shadow:0 0 0 1px var(--line),0 3px 0 var(--line)}
+.hcard .hd{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--mute)}
+.hcard .hw{display:flex;align-items:center;gap:6px;font:700 16px/1.2 Outfit,sans-serif}
+.hcard .hw small{font:600 13px Inter,sans-serif;color:var(--mute)}
+.hcard .hw .crown{position:static;transform:none;width:20px;height:15px;flex:none}
+.hcard .hs{display:flex;flex-wrap:wrap;gap:6px 14px}
+.hcard .hs>span{display:inline-flex;gap:5px;align-items:baseline;font-size:13px;font-weight:600}
+.hcard .hs i{font-style:normal}
+.hcard .hs b{font:600 15px Outfit,sans-serif}
+.htag{font-size:11px;font-weight:700;padding:3px 8px;border-radius:20px;white-space:nowrap}
+.htag.on{color:var(--green);background:color-mix(in srgb,var(--green) 14%,transparent)}
+.htag.off{color:var(--mute);background:var(--s2)}
+.hst{width:100%;border-collapse:collapse;table-layout:fixed;margin-top:14px}
+.hst th{font:600 12px Inter,sans-serif;color:var(--mute);padding:10px 2px;border-bottom:1px solid var(--rule);border-left:1px solid var(--rule)}
+.hst td{text-align:center;font:600 17px Outfit,sans-serif;padding:10px 2px;border-bottom:1px solid var(--rule);border-left:1px solid var(--rule)}
+.hst th:first-child,.hst td:first-child{width:32%;text-align:left;border-left:0;padding-left:4px}
+.hst td:first-child{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hst td.best{color:var(--green);font-weight:700}
+.hst td.worst{color:var(--red);font-weight:700}
+.hst td.mut{color:var(--mute)}
+.hrec{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hrec>div{background:var(--s1);border-radius:10px;padding:10px 12px;box-shadow:0 0 0 1px var(--line),0 3px 0 var(--line);min-width:0}
+.hrec small{display:block;font-size:12px;font-weight:600;color:var(--mute)}
+.hrec b{display:block;font:700 16px Outfit,sans-serif;margin:3px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hrec span{font-size:13px;font-weight:600}
+.hdet{margin:14px 0 4px;max-height:46vh;overflow:auto}
 </style>
 </head>
 <body>
@@ -1647,7 +1721,7 @@ return {QRCode:R("index"),EC:R("QRErrorCorrectLevel")};})();
 {
 'use strict';
 const APP_URL = 'https://claude.ai/artifact/JsZTdfHmPZpr41U3HkhEnA';
-const APP_VER = '1.0.0';
+const APP_VER = '1.1.0';
 const SITE_HOME = 'https://yazboz101.com';
 const siteLink = p => (siteBase() || SITE_HOME) + p;
 /* Telefon uygulaması (Android/iOS kabuğu) mı? Sayfa yerel dosyadan açılır. */
@@ -1710,8 +1784,8 @@ const CROWN = '<svg class="crown" viewBox="0 0 26 20" aria-hidden="true"><path d
 
 /* ---------- tema ---------- */
 const PAL = {
-  light: {bg: '#ebe8e0', s1: '#e0dcd2', s2: '#d2cdc1', line: '#d5d0c5', ink: '#22231f', mute: '#67645b', red: '#c13a2e', redbg: '#f1dcd5', green: '#17743e', gold: '#946100', goldbg: '#efe0bd', blue: '#2a5bc9', felt1: '#15805c', felt2: '#0c5640', pri: '#0f6b4f', cur: '#d9e6dc', tile: '#f6f1e4', tileEdge: '#d4cab4', scrim: 'rgba(20,22,18,.45)'},
-  dark: {bg: '#0e1211', s1: '#172019', s2: '#222c27', line: '#29332e', ink: '#eef2ef', mute: '#9aa6a0', red: '#ff7d70', redbg: '#3a1a17', green: '#5fd896', gold: '#f3c35a', goldbg: '#2e2612', blue: '#86acff', felt1: '#125a44', felt2: '#0a3226', pri: '#1c9a71', cur: '#14261f', tile: '#f6f0e2', tileEdge: '#cdc4af', scrim: 'rgba(0,0,0,.6)'}
+  light: {bg: '#efe7d4', s1: '#e6dcc6', s2: '#d9ccb0', line: '#d6c8ab', ink: '#2a241b', mute: '#7a6f59', red: '#a3322a', redbg: '#efd8cf', green: '#1e6b47', gold: '#8a5a00', goldbg: '#efe0bd', blue: '#1d4f9c', felt1: '#226b4c', felt2: '#174f38', pri: '#1e5e43', cur: 'rgba(30,94,67,.10)', tile: '#f7f1e1', tileEdge: '#cfc3a4', scrim: 'rgba(20,22,18,.45)', rule: '#c9b796', ruleStrong: '#8f7a55', wood: '#8a5a33', bar: '#7a4e2c'},
+  dark: {bg: '#000000', s1: '#141414', s2: '#232323', line: '#2c2a25', ink: '#f2f2f2', mute: '#b5a684', red: '#ff8a7a', redbg: '#3a1a17', green: '#86dba2', gold: '#f3c35a', goldbg: '#2e2612', blue: '#86acff', felt1: '#15442f', felt2: '#0c2a1f', pri: '#2a7a57', cur: 'rgba(214,178,98,.10)', tile: '#e6dcc4', tileEdge: '#a89c7e', scrim: 'rgba(0,0,0,.66)', rule: 'rgba(214,178,98,.30)', ruleStrong: 'rgba(224,190,110,.78)', wood: '#4a3220', bar: '#0b0b0b'}
 };
 const darkMQ = window.matchMedia ? matchMedia('(prefers-color-scheme: dark)') : null;
 /* Telefon uygulaması gece modunu adres satırıyla (#t=dark) ya da ybTheme() ile bildirir; WebView'in kendi
@@ -1734,6 +1808,7 @@ function applyTheme() {
   for (const [k, v] of Object.entries(PAL[t])) r.style.setProperty('--' + k, v);
   r.style.colorScheme = t;
   try { if (window.YazbozAndroid && YazbozAndroid.bars) YazbozAndroid.bars(t); } catch (e) {}
+  lastNav = ''; // bars() alt rengi temaya göre sıfırlar; doğru rengi yeniden gönder
 }
 
 /* ---------- kurallar ve değerler ---------- */
@@ -1756,7 +1831,7 @@ function elShortcuts(v, esli) {
 const rekorDesc = r => `${r.sayi} ve üstüyle ya da ${r.cift} ve üstü çiftle açmak`;
 
 /* ---------- durum ---------- */
-let prefs = Object.assign({theme: 'auto', recent: [], onboarded: false, coached: false, lastSetup: null}, LS.get('yb.prefs', {}) || {});
+let prefs = Object.assign({theme: 'auto', recent: [], onboarded: false, coached: false, lastSetup: null, fark: true, odet: false}, LS.get('yb.prefs', {}) || {});
 prefs.vals = fixVals(prefs.vals);
 delete prefs.rules;
 let game = LS.get('yb.game', null);
@@ -1767,18 +1842,22 @@ let undoStack = [];
 let setup = null;
 const cap = {ready: false, db: null, user: null, room: null, sample: null, uid: null, images: false, imgTypes: null};
 let roomRef = null, peers = [];
-const live = {ok: false, err: null};
+const live = {ok: false, err: null, tries: 0, retry: 0};
+// Otomatik testlerin ve hata ayıklamanın okuyabildiği kısa durum özeti (kişisel veri içermez)
+window.ybDurum = () => ({ayar: !!cap.fb, sunucu: !!cap.db, kimlik: !!cap.uid, gonderildi: !!live.ok, hata: live.err || null,
+  kod: game && !game.sample ? game.code : null, rol: role, izleyici: viewerStatus, katilim: joinCode, gorunum: view});
 let myClaim = null;
 let lastTot = null;
 
 /* ---------- oyun yardımcıları ---------- */
 const totalHands = g => g.base + 1 + (g.extra || 0);
-const isOver = g => g.done >= totalHands(g);
-const curHand = g => Math.min(g.done + 1, totalHands(g));
+/* ended: oyun kalan eller oynanmadan "Oyunu bitir" ile erken bitirildi */
+const isOver = g => !!g.ended || g.done >= totalHands(g);
+const curHand = g => g.ended ? Math.max(1, g.done) : Math.min(g.done + 1, totalHands(g));
 const penHand = g => isOver(g) ? g.done : g.done + 1;
 const totals = g => { const t = g.sides.map(() => 0); for (const e of g.entries) if (t[e.s] != null) t[e.s] += e.v; return t; };
 /* reHide: son elden sonra (uzatmada) isteyerek yeniden gizlenmiş toplamlar; oyun bitince açılır */
-const showTotals = g => g.done >= totalHands(g) || (!g.reHide && (!g.hide || g.done >= g.base));
+const showTotals = g => isOver(g) || (!g.reHide && (!g.hide || g.done >= g.base));
 const sideColor = (g, i) => g.mode === 'esli' ? TEAM_COLORS[i % 2] : SIDE_COLORS[i % 6];
 const sideName = (g, i) => (g.sides[i] && g.sides[i].n) || (g.mode === 'esli' ? `${i + 1}. takım` : `Oyuncu ${i + 1}`);
 /* "10 + 1" biçimi yalnızca toplamlar gizli başlatılan oyunlarda; açık oyunlarda eller düz sayılır (11, 12...) */
@@ -1793,7 +1872,7 @@ const valsNow = () => { const g = G(); return g && g.vals ? g.vals : prefs.vals;
 
 /* ---------- kayıt & senkron ---------- */
 let pushT = null, writing = false, dirty = false, prefT = null;
-function saveGame() { if (game) LS.set('yb.game', game); else LS.del('yb.game'); schedulePush(); }
+function saveGame() { if (game) { LS.set('yb.game', game); if (isOver(game)) archive(game); } else LS.del('yb.game'); schedulePush(); }
 function savePrefs() {
   LS.set('yb.prefs', prefs);
   if (cap.db && cap.uid) {
@@ -1811,8 +1890,14 @@ async function pushNow() {
   const snap = clone(game);
   try {
     await cap.db.doc('tables/' + snap.code).set({v: 2, code: snap.code, adminId: cap.uid || null, at: Date.now(), game: snap});
-    live.ok = true; live.err = null;
-  } catch (e) { live.ok = false; live.err = (e && e.code) || 'hata'; }
+    live.ok = true; live.err = null; live.tries = 0; clearTimeout(live.retry);
+  } catch (e) {
+    live.ok = false; live.err = (e && e.code) || (e && e.name) || 'hata';
+    console.warn('Canlı skor gönderilemedi:', live.err, e && e.status ? 'HTTP ' + e.status : '', e && e.message ? e.message : '');
+    // bağlantı gelince masa kendiliğinden açılsın: 3, 6, 12, 24, 30, 30… sn sonra yeniden dene
+    live.tries = (live.tries || 0) + 1; clearTimeout(live.retry);
+    live.retry = setTimeout(() => { if (game && !game.sample && role !== 'viewer') pushNow(); }, Math.min(30000, 3000 * 2 ** (live.tries - 1)));
+  }
   writing = false;
   if (view === 'game' && role !== 'viewer') renderTop();
   if (dirty) { dirty = false; pushNow(); }
@@ -1841,7 +1926,16 @@ function setVals(fn) {
 function migrate(g) { if (!g) return g; if (!g.vals) g.vals = clone(prefs.vals); g.vals = fixVals(g.vals); delete g.rules; return g; }
 
 /* ---------- çizim ---------- */
-function render() { applyTheme(); renderTop(); renderMain(); renderBar(); navSync(); }
+function render() { applyTheme(); renderTop(); renderMain(); renderBar(); navSync(); syncNavColor(); }
+/* Android: sistem gezinme çubuğu sayfanın altıyla aynı renkte (oyun ekranında ahşap şerit, diğerlerinde kâğıt) */
+let lastNav = '';
+function syncNavColor() {
+  if (!window.YazbozAndroid || !YazbozAndroid.navColor) return;
+  const p = PAL[curTheme || effTheme()] || PAL.light, c = $('#bar').innerHTML.trim() ? p.bar : p.bg;
+  if (c === lastNav) return;
+  lastNav = c;
+  try { YazbozAndroid.navColor(c); } catch (e) {}
+}
 /* Telefon sürümünde geri tuşu: tek bir geçmiş kaydıyla panel kapatır, ana menüye döner */
 let navEntry = false, navSkip = false;
 const atRoot = () => !sheets.length && role !== 'viewer' && view === 'home' && $('#onb').hidden && $('#coach').hidden && $('#win').hidden;
@@ -1872,10 +1966,22 @@ function tilesRow(g) {
   const t = totals(g), vis = showTotals(g), n = g.sides.length, any = g.entries.length > 0, min = Math.min(...t);
   const prev = lastTot && lastTot.code === g.code && lastTot.vis === vis ? lastTot.t : null;
   lastTot = {code: g.code, t, vis};
+  // Fark: herkes bir üstündekine göre; lider ikinciye göre ne kadar önde. "Ödet" açıksa son iki (3 kişide son) öder.
+  const order = g.sides.map((x, i) => i).sort((a, b) => t[a] - t[b]), rank = [];
+  order.forEach((i, r) => { rank[i] = r; });
+  const showF = vis && any && n > 1 && prefs.fark !== false;
+  const payFrom = prefs.odet && g.mode !== 'esli' && n >= 3 ? n - (n >= 4 ? 2 : 1) : n;
+  const fk = i => {
+    if (!showF) return '';
+    const r = rank[i];
+    if (r === 0) { const d = t[order[1]] - t[i]; return `<span class="fk ${d > 0 ? 'up' : ''}">${d > 0 ? fmt(d) + ' önde' : 'berabere'}</span>`; }
+    const d = t[i] - t[order[r - 1]], pay = r >= payFrom;
+    return `<span class="fk ${pay ? 'pay' : ''}">${d > 0 ? '↑' + fmt(d) : 'berabere'}${pay ? ' öder' : ''}</span>`;
+  };
   return `<div class="trow" data-n="${n}" style="--n:${n}">${g.sides.map((s, i) => {
     const lead = vis && any && t[i] === min;
     const bump = vis && prev && prev[i] !== t[i];
-    return `<div class="tt ${lead ? 'top1' : ''} ${vis ? '' : 'hid'} ${bump ? 'bump' : ''}" style="--c:${sideColor(g, i)}">${lead ? CROWN : ''}<span class="nm">${esc(sideName(g, i))}</span><span class="v num">${vis ? fmt(t[i]) : '•••'}</span><span class="dt"></span></div>`;
+    return `<div class="ttw"><span class="nm">${lead ? CROWN : ''}${esc(sideName(g, i))}</span><div class="tt ${lead ? 'top1' : ''} ${vis ? '' : 'hid'} ${bump ? 'bump' : ''}" style="--c:${sideColor(g, i)}"><span class="v num">${vis ? fmt(t[i]) : '•••'}</span><span class="dt"></span></div>${fk(i)}</div>`;
   }).join('')}</div>`;
 }
 function renderTop() {
@@ -1891,7 +1997,7 @@ function renderTop() {
   }
   if (view === 'game' && game) {
     const st = NATIVE && !cap.fb ? `<span>${esc(planText(game))}</span>`
-      : `<span class="dot ${cap.db && live.ok ? 'on' : ''}"></span><span>${esc(planText(game))} · Masa ${esc(game.code)}${cap.db ? (live.ok ? ' · canlı' : live.err ? ' · bağlantı yok' : '') : ''}</span>`;
+      : `<span class="dot ${cap.db && live.ok ? 'on' : ''}"></span><span>${esc(planText(game))} · Masa ${esc(game.code)}${cap.db ? (live.ok ? ' · canlı' : live.err ? ' · bağlanıyor…' : '') : ''}</span>`;
     const vis = showTotals(game);
     t.innerHTML = headRow({left: homeBtn, title: isOver(game) ? 'Oyun bitti' : esc(handTitle(game, curHand(game))), sub: st,
       right: `<button class="ib" data-act="undo" aria-label="Geri al" title="Geri al" ${undoStack.length ? '' : 'disabled'}>${ic('undo')}</button>
@@ -1899,6 +2005,7 @@ function renderTop() {
         <button class="ib" data-act="eye" aria-label="${vis ? 'Toplamları gizle' : 'Toplamları göster'}" title="${vis ? 'Toplamları gizle' : 'Toplamları göster'}">${ic(vis ? 'eye' : 'eyeoff')}</button>${menuBtn}`}) + tilesRow(game);
     return;
   }
+  if (view === 'hist') { t.innerHTML = histTop(); return; }
   if (view === 'setup') {
     t.innerHTML = headRow({left: `<button class="ib" data-act="home" aria-label="Ana menü" title="Ana menü">${ic('arrowL')}</button>`, title: 'Yeni oyun', sub: '<span>Oyuncuları ve el sayısını seç</span>'});
     return;
@@ -1944,6 +2051,7 @@ function renderMain() {
   }
   if (view === 'game' && game) { m.innerHTML = gameView(game, true); return; }
   if (view === 'setup') { m.innerHTML = setupView(); return; }
+  if (view === 'hist') { m.innerHTML = histView(); return; }
   m.innerHTML = homeView();
 }
 
@@ -1955,7 +2063,7 @@ function homeView() {
   const mi = (act, icon, color, text) => `<button class="mi" data-act="${act}"><span class="mic" style="--k:${color}">${ic(icon)}</span><span class="t">${text}</span>${ic('chev')}</button>`;
   return `<div class="home">${resume}
     <button class="btn ${g ? '' : 'pri'} wide big-btn" data-act="newgame" style="margin-bottom:12px">${ic('plus')}Yeni oyun</button>
-    <div class="menu">${!NATIVE || cap.fb ? mi('join', 'qr', 'var(--blue)', 'Masaya katıl') : ''}${mi('book', 'book', 'var(--pri)', 'Kural kitapçığı')}${mi('vals', 'odul', 'var(--gold)', 'Değerleri ayarla')}${mi('settings', 'sliders', 'var(--mute)', 'Ayarlar')}${!NATIVE && cap.fb && CFG && CFG.android && CFG.android.apk && !/iPhone|iPad|iPod/i.test(navigator.userAgent) ? mi('getapp', 'phone', 'var(--pri)', 'Android uygulamasını indir') : ''}</div>
+    <div class="menu">${!NATIVE || cap.fb ? mi('join', 'qr', 'var(--blue)', 'Masaya katıl') : ''}${mi('hist', 'trophy', 'var(--gold)', 'Oyun geçmişi ve istatistik')}${mi('book', 'book', 'var(--pri)', 'Kural kitapçığı')}${mi('vals', 'odul', 'var(--gold)', 'Değerleri ayarla')}${mi('settings', 'sliders', 'var(--mute)', 'Ayarlar')}${!NATIVE && cap.fb && CFG && CFG.android && CFG.android.apk && !/iPhone|iPad|iPod/i.test(navigator.userAgent) ? mi('getapp', 'phone', 'var(--pri)', 'Android uygulamasını indir') : ''}</div>
     <p class="homefoot"><a href="${siteLink('/destek')}" target="_blank" rel="noopener">Yardım</a><a href="${siteLink('/gizlilik')}" target="_blank" rel="noopener">Gizlilik</a><a href="${siteLink('/veri-silme')}" target="_blank" rel="noopener">Veri silme</a></p></div>`;
 }
 
@@ -2012,7 +2120,7 @@ function viewerState() {
   const code = esc(joinCode || '');
   if (viewerStatus === 'nodb') return `<div class="state">${ic('info')}<h2>Canlı skor burada açılamadı</h2><p>${NATIVE ? `Masa ${code} skorunu görmek için uygulamanın Yazboz sitesine bağlı olması gerekiyor (Ayarlar › Canlı paylaşım). QR’ı telefon kamerasıyla okutursan skor tarayıcıda da açılır.` : window.claude ? `Masa ${code} skorunu görmek için bu sayfayı Claude hesabınla açman gerekiyor.` : `Sitenin canlı skor ayarları (config.js) eksik.`} Hesap makinesi ve fotoğrafla sayma yine de çalışır.</p>
     <div class="row2"><button class="btn" data-act="calc">${ic('calc')}Hesap</button><button class="btn" data-act="count">${ic('camera')}Fotoğrafla say</button></div><div class="row2"><button class="btn ghost" data-act="home" style="grid-column:span 2">Ana menü</button></div></div>`;
-  if (viewerStatus === 'missing') return `<div class="state"><h2>Bu kodla masa yok</h2><p>${code} kodlu açık bir masa bulunamadı. Kodu yazbozcuya tekrar sor.</p><div class="row2"><button class="btn pri" data-act="join">Başka kod gir</button><button class="btn ghost" data-act="home">Ana menü</button></div></div>`;
+  if (viewerStatus === 'missing') return `<div class="state"><h2>Masa bulunamadı</h2><p>${code} kodlu masa şu an görünmüyor. Kodu kontrol et; masayı açan telefonda üstte “canlı” yazıyor olmalı. Masa açılınca bu ekran kendiliğinden güncellenir.</p><div class="row2"><button class="btn pri" data-act="join">Başka kod gir</button><button class="btn ghost" data-act="home">Ana menü</button></div></div>`;
   if (viewerStatus === 'error') return `<div class="state"><h2>Masaya ulaşılamadı</h2><p>Bağlantı kurulamadı. Sayfayı yenileyip tekrar dene.</p><div class="row2"><button class="btn ghost" data-act="home" style="grid-column:span 2">Ana menü</button></div></div>`;
   return `<div class="state"><div class="spin"></div><h2>Masaya bağlanılıyor</h2><p>Masa ${code}${viewerStatus === 'slow' ? '<br>Bağlantı yavaş, skor birazdan görünecek.' : ''}</p><button class="btn ghost" data-act="home">Vazgeç</button></div>`;
 }
@@ -2029,6 +2137,10 @@ $('#app').addEventListener('click', e => {
   switch (a) {
     case 'home': if (role === 'viewer') leaveViewer(); else { view = 'home'; render(); } break;
     case 'resume': view = 'game'; render(); break;
+    case 'hist': histTab = 'list'; view = 'hist'; render(); break;
+    case 'htab': histTab = b.dataset.v === 'stats' ? 'stats' : 'list'; render(); break;
+    case 'hper': histPer = b.dataset.v; render(); break;
+    case 'hopen': openHist(b.dataset.id); break;
     case 'newgame': setup = freshSetup(); view = 'setup'; render(); break;
     case 'mode': setup.mode = b.dataset.v; renderMain(); break;
     case 'addp': if (setup.names.length < 6) { setup.names.push(''); renderMain(); $('#nm-' + (setup.names.length - 1))?.focus(); } break;
@@ -2079,7 +2191,8 @@ $('#main').addEventListener('keydown', e => {
 
 const unfinished = () => game && !game.sample && !isOver(game) && game.entries.length > 0;
 async function startGame() {
-  if (unfinished() && !(await ask('Devam eden oyun var', 'Yeni oyun başlarsa devam eden oyun silinir. Başlatılsın mı?', 'Yeni oyunu başlat', true))) return;
+  if (unfinished() && !(await ask('Devam eden oyun var', 'Yeni oyun başlarsa devam eden oyun yarım kalır; oyun geçmişinde görünmeye devam eder. Başlatılsın mı?', 'Yeni oyunu başlat', true))) return;
+  if (game && !game.sample) archive(game);
   const esli = setup.mode === 'esli';
   const raw = esli ? setup.teams : setup.names;
   const names = raw.map((n, i) => n.trim() || (esli ? `${i + 1}. takım` : `Oyuncu ${i + 1}`));
@@ -2114,6 +2227,23 @@ function addExtra() {
   s.body.innerHTML = `<p style="margin:4px 0 0">Bir el daha eklenecek. İstersen uzatma bitene kadar toplamları gizleyebilirsin.</p>
     <div class="row2"><button class="btn" data-a="hide">${ic('eyeoff')}Gizle ve ekle</button><button class="btn pri" data-a="add">${ic('plus')}Ekle</button></div>`;
   s.body.addEventListener('click', e => { const a = e.target.closest('[data-a]')?.dataset.a; if (a === 'add' || a === 'hide') { closeSheet(s); add(a === 'hide'); } });
+}
+
+/* Uzatma eli kaldırılabilir: eklenmiş ama henüz oynanmamış (o ele skor ya da ceza yazılmamış) olmalı */
+const canDropExtra = g => !!g && (g.extra || 0) > 0 && !g.ended && g.done < totalHands(g) && !g.entries.some(e => (e.h || 0) >= totalHands(g));
+function dropExtra() {
+  if (!canDropExtra(game)) { toast('Oynanmış uzatma eli kaldırılamaz'); return; }
+  mutate(g => { g.extra -= 1; if (g.done >= totalHands(g)) g.reHide = false; });
+  toast('Uzatma eli kaldırıldı', undo);
+  if (isOver(game)) celebrate(game, () => openResults());
+}
+/* Oyunu erken bitir: kalan eller oynanmaz, şu anki toplamlara göre kazanan ilan edilir */
+async function endGame() {
+  const g = game; if (!g || isOver(g) || g.done < 1) return;
+  const ok = await ask('Oyunu bitir', `Oyun ${g.done}. elden sonra, şu anki toplamlarla bitecek ve kazanan ilan edilecek. Kalan eller oynanmayacak.`, 'Oyunu bitir');
+  if (!ok || !game || isOver(game)) return;
+  mutate(x => { x.ended = true; });
+  celebrate(game, () => openResults());
 }
 
 /* ---------- paneller ---------- */
@@ -2189,7 +2319,7 @@ const kpShow = (st, fb) => st.buf === '' && st.neg ? '−' : st.buf !== '' ? fmt
 /* ---------- El gir ---------- */
 function openEl() {
   if (!game) return;
-  if (isOver(game)) { toast('Oyun bitti. Uzatma eli ekleyebilirsin.'); openResults(); return; }
+  if (isOver(game)) { toast(game.ended ? 'Oyun bitirildi.' : 'Oyun bitti. Uzatma eli ekleyebilirsin.'); openResults(); return; }
   const g = game, n = g.sides.length, h = curHand(g);
   const st = {vals: Array(n).fill(null), labs: Array(n).fill(''), act: 0, buf: '', neg: false};
   const s = openSheet({title: handTitle(g, h) + ' · el gir'});
@@ -2366,13 +2496,15 @@ function openResults() {
     const t = totals(g2), vis = showTotals(g2) || isOver(g2);
     const order = g2.sides.map((x, i) => i).sort((a, b) => t[a] - t[b]);
     s.body.innerHTML = `${vis ? `<div class="rank">${order.map((i, r) => `<div class="rk ${r === 0 ? 'first' : ''}"><span class="n num">${r + 1}</span>${tb(g2, i, 'lg')}<b>${esc(sideName(g2, i))}${r === 0 ? `<small>${isOver(g2) ? 'Kazanan' : 'Önde'}</small>` : ''}</b><span class="v num">${fmt(t[i])}</span></div>`).join('')}</div>` : '<p class="empty">Toplamlar şimdilik gizli.</p>'}
-      ${isAdmin() ? `<div class="row2"><button class="btn" data-a="extra">${ic('plus')}Uzatma eli</button><button class="btn" data-a="copy">${ic('copy')}Kopyala</button></div>
+      ${isAdmin() ? `<div class="row2">${g2.ended ? `<button class="btn" data-a="unend">${ic('play')}Oyuna devam et</button>` : canDropExtra(g2) ? `<button class="btn" data-a="dropx">${ic('minus')}Uzatmayı kaldır</button>` : `<button class="btn" data-a="extra">${ic('plus')}Uzatma eli</button>`}<button class="btn" data-a="copy">${ic('copy')}Kopyala</button></div>
       <button class="btn pri wide" style="margin-top:8px" data-a="new">Yeni oyun</button>` : ''}`;
   }
   s.redraw = draw;
   s.body.addEventListener('click', e => {
     const a = e.target.closest('[data-a]')?.dataset.a;
     if (a === 'extra') { closeSheet(s); addExtra(); }
+    if (a === 'dropx') { closeSheet(s); dropExtra(); }
+    if (a === 'unend') { closeSheet(s); mutate(x => { delete x.ended; }); toast('Oyun devam ediyor', undo); }
     if (a === 'copy') copyText(scoreText(), s.body);
     if (a === 'new') { closeAll(); setup = freshSetup(); view = 'setup'; render(); }
   });
@@ -2454,6 +2586,12 @@ async function fetchSiteConfig(site) {
   LS.set('yb.cfg', c);
   return c;
 }
+// Takılan bir istek (zayıf bağlantı) sonraki gönderimleri bekletmesin: 15 sn'de vazgeçilir, sonra yeniden denenir
+function tfetch(u, o = {}, ms = 15000) {
+  const ac = typeof AbortController === 'function' ? new AbortController() : null;
+  const t = ac ? setTimeout(() => ac.abort(), ms) : 0;
+  return fetch(u, ac ? Object.assign({}, o, {signal: ac.signal}) : o).finally(() => clearTimeout(t));
+}
 function makeFB(c) {
   const key = c.firebase.apiKey, base = c.firebase.databaseURL.replace(/\/+$/, '');
   const AUTH = c.firebase.authURL || 'https://identitytoolkit.googleapis.com/v1', TOK = c.firebase.tokenURL || 'https://securetoken.googleapis.com/v1';
@@ -2465,12 +2603,12 @@ function makeFB(c) {
     if (pend) return pend;
     pend = (async () => {
       if (au && au.rt) {
-        const r = await fetch(`${TOK}/token?key=${encodeURIComponent(key)}`, {method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body: 'grant_type=refresh_token&refresh_token=' + encodeURIComponent(au.rt)});
+        const r = await tfetch(`${TOK}/token?key=${encodeURIComponent(key)}`, {method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body: 'grant_type=refresh_token&refresh_token=' + encodeURIComponent(au.rt)});
         if (r.ok) { const j = await r.json(); au = {base, uid: j.user_id, rt: j.refresh_token, it: j.id_token, exp: Date.now() + (+j.expires_in || 3600) * 1000}; LS.set('yb.fbauth', au); return au.it; }
         if (r.status !== 400) throw {code: 'net'};
       }
-      const r = await fetch(`${AUTH}/accounts:signUp?key=${encodeURIComponent(key)}`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: '{"returnSecureToken":true}'});
-      if (!r.ok) throw {code: 'auth'};
+      const r = await tfetch(`${AUTH}/accounts:signUp?key=${encodeURIComponent(key)}`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: '{"returnSecureToken":true}'});
+      if (!r.ok) throw {code: 'auth', status: r.status};
       const j = await r.json();
       au = {base, uid: j.localId, rt: j.refreshToken, it: j.idToken, exp: Date.now() + (+j.expiresIn || 3600) * 1000}; LS.set('yb.fbauth', au);
       return au.it;
@@ -2478,9 +2616,14 @@ function makeFB(c) {
     try { return await pend; } finally { pend = null; }
   }
   const url = (path, auth) => `${base}/${path}.json${auth ? '?auth=' + encodeURIComponent(auth) : ''}`;
-  const fail = r => ({code: r.status === 401 || r.status === 403 ? 'denied' : 'net'});
-  async function put(path, val) { const t = await token(); const r = await fetch(url(path, t), {method: 'PUT', body: JSON.stringify(val)}); if (!r.ok) throw fail(r); }
-  async function get(path) { const r = await fetch(url(path)); if (!r.ok) throw fail(r); return r.json(); }
+  const fail = r => ({code: r.status === 401 || r.status === 403 ? 'denied' : 'net', status: r.status});
+  async function put(path, val) {
+    const t = await token();
+    const r = await tfetch(url(path, t), {method: 'PUT', body: JSON.stringify(val)});
+    if (r.status === 401 && au) { au.it = null; au.exp = 0; } // süresi dolmuş kimlik: bir dahakinde yenilenir
+    if (!r.ok) throw fail(r);
+  }
+  async function get(path) { const r = await tfetch(url(path)); if (!r.ok) throw fail(r); return r.json(); }
   function stream(path, onData, onErr) {
     let es = null, node = null, closed = false, retry = null;
     const setAt = (pth, v) => {
@@ -2653,6 +2796,17 @@ function startViewer(code) {
   render();
   if (cap.ready) watch();
 }
+// Masa henüz yoksa (yazbozcunun telefonu masayı daha göndermediyse) birkaç saniyede bir yeniden bakılır
+let missT = 0;
+function pollMissing() {
+  clearTimeout(missT);
+  const code = joinCode;
+  missT = setTimeout(async () => {
+    if (role !== 'viewer' || joinCode !== code || viewerStatus !== 'missing' || !cap.db) return;
+    try { const sn = await cap.db.doc('tables/' + code).get(); if (sn.exists && joinCode === code && viewerStatus === 'missing') { watch(); return; } } catch (e) {}
+    pollMissing();
+  }, 4000);
+}
 function watch() {
   if (unsubV) { try { unsubV(); } catch (e) {} unsubV = null; }
   if (!cap.db) { viewerStatus = 'nodb'; render(); return; }
@@ -2661,7 +2815,7 @@ function watch() {
   try {
     unsubV = cap.db.doc('tables/' + joinCode).onSnapshot(snap => {
       clearTimeout(timer);
-      if (!snap.exists) { if (!snap.metadata || !snap.metadata.fromCache) viewerStatus = 'missing'; }
+      if (!snap.exists) { if (!snap.metadata || !snap.metadata.fromCache) { viewerStatus = 'missing'; pollMissing(); } }
       else { const d = snap.data(); if (d && d.game) { const was = remote && remote.game && isOver(remote.game);
         remote = {game: migrate(clone(d.game)), adminId: d.adminId || null}; viewerStatus = 'ok';
         if (remote.game && isOver(remote.game) && remote.game.entries.length && was === false) setTimeout(() => { if (role === 'viewer' && remote && isOver(remote.game)) celebrate(remote.game, null); }, 50);
@@ -3498,12 +3652,14 @@ function openMenu() {
   const items = viewer
     ? [['home', 'home', 'Ana menü'], ['book', 'book', 'Kural kitapçığı'], ['calc', 'calc', 'Hesap makinesi'], ['camera', 'count', 'Fotoğrafla say'], ['sliders', 'settings', 'Ayarlar'], ['exit', 'leave', 'Masadan ayrıl']]
     : [['home', 'home', 'Ana menü'], ['book', 'book', 'Kural kitapçığı'], ['odul', 'vals', 'Değerleri ayarla'], ['calc', 'calc', 'Hesap makinesi'], ['camera', 'count', 'Fotoğrafla say'], ['pencil', 'edit', 'Kayıtları düzelt'], ['trophy', 'results', 'Sıralama'], ['sliders', 'settings', 'Ayarlar'], ['plus', 'new', 'Yeni oyun']];
+  if (!viewer && game && canDropExtra(game)) items.splice(items.length - 2, 0, ['minus', 'dropx', 'Uzatma elini kaldır']);
+  if (!viewer && game && !isOver(game) && game.done >= 1) items.splice(items.length - 1, 0, ['trophy', 'end', 'Oyunu bitir']);
   s.body.innerHTML = `<div class="menu">${items.map(([i, a, l]) => `<button class="mi ${a === 'leave' ? 'dg' : ''}" data-a="${a}"><span class="mic" style="--k:${a === 'leave' ? 'var(--red)' : a === 'vals' ? 'var(--gold)' : 'var(--pri)'}">${ic(i)}</span><span class="t">${l}</span>${ic('chev')}</button>`).join('')}</div>`;
   s.body.addEventListener('click', e => {
     const a = e.target.closest('[data-a]')?.dataset.a; if (!a) return;
     closeSheet(s);
     ({home: () => { if (viewer) leaveViewer(); else { view = 'home'; render(); } }, book: () => openBook(), vals: () => openValues(), calc: () => openCalc(), count: () => openCount({}), edit: () => openRecords(), results: () => openResults(), settings: () => openSettings(), leave: () => leaveViewer(),
-      new: () => { setup = freshSetup(); view = 'setup'; render(); }})[a]();
+      new: () => { setup = freshSetup(); view = 'setup'; render(); }, end: () => endGame(), dropx: () => dropExtra()})[a]();
   });
 }
 function openSettings() {
@@ -3511,6 +3667,9 @@ function openSettings() {
   function draw() {
     s.body.innerHTML = `<div class="lbl">Tema</div>
       <div class="seg" style="--n:3">${[['auto', 'Otomatik'], ['light', 'Açık'], ['dark', 'Koyu']].map(([v, l]) => `<button class="${prefs.theme === v ? 'on' : ''}" data-a="theme" data-v="${v}">${l}</button>`).join('')}</div>
+      <div class="lbl">Skor tablosu</div>
+      <div class="tog"><div><b>Farkı göster</b><small>Herkesin bir üstündekine farkı, liderin ne kadar önde olduğu</small></div><button class="sw ${prefs.fark !== false ? 'on' : ''}" data-a="fark" role="switch" aria-checked="${prefs.fark !== false}" aria-label="Farkı göster"></button></div>
+      <div class="tog"><div><b>Ödet</b><small>Son iki oyuncunun farkının yanına “öder” yazılır</small></div><button class="sw ${prefs.odet ? 'on' : ''}" data-a="odet" role="switch" aria-checked="${!!prefs.odet}" aria-label="Ödet"></button></div>
       <div class="lbl">Masa</div>
       <div class="menu"><button class="mi" data-a="book"><span class="mic" style="--k:var(--pri)">${ic('book')}</span><span class="t">Kural kitapçığı</span>${ic('chev')}</button>
         ${role !== 'viewer' ? `<button class="mi" data-a="vals"><span class="mic" style="--k:var(--gold)">${ic('odul')}</span><span class="t">Değerleri ayarla</span>${ic('chev')}</button>` : ''}
@@ -3527,6 +3686,8 @@ function openSettings() {
     const b = e.target.closest('[data-a]'); if (!b) return;
     const a = b.dataset.a;
     if (a === 'theme') { prefs.theme = b.dataset.v; savePrefs(); curTheme = ''; applyTheme(); draw(); toast(b.dataset.v === 'auto' ? 'Tema cihaza göre' : b.dataset.v === 'dark' ? 'Koyu tema' : 'Açık tema'); }
+    if (a === 'fark') { prefs.fark = prefs.fark === false; savePrefs(); draw(); render(); }
+    if (a === 'odet') { prefs.odet = !prefs.odet; if (prefs.odet) prefs.fark = true; savePrefs(); draw(); render(); }
     if (a === 'vals') openValues();
     if (a === 'book') openBook();
     if (a === 'live') openLive();
@@ -3553,19 +3714,39 @@ const ONB = [
 ];
 function showOnb() {
   const o = $('#onb'); let i = 0;
-  const draw = () => {
+  const draw = (dir = 0) => {
     const c = ONB[i];
     o.innerHTML = `<div class="ob"><div class="ob-top">${i < ONB.length - 1 ? '<button class="btn sm ghost" data-o="skip">Geç</button>' : ''}</div>
-      <div class="ob-art">${sv(c.art)}</div><h2>${c.t}</h2><p>${c.p}</p>
+      <div class="ob-slide${dir > 0 ? ' in-r' : dir < 0 ? ' in-l' : ''}"><div class="ob-art">${sv(c.art)}</div><h2>${c.t}</h2><p>${c.p}</p></div>
       <div class="ob-dots">${ONB.map((x, j) => `<i class="${j === i ? 'on' : ''}"></i>`).join('')}</div>
       <div class="row2" style="margin-top:0">${i > 0 ? '<button class="btn" data-o="prev">Geri</button>' : '<span></span>'}<button class="btn pri" data-o="next">${i < ONB.length - 1 ? 'İleri' : 'Başla'}</button></div></div>`;
   };
+  const go = d => { const j = Math.max(0, Math.min(ONB.length - 1, i + d)); if (j === i) return false; i = j; draw(d); return true; };
   o.onclick = e => {
     const a = e.target.closest('[data-o]')?.dataset.o; if (!a) return;
-    if (a === 'prev') { i = Math.max(0, i - 1); draw(); return; }
-    if (a === 'next' && i < ONB.length - 1) { i++; draw(); return; }
+    if (a === 'prev') { go(-1); return; }
+    if (a === 'next' && i < ONB.length - 1) { go(1); return; }
     o.hidden = true; o.innerHTML = ''; prefs.onboarded = true; savePrefs(); navSync();
   };
+  // Parmakla sağa/sola kaydırma: sayfa parmağı izler, yeterince çekilince sonraki/önceki sayfaya geçer
+  let sx = 0, sy = 0, drag = null, sl = null, pid = null;
+  o.onpointerdown = e => { if (e.target.closest('button,a')) return; pid = e.pointerId; sx = e.clientX; sy = e.clientY; drag = null; sl = o.querySelector('.ob-slide'); };
+  o.onpointermove = e => {
+    if (e.pointerId !== pid || !sl) return;
+    const dx = e.clientX - sx, dy = e.clientY - sy;
+    if (drag === null && (Math.abs(dx) > 8 || Math.abs(dy) > 8)) drag = Math.abs(dx) > Math.abs(dy);
+    if (!drag) return;
+    const edge = (dx > 0 && i === 0) || (dx < 0 && i === ONB.length - 1);
+    sl.style.transition = 'none'; sl.style.transform = `translateX(${dx * (edge ? .22 : .7)}px)`; sl.style.opacity = String(1 - Math.min(.45, Math.abs(dx) / 700));
+  };
+  const end = e => {
+    if (e.pointerId !== pid) return; pid = null;
+    if (!drag || !sl) { drag = null; return; }
+    const dx = e.clientX - sx; drag = null;
+    if ((dx < -50 && go(1)) || (dx > 50 && go(-1))) return;
+    sl.style.transition = 'transform .22s ease-out, opacity .22s'; sl.style.transform = ''; sl.style.opacity = '';
+  };
+  o.onpointerup = end; o.onpointercancel = end;
   draw(); o.hidden = false; navSync();
 }
 
@@ -3694,10 +3875,141 @@ async function afterCaps() {
   }
 }
 
+
+/* ---------- oyun geçmişi ve istatistik: telefonda saklanır (en fazla 100 oyun), sunucuya gitmez ---------- */
+const HIST_MAX = 100, DEF_NAME = /^(oyuncu \d+|\d+\. takım)$/i;
+let histTab = 'list', histPer = 'all';
+const histId = g => g.code + ':' + (g.created || 0);
+const nkey = n => String(n || '').trim().toLocaleLowerCase('tr');
+function archive(g) {
+  if (!g || g.sample || !g.entries || !g.entries.length) return;
+  const h = (LS.get('yb.hist', []) || []).filter(Boolean);
+  const rec = clone(g); delete rec.vals; delete rec.adminId;
+  const id = histId(g), k = h.findIndex(x => histId(x) === id);
+  if (k >= 0) h[k] = rec; else h.unshift(rec);
+  h.sort((a, b) => (b.created || 0) - (a.created || 0));
+  LS.set('yb.hist', h.slice(0, HIST_MAX));
+}
+function histGames() {
+  const h = (LS.get('yb.hist', []) || []).filter(Boolean);
+  if (game && !game.sample && game.entries.length) {
+    const k = h.findIndex(x => histId(x) === histId(game));
+    if (k >= 0) h[k] = clone(game); else h.unshift(clone(game));
+  }
+  return h.sort((a, b) => (b.created || 0) - (a.created || 0));
+}
+const TR_AY = ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'];
+const TR_AY_UZUN = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+const TR_GUN = ['Paz', 'Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt'];
+function histDate(ts) {
+  const d = new Date(ts || 0), now = new Date(), hm = String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+  const day = x => new Date(x.getFullYear(), x.getMonth(), x.getDate()).getTime(), diff = Math.round((day(now) - day(d)) / 864e5);
+  if (diff === 0) return 'Bugün ' + hm;
+  if (diff === 1) return 'Dün ' + hm;
+  return `${d.getDate()} ${TR_AY[d.getMonth()]}${d.getFullYear() !== now.getFullYear() ? ' ' + d.getFullYear() : ''} ${TR_GUN[d.getDay()]}`;
+}
+function histGroup(ts) {
+  const d = new Date(ts || 0), now = new Date();
+  const wk = x => { const y = new Date(x.getFullYear(), x.getMonth(), x.getDate()); y.setDate(y.getDate() - ((y.getDay() + 6) % 7)); return y.getTime(); };
+  const w = Math.round((wk(now) - wk(d)) / 6048e5);
+  if (w === 0) return 'Bu hafta';
+  if (w === 1) return 'Geçen hafta';
+  return TR_AY_UZUN[d.getMonth()] + (d.getFullYear() !== now.getFullYear() ? ' ' + d.getFullYear() : '');
+}
+function histStats(gs) {
+  const P = new Map(), streak = new Map(); let fark = null;
+  const get = n => { const k = nkey(n); if (!P.has(k)) P.set(k, {n: String(n).trim(), oyun: 0, kaz: 0, bitti: 0, ceza: 0, cezaP: 0}); return P.get(k); };
+  for (const g of [...gs].sort((a, b) => (a.created || 0) - (b.created || 0))) {
+    const t = totals(g), w = winners(g);
+    const named = g.sides.map((x, i) => ({i, n: sideName(g, i)})).filter(x => !DEF_NAME.test(x.n.trim()));
+    const winK = new Set(w.idx.map(i => nkey(sideName(g, i))));
+    for (const {i, n} of named) {
+      const p = get(n); p.oyun++;
+      if (w.idx.includes(i)) p.kaz++;
+      for (const e of g.entries) if (e.s === i) { if (e.k === 'el' && e.v < 0) p.bitti++; if (e.k === 'ceza') { p.ceza++; p.cezaP += e.v; } }
+      const k = nkey(n), st = streak.get(k) || {n: p.n, cur: 0, best: 0};
+      if (winK.has(k)) { st.cur++; st.best = Math.max(st.best, st.cur); } else st.cur = 0;
+      streak.set(k, st);
+    }
+    if (g.sides.length > 1 && w.idx.length === 1 && !DEF_NAME.test(sideName(g, w.idx[0]).trim())) {
+      const s2 = [...t].sort((a, b) => a - b), d = s2[1] - s2[0];
+      if (!fark || d > fark.d) fark = {d, n: sideName(g, w.idx[0]), at: g.created};
+    }
+  }
+  const rows = [...P.values()].sort((a, b) => b.kaz - a.kaz || b.oyun - a.oyun || a.n.localeCompare(b.n, 'tr'));
+  const top = f => rows.reduce((m, r) => f(r) > (m ? f(m) : 0) ? r : m, null);
+  const seri = [...streak.values()].reduce((m, x) => x.best >= 2 && x.best > (m ? m.best : 0) ? x : m, null);
+  return {rows, bitti: top(r => r.bitti), ceza: top(r => r.ceza), az: rows.length > 1 ? [...rows].filter(r => r.oyun >= 2).sort((a, b) => a.ceza / a.oyun - b.ceza / b.oyun)[0] : null, fark, seri};
+}
+function histTop() {
+  const all = histGames(), fin = all.filter(isOver);
+  const sub = `<span>${fin.length ? fin.length + ' oyun bitti' : 'Henüz biten oyun yok'}${all.length > fin.length ? ' · ' + (all.length - fin.length) + ' yarım' : ''}</span>`;
+  const head = headRow({left: `<button class="ib" data-act="home" aria-label="Ana menü" title="Ana menü">${ic('arrowL')}</button>`, title: 'Oyun geçmişi', sub});
+  if (histTab === 'stats') return head + `<div class="hper">${[['all', 'Tümü'], ['month', 'Bu ay'], ['last10', 'Son 10 oyun']].map(([v, l]) => `<button class="${histPer === v ? 'on' : ''}" data-act="hper" data-v="${v}">${l}</button>`).join('')}</div>`;
+  if (!fin.length) return head;
+  const st = histStats(fin), lead = st.rows[0] && st.rows[0].kaz ? st.rows[0] : null;
+  const tile = (b, l) => `<div class="htile"><b>${b}</b><small>${l}</small></div>`;
+  return head + `<div class="htiles">${tile(fin.length, 'oyun')}${lead ? tile(esc(lead.n), lead.kaz + ' kez kazandı') : tile('—', 'en çok kazanan')}${tile(fin.reduce((a, g) => a + g.done, 0), 'el oynandı')}</div>`;
+}
+function histCard(g) {
+  const over = isOver(g), cur = game && !game.sample && histId(game) === histId(g), t = totals(g), vis = showTotals(g);
+  const order = g.sides.map((x, i) => i).sort((a, b) => vis ? t[a] - t[b] : a - b), w = winners(g);
+  const tag = over ? (g.ended ? '<span class="htag off">Erken bitti</span>' : '') : cur ? '<span class="htag on">Devam ediyor</span>' : '<span class="htag off">Yarım kaldı</span>';
+  const line = over ? `${CROWN}<span>${esc(w.idx.map(i => sideName(g, i)).join(' ve '))} ${w.idx.length > 1 ? 'berabere' : 'kazandı'}</span>`
+    : vis && g.done ? `<small>Şu an önde:</small><span>${esc(sideName(g, order[0]))}</span>` : `<small>${g.done ? 'Toplamlar gizli' : 'Henüz el oynanmadı'}</small>`;
+  const plan = `${g.mode === 'esli' ? 'Eşli' : 'Tekli'} · ${over && !g.ended ? totalHands(g) + ' el' : g.done + '/' + totalHands(g) + ' el'}`;
+  return `<button class="hcard" data-act="hopen" data-id="${esc(histId(g))}"><span class="hd"><span>${histDate(g.created)} · ${plan}</span>${tag}</span>
+    <span class="hw">${line}</span>
+    <span class="hs">${order.map((i, r) => `<span><i style="color:${sideColor(g, i) === '#1b1d21' ? 'var(--ink)' : sideColor(g, i)}">${esc(sideName(g, i))}</i><b>${vis ? fmt(t[i]) : '•••'}</b></span>`).join('')}</span></button>`;
+}
+function histView() {
+  const seg = `<div class="seg" style="--n:2">${[['list', 'Oyunlar'], ['stats', 'İstatistik']].map(([v, l]) => `<button class="${histTab === v ? 'on' : ''}" data-act="htab" data-v="${v}">${l}</button>`).join('')}</div>`;
+  const all = histGames();
+  if (!all.length) return seg + `<p class="empty" style="margin-top:28px">Henüz kayıtlı oyun yok. Oynadığın oyunlar burada birikir; istatistikler de buradan çıkar.</p>`;
+  if (histTab === 'list') {
+    let out = '', last = '';
+    for (const g of all) { const grp = histGroup(g.created); if (grp !== last) { out += `<div class="hgrp">${grp}</div>`; last = grp; } out += histCard(g); }
+    return seg + out;
+  }
+  let fin = all.filter(isOver);
+  if (histPer === 'month') { const n = new Date(), m0 = new Date(n.getFullYear(), n.getMonth(), 1).getTime(); fin = fin.filter(g => (g.created || 0) >= m0); }
+  if (histPer === 'last10') fin = fin.slice(0, 10);
+  const st = histStats(fin);
+  if (!st.rows.length) return seg + `<p class="empty" style="margin-top:28px">${fin.length ? 'Oyuncu adı girilmiş biten oyun yok. İstatistik için oyuncuların adını yazarak oyna.' : 'Bu dönemde biten oyun yok.'}</p>`;
+  const mx = f => Math.max(...st.rows.map(f));
+  const kMax = mx(r => r.kaz), bMax = mx(r => r.bitti), cMax = mx(r => r.ceza);
+  const cell = (v, best, worst) => `<td class="${best && v > 0 ? 'best' : worst && v > 0 ? 'worst' : ''}">${v}</td>`;
+  const table = `<table class="hst"><thead><tr><th>Oyuncu</th><th>Oyun</th><th>Kazandı</th><th>Bitti</th><th>Ceza</th></tr></thead><tbody>${st.rows.map(r => `<tr><td>${esc(r.n)}</td><td class="mut">${r.oyun}</td>${cell(r.kaz, r.kaz === kMax)}${cell(r.bitti, r.bitti === bMax)}${cell(r.ceza, false, r.ceza === cMax && st.rows.length > 1)}</tr>`).join('')}</tbody></table>`;
+  const rec = [];
+  if (st.bitti && st.bitti.bitti) rec.push(['En çok biten', st.bitti.n, `${st.bitti.bitti} el bitirdi`, 'var(--green)']);
+  if (st.ceza && st.ceza.ceza) rec.push(['Ceza kralı', st.ceza.n, `${st.ceza.ceza} ceza · ${fmt(st.ceza.cezaP)} puan`, 'var(--red)']);
+  if (st.fark && st.fark.d > 0) { const d = new Date(st.fark.at); rec.push(['En büyük fark', st.fark.n, `${fmt(st.fark.d)} farkla · ${d.getDate()} ${TR_AY[d.getMonth()]}`, 'var(--ink)']); }
+  if (st.seri) rec.push(['En uzun seri', st.seri.n, `${st.seri.best} oyun üst üste`, 'var(--ink)']);
+  if (rec.length < 4 && st.az && st.az !== st.ceza) rec.push(['En az ceza', st.az.n, `oyun başına ${(st.az.ceza / st.az.oyun).toLocaleString('tr', {maximumFractionDigits: 1})}`, 'var(--blue)']);
+  return seg + table + `<p class="fine" style="margin:8px 2px 0">${fin.length} biten oyun · oyuncular adlarına göre eşleşir</p>` +
+    (rec.length ? `<div class="hgrp">Rekorlar</div><div class="hrec">${rec.slice(0, 4).map(([a, n, v, c]) => `<div><small>${a}</small><b>${esc(n)}</b><span style="color:${c}">${v}</span></div>`).join('')}</div>` : '');
+}
+function openHist(id) {
+  if (game && !game.sample && histId(game) === id) { view = 'game'; render(); return; }
+  const g = (LS.get('yb.hist', []) || []).find(x => x && histId(x) === id); if (!g) return;
+  g.vals = clone(prefs.vals);
+  const s = openSheet({title: `${histDate(g.created)} · ${g.mode === 'esli' ? 'Eşli' : 'Tekli'}`});
+  const t = totals(g), order = g.sides.map((x, i) => i).sort((a, b) => t[a] - t[b]), over = isOver(g);
+  s.body.innerHTML = `<div class="rank">${order.map((i, r) => `<div class="rk ${r === 0 && over ? 'first' : ''}"><span class="n num">${r + 1}</span>${tb(g, i, 'lg')}<b>${esc(sideName(g, i))}${r === 0 && over ? '<small>Kazanan</small>' : ''}</b><span class="v num">${fmt(t[i])}</span></div>`).join('')}</div>
+    <div class="hdet">${gameView(g, false).replace(/^[\s\S]*?(?=<div class="tw">)/, '').replace(/<tr class="fut">[\s\S]*?<\/tr>/g, '')}</div>
+    <div class="row2"><span></span><button class="btn" data-a="del">${ic('trash')}Geçmişten sil</button></div>`;
+  s.body.addEventListener('click', async e => {
+    if (!e.target.closest('[data-a="del"]')) return;
+    if (!(await ask('Oyunu sil', 'Bu oyun geçmişten ve istatistiklerden silinecek.', 'Sil', true))) return;
+    LS.set('yb.hist', (LS.get('yb.hist', []) || []).filter(x => x && histId(x) !== id));
+    closeAll(); render(); toast('Oyun geçmişten silindi');
+  });
+}
+
 /* ---------- başlat ---------- */
 function start(data) {
   if (data && data.game !== undefined) { game = data.game; role = data.role || null; joinCode = data.joinCode || null; view = data.view || 'home'; }
-  else view = game ? 'game' : 'home';
+  else view = 'home'; // açılışta ana menü; devam eden oyun oradaki "Devam et" ile açılır
   game = migrate(game);
   if (!role && game) role = 'admin';
   setup = freshSetup();

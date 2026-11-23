@@ -17,7 +17,7 @@ android {
         targetSdk 36          // Google Play: 31 Ağustos 2026'dan beri yeni uygulamalar ve güncellemeler için en az 36
         // GitHub'da her derlemede kendiliğinden artar (10 + çalıştırma no). Android Studio'da elle derlersen bu sayıyı artır.
         versionCode((System.getenv('YAZBOZ_VERSION_CODE') ?: '10') as int)
-        versionName '1.0.1'
+        versionName '1.1.0'
         // QR bağlantıları (https://yazboz101.com/m/KOD) uygulama yüklüyse doğrudan uygulamada açılsın
         manifestPlaceholders = [siteHost: 'yazboz101.com']
     }
