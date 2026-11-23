@@ -81,6 +81,7 @@ async function baglan(etiket, sureMs = 25000) {
             const c = await wsAc(pg.webSocketDebuggerUrl);
             c.on(m => {
               const p = m.params || {};
+              if (JSON.stringify(p).includes('favicon')) return; // uygulamada site simgesi yok, önemsiz
               if (m.method === 'Runtime.consoleAPICalled' && ['error', 'warning', 'assert'].includes(p.type)) {
                 S.konsol.push(`[${etiket}] ${p.type}: ` + (p.args || []).map(a => a.value ?? a.description ?? '').join(' '));
               } else if (m.method === 'Runtime.exceptionThrown') {
@@ -109,7 +110,7 @@ async function baglan(etiket, sureMs = 25000) {
 const DURUM = `JSON.stringify((() => {
   const v = e => !!e && !e.hidden && e.getClientRects().length > 0;
   return { yuklenme: document.readyState, tanitim: v(document.querySelector('#onb')),
-    anaSayfa: !!document.querySelector('[data-act=newgame]'), oyunEkrani: !!document.querySelector('[data-act=el]'),
+    anaSayfa: !!document.querySelector('[data-act=newgame]'), devamEt: !!document.querySelector('[data-act=resume]'), oyunEkrani: !!document.querySelector('[data-act=el]'),
     yaziUzunlugu: (document.body && document.body.innerText.length) || 0, sayfaSuresiMs: Math.round(performance.now()),
     tema: document.documentElement.dataset.theme || document.body.className || '' };
 })())`;
@@ -173,7 +174,7 @@ async function main() {
   c = await baglan('kapat-aç');
   let d = await durum(c);
   asama('2 kapat-aç', { acilisMs: ms, ...d });
-  if (!d.oyunEkrani) S.sorunlar.push('Kapatıp açınca oyun ekranı geri gelmedi');
+  if (!d.devamEt) S.sorunlar.push('Kapatıp açınca ana menüde "Devam et" görünmedi (oyun kaybolmuş olabilir)');
   if (c) c.close();
 
   // 3) Sil-yükle-aç: Play'deki beyaz ekran sorununun denemesi

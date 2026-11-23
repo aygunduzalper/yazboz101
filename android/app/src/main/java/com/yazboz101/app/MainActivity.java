@@ -93,6 +93,8 @@ public class MainActivity extends Activity {
         // Sadece test (debug) sürümünde: otomatik testler sayfanın içine bakabilsin. Play'deki sürümü etkilemez.
         if ((getApplicationInfo().flags & android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE) != 0) WebView.setWebContentsDebuggingEnabled(true);
         web = new WebView(this);
+        // Sayfa çizilene kadar beyaz değil, uygulamanın zemin rengi görünsün (kâğıt / gece siyahı)
+        web.setBackgroundColor(night() ? BG_DARK : BG_LIGHT);
         WebSettings s = web.getSettings();
         s.setJavaScriptEnabled(true);
         s.setDomStorageEnabled(true);
