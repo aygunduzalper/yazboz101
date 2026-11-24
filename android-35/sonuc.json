@@ -1,0 +1,159 @@
+{
+  "platform": "android",
+  "cihaz": "sdk_gphone64_x86_64 · Android 15 · 1080x2400",
+  "webview": "com.google.android.webview, 124.0.6367.219",
+  "asamalar": {
+    "1 ilk açılış": {
+      "acilisMs": 4098,
+      "yuklenme": "complete",
+      "tanitim": true,
+      "anaSayfa": true,
+      "devamEt": false,
+      "oyunEkrani": false,
+      "yaziUzunlugu": 262,
+      "sayfaSuresiMs": 5313,
+      "tema": ""
+    },
+    "1b masa sunucuda": {
+      "kod": "NQWX",
+      "ayar": false,
+      "not": "canlı paylaşım ayarı yok"
+    },
+    "2 kapat-aç": {
+      "acilisMs": 4037,
+      "yuklenme": "complete",
+      "tanitim": false,
+      "anaSayfa": true,
+      "devamEt": true,
+      "oyunEkrani": false,
+      "yaziUzunlugu": 263,
+      "sayfaSuresiMs": 5805,
+      "tema": ""
+    },
+    "3 sil-yükle-aç": {
+      "acilisMs": 2569,
+      "yuklenme": "complete",
+      "tanitim": true,
+      "anaSayfa": true,
+      "devamEt": false,
+      "oyunEkrani": false,
+      "yaziUzunlugu": 275,
+      "sayfaSuresiMs": 11824,
+      "tema": "",
+      "uyariPenceresi": false
+    },
+    "4 gece modu": {
+      "yuklenme": "complete",
+      "tanitim": true,
+      "anaSayfa": true,
+      "devamEt": false,
+      "oyunEkrani": false,
+      "yaziUzunlugu": 275,
+      "sayfaSuresiMs": 6048,
+      "tema": ""
+    },
+    "5 internetsiz açılış": {
+      "acilisMs": 1720,
+      "yuklenme": "complete",
+      "tanitim": true,
+      "anaSayfa": true,
+      "devamEt": false,
+      "oyunEkrani": false,
+      "yaziUzunlugu": 275,
+      "sayfaSuresiMs": 5300,
+      "tema": ""
+    }
+  },
+  "senaryo": {
+    "platform": "android",
+    "ok": true,
+    "adimlar": [
+      {
+        "ad": "ilk ekran geldi",
+        "ms": 0
+      },
+      {
+        "ad": "tanıtım",
+        "ms": 3891
+      },
+      {
+        "ad": "ana sayfa",
+        "ms": 3891
+      },
+      {
+        "ad": "yeni oyun kurulumu",
+        "ms": 4886
+      },
+      {
+        "ad": "oyunu başlat",
+        "ms": 9791
+      },
+      {
+        "ad": "ipucunu geç",
+        "ms": 13155
+      },
+      {
+        "ad": "1. el girişi",
+        "ms": 18142
+      },
+      {
+        "ad": "2. el girişi",
+        "ms": 21419
+      },
+      {
+        "ad": "3. el girişi",
+        "ms": 25056
+      },
+      {
+        "ad": "ceza penceresi",
+        "ms": 30104
+      },
+      {
+        "ad": "paylaş penceresi",
+        "ms": 41672
+      },
+      {
+        "ad": "ayarlar",
+        "ms": 43567
+      },
+      {
+        "ad": "oyunu erken bitir",
+        "ms": 47851
+      },
+      {
+        "ad": "oyun geçmişi",
+        "ms": 51000
+      }
+    ],
+    "hatalar": [],
+    "bilgi": {
+      "tarayici": "Mozilla/5.0 (Linux; Android 15; sdk_gphone64_x86_64 Build/AE3A.240806.043; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/124.0.6367.219 Mobile Safari/537.36",
+      "ekran": "412x839 @2.625x",
+      "ilkEkranMs": 5325,
+      "canli": {
+        "ayar": false,
+        "sunucu": false,
+        "kimlik": false,
+        "gonderildi": false,
+        "hata": null,
+        "kod": "NQWX",
+        "rol": "admin",
+        "izleyici": "idle",
+        "katilim": null,
+        "gorunum": "game"
+      },
+      "canliPaylasim": "yok",
+      "canliPaylasimMs": 10055,
+      "toplamMs": 51000
+    }
+  },
+  "konsol": [
+    "[ilk açılış] network: Failed to load resource: net::ERR_INTERNET_DISCONNECTED https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap",
+    "[ilk açılış] network: Failed to load resource: net::ERR_INTERNET_DISCONNECTED https://yazboz101.com/surum.json?t=1795541422725",
+    "[ilk açılış] network: Failed to load resource: net::ERR_INTERNET_DISCONNECTED https://yazboz101.com/config.js",
+    "[internetsiz] network: Failed to load resource: net::ERR_INTERNET_DISCONNECTED https://yazboz101.com/surum.json?t=1795541525336"
+  ],
+  "sorunlar": [
+    "Uygulama çöktü (logcat.txt içinde AndroidRuntime satırları)"
+  ]
+}

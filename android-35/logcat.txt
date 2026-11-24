@@ -1,0 +1,599 @@
+11-24 17:32:04.500 E/MobileVisionBase( 4897): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:04.500 E/MobileVisionBase( 4897): 	at com.google.mlkit.common.sdkinternal.MlKitThreadPool.zzd(com.google.mlkit:common@@18.11.0:2)
+11-24 17:32:04.500 E/MobileVisionBase( 4897): 	at com.google.mlkit.common.sdkinternal.zzk.run(Unknown Source:2)
+11-24 17:32:04.500 E/MobileVisionBase( 4897): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:04.506 W/ziparchive(  567): Unable to open '/data/app/~~48di2-_8ArnJKBqBcyuusA==/com.aygunduz.yazboz101-6ycZJgXzHBC-rhDv2-CADw==/base.dm': No such file or directory
+11-24 17:32:04.549 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:04.563 W/InputManager-JNI(  567): Input channel object 'd64d87d Splash Screen com.aygunduz.yazboz101 (client)' was disposed without first being removed with the input manager!
+11-24 17:32:04.607 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:04.608 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:04.613 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:04.666 W/PackageConfigPersister(  567): App-specific configuration not found for packageName: com.aygunduz.yazboz101 and userId: 0
+11-24 17:32:04.670 W/unduz.yazboz101( 4897): Verification of void com.google.android.gms.common.internal.safeparcel.SafeParcelWriter.writeParcelList(android.os.Parcel, int, java.util.List, boolean) took 136.531ms (424.81 bytecodes/s) (3256B approximate peak alloc)
+11-24 17:32:04.777 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.matchstick [CONTEXT service_id=204 ]
+11-24 17:32:04.777 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.matchstick
+11-24 17:32:04.777 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:04.777 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:04.777 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:04.777 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:04.777 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:04.777 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:04.777 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:04.777 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:04.777 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:04.777 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:04.777 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:04.901 W/ActivityManager(  567): Unable to start service Intent { act=com.google.android.finsky.BIND_PLAY_MODULE_SERVICE pkg=com.android.vending } U=0: not found
+11-24 17:32:04.912 E/ZappPhoneskyConn( 1378): Unable to bind to Phonesky
+11-24 17:32:04.912 W/Pay     ( 1378): Active account was null, notification task will be cancelled. [CONTEXT service_id=198 ]
+11-24 17:32:04.913 W/ActivityManager(  567): Unable to start service Intent { act=com.google.android.finsky.BIND_PLAY_MODULE_SERVICE pkg=com.android.vending } U=0: not found
+11-24 17:32:04.913 E/ZappPhoneskyConn( 1378): Unable to bind to Phonesky
+11-24 17:32:04.913 E/DynamicModuleDownloader( 1378): Zapp module request failed: null
+11-24 17:32:04.969 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.clearcut.public [CONTEXT service_id=204 ]
+11-24 17:32:04.969 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.clearcut.public
+11-24 17:32:04.969 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:04.969 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:04.969 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:04.969 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:04.969 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:04.969 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:04.969 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:04.969 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:04.969 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:04.969 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:04.969 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:04.970 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:04.970 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:04.971 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:04.972 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:05.004 W/ZappDownloader( 1378): No successful Zapp module downloads for requested modules [VisionOcr.optional:242335100000:permitMetered, MlkitOcrCommon.optional:242335100800:permitMetered, TfliteDynamiteDynamite.integ:264010405100800:permitMetered].
+11-24 17:32:05.006 W/ChimeraConfigService( 1378): Retry attempt was throttled. [CONTEXT service_id=264 ]
+11-24 17:32:05.013 W/.apps.messaging( 3434): Long monitor contention with owner Blocking Thread #18 (3916) at boolean dasx.k(dasl)(PG:185) waiters=1 in void dasr.run() for 968ms
+11-24 17:32:05.113 W/gle.android.gms( 1378): ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~48di2-_8ArnJKBqBcyuusA==/com.aygunduz.yazboz101-6ycZJgXzHBC-rhDv2-CADw==/base.apk' with 1 weak references
+11-24 17:32:05.128 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms [CONTEXT service_id=204 ]
+11-24 17:32:05.128 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms
+11-24 17:32:05.128 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:05.128 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:05.128 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:05.128 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:05.128 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:05.128 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:05.128 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:05.128 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:05.128 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:05.128 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:05.128 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:05.160 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:05.160 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:05.160 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:05.164 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:05.171 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.autofill [CONTEXT service_id=204 ]
+11-24 17:32:05.171 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.autofill
+11-24 17:32:05.171 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:05.171 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:05.171 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:05.171 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:05.171 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:05.171 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:05.171 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:05.171 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:05.171 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:05.171 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:05.171 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:05.174 E/ctxmgr  ( 1174): [WorkManager] Ongoing task not found: HandleSystemStateOnReceive [CONTEXT service_id=47 ]
+11-24 17:32:05.210 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.home [CONTEXT service_id=204 ]
+11-24 17:32:05.210 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.home
+11-24 17:32:05.210 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:05.210 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:05.210 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:05.210 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:05.210 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:05.210 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:05.210 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:05.210 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:05.210 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:05.210 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:05.210 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:05.267 W/SystemServiceRegistry( 1378): No service published for: thread_network
+11-24 17:32:05.323 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.icing [CONTEXT service_id=204 ]
+11-24 17:32:05.323 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.icing
+11-24 17:32:05.323 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:05.323 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:05.323 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:05.323 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:05.323 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:05.323 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:05.323 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:05.323 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:05.323 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:05.323 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:05.323 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:05.328 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.playlog.uploader [CONTEXT service_id=204 ]
+11-24 17:32:05.328 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.playlog.uploader
+11-24 17:32:05.328 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:05.328 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:05.328 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:05.328 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:05.328 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:05.328 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:05.328 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:05.328 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:05.328 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:05.328 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:05.328 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:05.435 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:05.435 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:05.436 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:05.437 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:05.442 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.smartdevice [CONTEXT service_id=204 ]
+11-24 17:32:05.442 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.smartdevice
+11-24 17:32:05.442 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:05.442 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:05.442 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:05.442 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:05.442 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:05.442 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:05.442 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:05.442 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:05.442 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:05.442 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:05.442 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:05.454 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.phenotype [CONTEXT service_id=204 ]
+11-24 17:32:05.454 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.phenotype
+11-24 17:32:05.454 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:05.454 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:05.454 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:05.454 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:05.454 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:05.454 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:05.454 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:05.454 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:05.454 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:05.454 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:05.454 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:05.457 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.kids#com.google.android.gms [CONTEXT service_id=204 ]
+11-24 17:32:05.457 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.kids#com.google.android.gms
+11-24 17:32:05.457 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:05.457 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:05.457 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:05.457 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:05.457 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:05.457 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:05.457 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:05.457 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:05.457 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:05.457 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:05.457 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:05.462 W/FontLog ( 1174): Error updating last accessed time for {Google Sans, wdth 100.0, wght 500, ital 0.0, bestEffort false}. [CONTEXT service_id=132 ]
+11-24 17:32:05.462 W/FontLog ( 1174): java.lang.IllegalStateException: Cannot perform this operation because the connection pool has been closed.
+11-24 17:32:05.462 W/FontLog ( 1174): 	at android.database.sqlite.SQLiteConnectionPool.throwIfClosedLocked(SQLiteConnectionPool.java:1103)
+11-24 17:32:05.462 W/FontLog ( 1174): 	at android.database.sqlite.SQLiteConnectionPool.waitForConnection(SQLiteConnectionPool.java:794)
+11-24 17:32:05.462 W/FontLog ( 1174): 	at android.database.sqlite.SQLiteConnectionPool.acquireConnection(SQLiteConnectionPool.java:399)
+11-24 17:32:05.462 W/FontLog ( 1174): 	at android.database.sqlite.SQLiteSession.acquireConnection(SQLiteSession.java:920)
+11-24 17:32:05.462 W/FontLog ( 1174): 	at android.database.sqlite.SQLiteSession.executeForChangedRowCount(SQLiteSession.java:778)
+11-24 17:32:05.462 W/FontLog ( 1174): 	at android.database.sqlite.SQLiteStatement.executeUpdateDelete(SQLiteStatement.java:67)
+11-24 17:32:05.462 W/FontLog ( 1174): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:2207)
+11-24 17:32:05.462 W/FontLog ( 1174): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:2183)
+11-24 17:32:05.462 W/FontLog ( 1174): 	at bbkg.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):57)
+11-24 17:32:05.462 W/FontLog ( 1174): 	at angs.c(:com.google.android.gms@242335041@24.23.35 (190800-646585959):50)
+11-24 17:32:05.462 W/FontLog ( 1174): 	at angs.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):76)
+11-24 17:32:05.462 W/FontLog ( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:05.462 W/FontLog ( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:05.462 W/FontLog ( 1174): 	at anmg.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:05.462 W/FontLog ( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:05.465 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.lighter.android#com.google.android.gms [CONTEXT service_id=204 ]
+11-24 17:32:05.465 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.lighter.android#com.google.android.gms
+11-24 17:32:05.465 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:05.465 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:05.465 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:05.465 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:05.465 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:05.465 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:05.465 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:05.465 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:05.465 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:05.465 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:05.465 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:05.469 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.westworld [CONTEXT service_id=204 ]
+11-24 17:32:05.469 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.westworld
+11-24 17:32:05.469 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:05.469 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:05.469 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:05.469 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:05.469 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:05.469 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:05.469 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:05.469 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:05.469 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:05.469 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:05.469 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:05.537 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.dtdi_logging#com.google.android.gms [CONTEXT service_id=204 ]
+11-24 17:32:05.537 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.dtdi_logging#com.google.android.gms
+11-24 17:32:05.537 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:05.537 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:05.537 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:05.537 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:05.537 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:05.537 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:05.537 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:05.537 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:05.537 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:05.537 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:05.537 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:05.604 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:05.752 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:05.844 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:05.907 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:05.988 W/gclk    ( 1174): [{0}] Failed to resolve name. status={1}
+11-24 17:32:05.992 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:06.048 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.backup [CONTEXT service_id=204 ]
+11-24 17:32:06.048 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.backup
+11-24 17:32:06.048 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.048 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.048 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.048 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.048 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.048 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.048 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.048 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.048 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.048 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.048 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.069 W/gclk    ( 1174): [{0}] Failed to resolve name. status={1}
+11-24 17:32:06.073 W/ChimeraUtils( 1378): Module com.google.android.gms.backup_g1 missing resource null(0)
+11-24 17:32:06.074 W/ChimeraUtils( 1378): Module com.google.android.gms.backup_g1 missing resource null(0)
+11-24 17:32:06.076 W/Backup  ( 1378): [GmsBackupSchedulerIO] Intent not supported: com.google.android.gms.phenotype.com.google.android.gms.backup.COMMITTED
+11-24 17:32:06.078 W/ChimeraUtils( 1378): Module com.google.android.gms.backup_g1 missing resource null(0)
+11-24 17:32:06.098 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.098 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.099 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.104 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.121 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.auth_account [CONTEXT service_id=204 ]
+11-24 17:32:06.121 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.auth_account
+11-24 17:32:06.121 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.121 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.121 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.121 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.121 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.121 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.121 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.121 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.121 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.121 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.121 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.146 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:06.172 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.auth.blockstore [CONTEXT service_id=204 ]
+11-24 17:32:06.172 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.auth.blockstore
+11-24 17:32:06.172 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.172 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.172 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.172 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.172 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.172 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.172 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.172 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.172 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.172 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.172 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.172 W/.apps.messaging( 3434): Long monitor contention with owner Blocking Thread #18 (3916) at boolean dasx.k(dasl)(PG:185) waiters=1 in void dasx.f(dasm) for 109ms
+11-24 17:32:06.204 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.nearby [CONTEXT service_id=204 ]
+11-24 17:32:06.204 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.nearby
+11-24 17:32:06.204 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.204 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.204 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.204 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.204 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.204 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.204 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.204 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.204 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.204 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.204 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.234 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.wallet [CONTEXT service_id=204 ]
+11-24 17:32:06.234 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.wallet
+11-24 17:32:06.234 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.234 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.234 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.234 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.234 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.234 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.234 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.234 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.234 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.234 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.234 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.251 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.251 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.254 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.256 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.265 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.wearable [CONTEXT service_id=204 ]
+11-24 17:32:06.265 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.wearable
+11-24 17:32:06.265 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.265 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.265 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.265 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.265 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.265 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.265 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.265 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.265 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.265 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.265 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.349 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.pay [CONTEXT service_id=204 ]
+11-24 17:32:06.349 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.pay
+11-24 17:32:06.349 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.349 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.349 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.349 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.349 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.349 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.349 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.349 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.349 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.349 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.349 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.388 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.388 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.388 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.390 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.395 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:06.399 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.constellation [CONTEXT service_id=204 ]
+11-24 17:32:06.399 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.constellation
+11-24 17:32:06.399 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.399 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.399 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.399 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.399 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.399 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.399 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.399 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.399 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.399 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.399 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.405 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.thunderbird [CONTEXT service_id=204 ]
+11-24 17:32:06.405 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.thunderbird
+11-24 17:32:06.405 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.405 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.405 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.405 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.405 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.405 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.405 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.405 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.405 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.405 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.405 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.423 W/Pay     ( 1378): Active account was null, notification task will be cancelled. [CONTEXT service_id=198 ]
+11-24 17:32:06.473 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.metrics [CONTEXT service_id=204 ]
+11-24 17:32:06.473 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.metrics
+11-24 17:32:06.473 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.473 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.473 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.473 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.473 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.473 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.473 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.473 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.473 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.473 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.473 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.519 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.524 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.524 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.524 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.529 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.clearcut.public [CONTEXT service_id=204 ]
+11-24 17:32:06.529 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.clearcut.public
+11-24 17:32:06.529 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.529 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.529 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.529 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.529 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.529 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.529 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.529 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.529 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.529 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.529 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.583 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms [CONTEXT service_id=204 ]
+11-24 17:32:06.583 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms
+11-24 17:32:06.583 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.583 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.583 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.583 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.583 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.583 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.583 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.583 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.583 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.583 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.583 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.613 W/.apps.messaging( 3434): Long monitor contention with owner Blocking Thread #18 (3916) at java.util.List dasx.c()(PG:44) waiters=1 in void dasx.f(dasm) for 122ms
+11-24 17:32:06.625 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.security [CONTEXT service_id=204 ]
+11-24 17:32:06.625 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.security
+11-24 17:32:06.625 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.625 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.625 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.625 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.625 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.625 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.625 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.625 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.625 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.625 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.625 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.637 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.637 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.638 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.645 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.654 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.autofill [CONTEXT service_id=204 ]
+11-24 17:32:06.654 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.autofill
+11-24 17:32:06.654 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.654 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.654 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.654 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.654 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.654 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.654 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.654 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.654 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.654 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.654 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.677 W/SystemServiceRegistry( 1378): No service published for: thread_network
+11-24 17:32:06.679 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.home [CONTEXT service_id=204 ]
+11-24 17:32:06.679 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.home
+11-24 17:32:06.679 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.679 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.679 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.679 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.679 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.679 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.679 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.679 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.679 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.679 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.679 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.700 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.700 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.702 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.703 W/ModuleInitIntentOp( 1378): Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+11-24 17:32:06.713 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.smartdevice [CONTEXT service_id=204 ]
+11-24 17:32:06.713 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.smartdevice
+11-24 17:32:06.713 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.713 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.713 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.713 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.713 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.713 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.713 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.713 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.713 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.713 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.713 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.724 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.phenotype [CONTEXT service_id=204 ]
+11-24 17:32:06.724 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.phenotype
+11-24 17:32:06.724 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.724 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.724 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.724 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.724 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.724 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.724 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.724 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.724 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.724 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.724 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.727 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.kids#com.google.android.gms [CONTEXT service_id=204 ]
+11-24 17:32:06.727 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.kids#com.google.android.gms
+11-24 17:32:06.727 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.727 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.727 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.727 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.727 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.727 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.727 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.727 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.727 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.727 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.727 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.731 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.lighter.android#com.google.android.gms [CONTEXT service_id=204 ]
+11-24 17:32:06.731 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.lighter.android#com.google.android.gms
+11-24 17:32:06.731 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.731 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.731 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.731 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.731 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.731 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.731 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.731 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.731 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.731 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.731 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.734 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.people [CONTEXT service_id=204 ]
+11-24 17:32:06.734 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.people
+11-24 17:32:06.734 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.734 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.734 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.734 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.734 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.734 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.734 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.734 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.734 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.734 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.734 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.737 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.westworld [CONTEXT service_id=204 ]
+11-24 17:32:06.737 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.westworld
+11-24 17:32:06.737 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.737 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.737 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.737 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.737 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.737 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.737 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.737 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.737 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.737 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.737 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:06.863 E/TaskPersister(  567): File error accessing recents directory (directory doesn't exist?).
+11-24 17:32:06.924 W/PlatformConfigurator( 1174): Update for unknown DeviceConfig package com.google.android.gms.dtdi_logging#com.google.android.gms [CONTEXT service_id=204 ]
+11-24 17:32:06.924 W/PlatformConfigurator( 1174): daaf: No package exists for config package: com.google.android.gms.dtdi_logging#com.google.android.gms
+11-24 17:32:06.924 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+11-24 17:32:06.924 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+11-24 17:32:06.924 W/PlatformConfigurator( 1174): 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+11-24 17:32:06.924 W/PlatformConfigurator( 1174): 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+11-24 17:32:06.924 W/PlatformConfigurator( 1174): 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-24 17:32:06.924 W/PlatformConfigurator( 1174): 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+11-24 17:32:06.924 W/PlatformConfigurator( 1174): 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+11-24 17:32:06.924 W/PlatformConfigurator( 1174): 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+11-24 17:32:06.924 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-24 17:32:06.924 W/PlatformConfigurator( 1174): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-24 17:32:06.924 W/PlatformConfigurator( 1174): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:32:07.016 W/.gms.persistent( 1174): Suspending all threads took: 5.635ms
+11-24 17:32:07.295 W/SQLiteConnectionPool( 1174): A SQLiteConnection object for database '/data/user/0/com.google.android.gms/databases/metadata.db' was leaked!  Please fix your application to end transactions in progress properly and to close the database when it is no longer needed.
+11-24 17:32:07.295 W/System  ( 1174): A resource failed to call SQLiteConnection.close. 
+11-24 17:32:08.004 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:08.253 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:08.388 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:08.389 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:08.455 W/gclk    ( 1174): [{0}] Failed to resolve name. status={1}
+11-24 17:32:08.530 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:08.530 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:08.585 W/BpBinder( 5004): Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-24 17:32:08.586 W/ProcessState( 5004): Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-24 17:32:08.620 W/gclk    ( 1378): [{0}] Failed to resolve name. status={1}
+11-24 17:32:08.700 W/rules.WifiRx( 3920): FenceState currentState is not true
+11-24 17:32:08.944 W/gclk    ( 1174): [{0}] Failed to resolve name. status={1}
+11-24 17:32:09.434 W/android.hardware.wifi-service(  392): AIBinder_linkToDeath is being called with a non-null cookie and no onUnlink callback set. This might not be intended. AIBinder_DeathRecipient_setOnUnlinked should be called first.
+11-24 17:32:09.436 E/WifiChipAidlImpl(  567): getMode failed with service-specific exception: android.os.ServiceSpecificException:  (code 5)
+11-24 17:32:09.436 W/android.hardware.wifi-service(  392): No active wlan interfaces in use! Using default
+11-24 17:32:09.436 E/android.hardware.wifi-service(  392): Unknown iface name: wlan0
+11-24 17:32:09.436 E/android.hardware.wifi-service(  392): Unknown iface name: wlan0
+11-24 17:32:09.439 E/WifiChipAidlImpl(  567): getMode failed with service-specific exception: android.os.ServiceSpecificException:  (code 5)
+11-24 17:32:09.439 W/android.hardware.wifi-service(  392): No active wlan interfaces in use! Using default
+11-24 17:32:09.439 E/android.hardware.wifi-service(  392): Unknown iface name: wlan0
+11-24 17:32:09.439 E/android.hardware.wifi-service(  392): Unknown iface name: wlan0
+11-24 17:32:09.440 W/android.hardware.wifi-service(  392): No active wlan interfaces in use! Using default
+11-24 17:32:09.440 E/android.hardware.wifi-service(  392): Failed to register radio mode change callback
+11-24 17:32:09.440 W/android.hardware.wifi-service(  392): No active wlan interfaces in use! Using default
+11-24 17:32:09.440 E/android.hardware.wifi-service(  392): Failed to get SupportedIfaceCombinations matrix from legacy HAL: NOT_SUPPORTED
+11-24 17:32:09.440 W/android.hardware.wifi-service(  392): No active wlan interfaces in use! Using default
+11-24 17:32:09.441 E/android.hardware.wifi-service(  392): Failed to set DFS flag; DFS channels may be unavailable.
+11-24 17:32:09.443 W/android.hardware.wifi-service(  392): AIBinder_linkToDeath is being called with a non-null cookie and no onUnlink callback set. This might not be intended. AIBinder_DeathRecipient_setOnUnlinked should be called first.
+11-24 17:32:09.443 E/android.hardware.wifi-service(  392): twtRegisterEvents failed - %d-4
+11-24 17:32:09.443 W/android.hardware.wifi-service(  392): AIBinder_linkToDeath is being called with a non-null cookie and no onUnlink callback set. This might not be intended. AIBinder_DeathRecipient_setOnUnlinked should be called first.
+11-24 17:32:09.446 E/SupplicantStaIfaceHalAidlImpl(  567): Can't call getKeyMgmtCapabilities, ISupplicantStaIface is null for iface=wlan0
+11-24 17:32:09.449 E/SupplicantStaIfaceHalAidlImpl(  567): Can't call getWpaDriverCapabilities, ISupplicantStaIface is null for iface=wlan0
+11-24 17:32:09.458 E/WifiStaIfaceAidlImpl(  567): getTwtCapabilities failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-24 17:32:09.458 E/WifiChipAidlImpl(  567): getUsableChannels failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-24 17:32:09.465 E/WifiChipAidlImpl(  567): enableStaChannelForPeerNetwork failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-24 17:32:09.548 E/wpa_supplicant( 5025): nl80211: kernel reports: Registration to specific type not supported
+11-24 17:32:09.554 E/WifiStaIfaceAidlImpl(  567): getTwtCapabilities failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-24 17:32:09.554 E/WifiChipAidlImpl(  567): getUsableChannels failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-24 17:32:09.560 E/WifiChipAidlImpl(  567): setMultiStaUseCase failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-24 17:32:09.560 E/WifiChipAidlImpl(  567): setMultiStaPrimaryConnection failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-24 17:32:09.561 E/WifiStaIfaceAidlImpl(  567): getBackgroundScanCapabilities failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-24 17:32:09.571 E/WifiScoringParams(  567): Invalid frequency(-1), using 5G as default rssi array
+11-24 17:32:09.571 E/WifiScanningService(  567): wifi driver loaded received while already loaded
+11-24 17:32:09.579 E/WifiChipAidlImpl(  567): getUsableChannels failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-24 17:32:09.581 E/WifiDataStall(  567): onDataConnectionStateChanged unexpected State: -1
+11-24 17:32:09.581 E/MboOceController(  567): onDataConnectionStateChanged unexpected State: -1

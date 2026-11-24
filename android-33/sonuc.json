@@ -1,0 +1,167 @@
+{
+  "platform": "android",
+  "cihaz": "sdk_gphone64_x86_64 · Android 13 · 1080x1920",
+  "webview": "com.google.android.webview, 109.0.5414.123",
+  "asamalar": {
+    "1 ilk açılış": {
+      "acilisMs": 3212,
+      "yuklenme": "interactive",
+      "tanitim": true,
+      "anaSayfa": true,
+      "devamEt": false,
+      "oyunEkrani": false,
+      "yaziUzunlugu": 262,
+      "sayfaSuresiMs": 3486,
+      "tema": ""
+    },
+    "1b masa sunucuda": {
+      "kod": "MRBA",
+      "var": true
+    },
+    "2 kapat-aç": {
+      "acilisMs": 2626,
+      "yuklenme": "complete",
+      "tanitim": false,
+      "anaSayfa": true,
+      "devamEt": true,
+      "oyunEkrani": false,
+      "yaziUzunlugu": 263,
+      "sayfaSuresiMs": 5157,
+      "tema": ""
+    },
+    "3 sil-yükle-aç": {
+      "acilisMs": 3261,
+      "yuklenme": "complete",
+      "tanitim": true,
+      "anaSayfa": true,
+      "devamEt": false,
+      "oyunEkrani": false,
+      "yaziUzunlugu": 275,
+      "sayfaSuresiMs": 11409,
+      "tema": "",
+      "uyariPenceresi": false
+    },
+    "4 gece modu": {
+      "yuklenme": "complete",
+      "tanitim": true,
+      "anaSayfa": true,
+      "devamEt": false,
+      "oyunEkrani": false,
+      "yaziUzunlugu": 275,
+      "sayfaSuresiMs": 4678,
+      "tema": ""
+    },
+    "4b QR ile katılma": {
+      "ayar": true,
+      "sunucu": true,
+      "kimlik": true,
+      "gonderildi": false,
+      "hata": null,
+      "kod": null,
+      "rol": "viewer",
+      "izleyici": "ok",
+      "katilim": "MRBA",
+      "gorunum": "home"
+    },
+    "5 internetsiz açılış": {
+      "acilisMs": 3568,
+      "yuklenme": "complete",
+      "tanitim": true,
+      "anaSayfa": true,
+      "devamEt": false,
+      "oyunEkrani": false,
+      "yaziUzunlugu": 275,
+      "sayfaSuresiMs": 5909,
+      "tema": ""
+    }
+  },
+  "senaryo": {
+    "platform": "android",
+    "ok": true,
+    "adimlar": [
+      {
+        "ad": "ilk ekran geldi",
+        "ms": 1
+      },
+      {
+        "ad": "tanıtım",
+        "ms": 4266
+      },
+      {
+        "ad": "ana sayfa",
+        "ms": 4266
+      },
+      {
+        "ad": "yeni oyun kurulumu",
+        "ms": 5217
+      },
+      {
+        "ad": "oyunu başlat",
+        "ms": 6431
+      },
+      {
+        "ad": "ipucunu geç",
+        "ms": 8206
+      },
+      {
+        "ad": "1. el girişi",
+        "ms": 12469
+      },
+      {
+        "ad": "2. el girişi",
+        "ms": 15654
+      },
+      {
+        "ad": "3. el girişi",
+        "ms": 19395
+      },
+      {
+        "ad": "ceza penceresi",
+        "ms": 23735
+      },
+      {
+        "ad": "paylaş penceresi",
+        "ms": 24917
+      },
+      {
+        "ad": "ayarlar",
+        "ms": 26362
+      },
+      {
+        "ad": "oyunu erken bitir",
+        "ms": 29509
+      },
+      {
+        "ad": "oyun geçmişi",
+        "ms": 32709
+      }
+    ],
+    "hatalar": [],
+    "bilgi": {
+      "tarayici": "Mozilla/5.0 (Linux; Android 13; sdk_gphone64_x86_64 Build/TE1A.240213.009; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.123 Mobile Safari/537.36",
+      "ekran": "360x592 @3x",
+      "ilkEkranMs": 3492,
+      "canli": {
+        "ayar": true,
+        "sunucu": true,
+        "kimlik": true,
+        "gonderildi": true,
+        "hata": null,
+        "kod": "MRBA",
+        "rol": "admin",
+        "izleyici": "idle",
+        "katilim": null,
+        "gorunum": "game"
+      },
+      "canliPaylasim": "açık",
+      "canliPaylasimMs": 16,
+      "toplamMs": 32709
+    }
+  },
+  "konsol": [
+    "[internetsiz] network: Failed to load resource: net::ERR_INTERNET_DISCONNECTED https://yazboz101.com/surum.json?t=1795541619483"
+  ],
+  "sorunlar": [],
+  "db": "https://yazboz101-359a3-default-rtdb.europe-west1.firebasedatabase.app",
+  "masaKodu": "MRBA"
+}

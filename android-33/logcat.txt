@@ -1,0 +1,599 @@
+11-24 17:33:36.940 E/BugleRcsEngine( 2892): [56] bfat.handleMessage: StateMachine.handleMessage: The start method not called, received msg: { when=0 what=4 target=bfat }
+11-24 17:33:36.944 W/resolv  (  281): resolv_stats_set_addrs: Network 100 not found for PROTO_DOH
+11-24 17:33:36.963 W/BugleTachygram( 2537): Not using Tachygram because PEv3 is disabled
+11-24 17:33:37.101 W/A       ( 1675): Task o[ServiceTransaction[SessionController#handleGenericClientEvent]] was queued for 1029ms before starting on executor EventBus
+11-24 17:33:37.160 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:37.160 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:37.162 W/unduz.yazboz101( 6279): Unexpected CPU variant for x86: x86_64.
+11-24 17:33:37.162 W/unduz.yazboz101( 6279): Known variants: atom, sandybridge, silvermont, kabylake, default
+11-24 17:33:37.191 W/ContextImpl(  482): Calling a method in the system process without a qualified user: android.app.ContextImpl.sendStickyBroadcast:1586 android.net.connectivity.com.android.server.ConnectivityService.sendStickyBroadcast:105 android.net.connectivity.com.android.server.ConnectivityService.sendLegacyNetworkBroadcast:156 android.net.connectivity.com.android.server.ConnectivityService$LegacyTypeTracker.remove:49 android.net.connectivity.com.android.server.ConnectivityService$LegacyTypeTracker.remove:6 
+11-24 17:33:37.205 W/BugleTachygram( 2537): Not using Tachygram because PEv3 is disabled
+11-24 17:33:37.223 W/View    ( 1675): requestLayout() improperly called by android.widget.FrameLayout{bc78727 V.E...... ......ID 0,0-1080,600 #7f0b0fee app:id/googleapp_discover_header_container} during layout: running second layout pass
+11-24 17:33:37.225 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:37.272 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:37.337 W/A       ( 1675): Could not collect restore state: The DisplayCoordinator's controller has not taken over yet.
+11-24 17:33:37.391 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:37.420 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.420 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.420 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.420 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.420 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.441 W/resolv  (  281): resolv_stats_set_addrs: Network 101 not found for PROTO_DOT
+11-24 17:33:37.441 W/resolv  (  281): resolv_stats_set_addrs: Network 101 not found for PROTO_DOH
+11-24 17:33:37.462 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.462 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.462 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.462 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.501 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:37.515 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:37.537 W/earchbox:search( 1675): Long monitor contention with owner Blocking Thread #5 (2400) at java.lang.Object dagger.a.e.b()(PG:2) waiters=0 in java.lang.Object dagger.a.e.b() for 106ms
+11-24 17:33:37.557 W/TimedProcessReaper( 1675): Scheduling killing of process to refresh configuration
+11-24 17:33:37.568 W/TimedProcessReaper( 2537): Scheduling killing of process to refresh configuration
+11-24 17:33:37.602 W/TimedProcessReaper( 2892): Scheduling killing of process to refresh configuration
+11-24 17:33:37.608 W/TimedProcessReaper( 2892): Scheduling killing of process to refresh configuration
+11-24 17:33:37.610 E/WakeLock( 1056): GCM_READ ** IS FORCE-RELEASED ON TIMEOUT **
+11-24 17:33:37.610 W/ziparchive( 6279): Unable to open '/data/app/~~_a5eyfkdpvJ0cvb6PpsfXw==/com.aygunduz.yazboz101-o1lVFSm-jpVjPiMfCQSEWg==/base.dm': No such file or directory
+11-24 17:33:37.610 W/ziparchive( 6279): Unable to open '/data/app/~~_a5eyfkdpvJ0cvb6PpsfXw==/com.aygunduz.yazboz101-o1lVFSm-jpVjPiMfCQSEWg==/base.dm': No such file or directory
+11-24 17:33:37.648 W/enyb    ( 1056): [{0}] Failed to resolve name. status={1}
+11-24 17:33:37.664 W/TimedProcessReaper( 2537): Scheduling killing of process to refresh configuration
+11-24 17:33:37.665 W/TimedProcessReaper( 2537): Scheduling killing of process to refresh configuration
+11-24 17:33:37.666 W/TimedProcessReaper( 2537): Scheduling killing of process to refresh configuration
+11-24 17:33:37.669 W/WakeLock( 1056): GCM_READ counter does not exist
+11-24 17:33:37.670 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:37.673 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.673 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.673 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.673 W/TimedProcessReaper( 1434): Scheduling killing of process to refresh configuration
+11-24 17:33:37.685 W/TimedProcessReaper( 1614): Scheduling killing of process to refresh configuration
+11-24 17:33:37.722 W/TimedProcessReaper( 1675): Scheduling killing of process to refresh configuration
+11-24 17:33:37.723 W/TimedProcessReaper( 1675): Scheduling killing of process to refresh configuration
+11-24 17:33:37.723 W/TimedProcessReaper( 1434): Scheduling killing of process to refresh configuration
+11-24 17:33:37.729 W/TimedProcessReaper( 1434): Scheduling killing of process to refresh configuration
+11-24 17:33:37.741 W/TimedProcessReaper( 1614): Scheduling killing of process to refresh configuration
+11-24 17:33:37.743 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.743 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.757 E/WakeLock( 1056): GCM_HB_ALARM release without a matched acquire!
+11-24 17:33:37.757 W/WakeLock( 1056): GCM_HB_ALARM counter does not exist
+11-24 17:33:37.762 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.762 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.791 W/.gms.persistent( 1056): Long monitor contention with owner lowpool[24] (6017) at void acea.execute(java.lang.Runnable)(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0) waiters=0 in void acea.execute(java.lang.Runnable) for 127ms
+11-24 17:33:37.792 W/enyb    ( 1056): [{0}] Failed to resolve name. status={1}
+11-24 17:33:37.799 W/enyb    ( 1056): [{0}] Failed to resolve name. status={1}
+11-24 17:33:37.839 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:37.842 W/WakeLock( 1056): GCM_CONN_ALARM counter does not exist
+11-24 17:33:37.845 W/TimedProcessReaper( 1556): Scheduling killing of process to refresh configuration
+11-24 17:33:37.870 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:37.873 W/TimedProcessReaper( 1556): Scheduling killing of process to refresh configuration
+11-24 17:33:37.878 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:37.880 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.880 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.902 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:37.909 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:37.917 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:37.979 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:37.988 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:37.988 W/SearchServiceCore( 1675): Abort, client detached.
+11-24 17:33:38.005 W/JobScheduler(  482): Job didn't exist in JobStore: 67fd4d6 #u0a119/-1000004 com.google.android.googlequicksearchbox/com.google.android.apps.gsa.tasks.BackgroundTasksJobService
+11-24 17:33:38.005 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:38.006 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:38.021 W/DynamiteModule( 6279): Local module descriptor class for com.google.mlkit.dynamite.text.latin not found.
+11-24 17:33:38.045 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:38.046 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:38.047 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:38.059 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:38.090 W/.gms.persistent( 1056): Long monitor contention with owner [com.google.android.gms.chimera.container.intentoperation.PersistentIntentOperationChimeraService-Executor] processing com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener for action android.intent.action.BOOT_COMPLETED (5057) at void hjm.run()(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3) waiters=1 in void hjm.run() for 7.838s
+11-24 17:33:38.091 W/ProviderHelper( 1056): Unknown dynamite feature vision.ocr
+11-24 17:33:38.104 W/DynamiteModule( 6279): Local module descriptor class for com.google.android.gms.vision.ocr not found.
+11-24 17:33:38.109 W/BpBinder( 1056): Large outgoing transaction of 325884 bytes, interface descriptor <uncached descriptor>, code 4
+11-24 17:33:38.111 W/ziparchive( 6279): Unable to open '/data/app/~~_EcVENszEowJVXwszf-jUQ==/com.google.android.trichromelibrary_541412337--Fm0eFKjoUQGdWrLQDyPTw==/TrichromeLibrary.dm': No such file or directory
+11-24 17:33:38.112 W/ziparchive( 6279): Unable to open '/data/app/~~_EcVENszEowJVXwszf-jUQ==/com.google.android.trichromelibrary_541412337--Fm0eFKjoUQGdWrLQDyPTw==/TrichromeLibrary.dm': No such file or directory
+11-24 17:33:38.112 W/unduz.yazboz101( 6279): Entry not found
+11-24 17:33:38.170 W/unduz.yazboz101( 6279): Accessing hidden method Landroid/os/Trace;->isTagEnabled(J)Z (unsupported, reflection, allowed)
+11-24 17:33:38.170 W/unduz.yazboz101( 6279): Accessing hidden method Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V (unsupported, reflection, allowed)
+11-24 17:33:38.170 W/unduz.yazboz101( 6279): Accessing hidden method Landroid/os/Trace;->traceEnd(J)V (unsupported, reflection, allowed)
+11-24 17:33:38.170 W/unduz.yazboz101( 6279): Accessing hidden method Landroid/os/Trace;->asyncTraceBegin(JLjava/lang/String;I)V (unsupported, reflection, allowed)
+11-24 17:33:38.171 W/unduz.yazboz101( 6279): Accessing hidden method Landroid/os/Trace;->asyncTraceEnd(JLjava/lang/String;I)V (unsupported, reflection, allowed)
+11-24 17:33:38.215 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:38.330 W/UsageLimitServiceImpl( 1556): Migrating limits: delete 0 obsolete limits, add 0 new limits
+11-24 17:33:38.357 E/bwfc    ( 1056): Phenotype API error. Event # edax@90dc9354, EventCode: 5 [CONTEXT service_id=51 ]
+11-24 17:33:38.357 E/bwfc    ( 1056): bwdx: 29501: Stale snapshot for com.google.android.inputmethod.latin#com.google.android.inputmethod.latin(change count changed - expected 4  but was 3)
+11-24 17:33:38.357 E/bwfc    ( 1056): 	at bwfg.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):16)
+11-24 17:33:38.357 E/bwfc    ( 1056): 	at bwff.g(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+11-24 17:33:38.357 E/bwfc    ( 1056): 	at bwfc.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+11-24 17:33:38.357 E/bwfc    ( 1056): 	at bwfc.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+11-24 17:33:38.357 E/bwfc    ( 1056): 	at avsy.eo(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+11-24 17:33:38.357 E/bwfc    ( 1056): 	at avtf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+11-24 17:33:38.357 E/bwfc    ( 1056): 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+11-24 17:33:38.357 E/bwfc    ( 1056): 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+11-24 17:33:38.357 E/bwfc    ( 1056): 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+11-24 17:33:38.357 E/bwfc    ( 1056): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+11-24 17:33:38.357 E/bwfc    ( 1056): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+11-24 17:33:38.357 E/bwfc    ( 1056): 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+11-24 17:33:38.357 E/bwfc    ( 1056): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:33:38.360 W/ocessService0:0( 6330): Unexpected CPU variant for x86: x86_64.
+11-24 17:33:38.360 W/ocessService0:0( 6330): Known variants: atom, sandybridge, silvermont, kabylake, default
+11-24 17:33:38.361 W/AsyncOperation( 1056): operation=CommitToConfigurationOperationCall, opStatusCode=29501 [CONTEXT service_id=51 ]
+11-24 17:33:38.361 W/AsyncOperation( 1056): OperationException[Status{statusCode=Stale snapshot for com.google.android.inputmethod.latin#com.google.android.inputmethod.latin(change count changed - expected 4  but was 3), resolution=null}]
+11-24 17:33:38.361 W/AsyncOperation( 1056): 	at bwfc.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+11-24 17:33:38.361 W/AsyncOperation( 1056): 	at bwfc.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+11-24 17:33:38.361 W/AsyncOperation( 1056): 	at avsy.eo(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+11-24 17:33:38.361 W/AsyncOperation( 1056): 	at avtf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+11-24 17:33:38.361 W/AsyncOperation( 1056): 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+11-24 17:33:38.361 W/AsyncOperation( 1056): 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+11-24 17:33:38.361 W/AsyncOperation( 1056): 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+11-24 17:33:38.361 W/AsyncOperation( 1056): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+11-24 17:33:38.361 W/AsyncOperation( 1056): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+11-24 17:33:38.361 W/AsyncOperation( 1056): 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+11-24 17:33:38.361 W/AsyncOperation( 1056): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:33:38.364 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:38.365 E/bwfc    ( 1056): Phenotype API error. Event # edax@ae34a4ce, EventCode: 5 [CONTEXT service_id=51 ]
+11-24 17:33:38.365 E/bwfc    ( 1056): bwdx: 29501: Stale snapshot for com.google.android.apps.messaging#com.google.android.apps.messaging(change count changed - expected 4  but was 3)
+11-24 17:33:38.365 E/bwfc    ( 1056): 	at bwfg.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):16)
+11-24 17:33:38.365 E/bwfc    ( 1056): 	at bwff.g(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+11-24 17:33:38.365 E/bwfc    ( 1056): 	at bwfc.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+11-24 17:33:38.365 E/bwfc    ( 1056): 	at bwfc.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+11-24 17:33:38.365 E/bwfc    ( 1056): 	at avsy.eo(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+11-24 17:33:38.365 E/bwfc    ( 1056): 	at avtf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+11-24 17:33:38.365 E/bwfc    ( 1056): 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+11-24 17:33:38.365 E/bwfc    ( 1056): 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+11-24 17:33:38.365 E/bwfc    ( 1056): 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+11-24 17:33:38.365 E/bwfc    ( 1056): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+11-24 17:33:38.365 E/bwfc    ( 1056): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+11-24 17:33:38.365 E/bwfc    ( 1056): 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+11-24 17:33:38.365 E/bwfc    ( 1056): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:33:38.366 W/AsyncOperation( 1056): operation=CommitToConfigurationOperationCall, opStatusCode=29501 [CONTEXT service_id=51 ]
+11-24 17:33:38.366 W/AsyncOperation( 1056): OperationException[Status{statusCode=Stale snapshot for com.google.android.apps.messaging#com.google.android.apps.messaging(change count changed - expected 4  but was 3), resolution=null}]
+11-24 17:33:38.366 W/AsyncOperation( 1056): 	at bwfc.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+11-24 17:33:38.366 W/AsyncOperation( 1056): 	at bwfc.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+11-24 17:33:38.366 W/AsyncOperation( 1056): 	at avsy.eo(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+11-24 17:33:38.366 W/AsyncOperation( 1056): 	at avtf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+11-24 17:33:38.366 W/AsyncOperation( 1056): 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+11-24 17:33:38.366 W/AsyncOperation( 1056): 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+11-24 17:33:38.366 W/AsyncOperation( 1056): 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+11-24 17:33:38.366 W/AsyncOperation( 1056): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+11-24 17:33:38.366 W/AsyncOperation( 1056): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+11-24 17:33:38.366 W/AsyncOperation( 1056): 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+11-24 17:33:38.366 W/AsyncOperation( 1056): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:33:38.366 W/PhenotypeFlagCommitter( 2537): Committing snapshot for com.google.android.apps.messaging#com.google.android.apps.messaging failed, retrying
+11-24 17:33:38.372 W/chromium( 6279): [WARNING:dns_config_service_android.cc(115)] Failed to read DnsConfig.
+11-24 17:33:38.403 W/BpBinder( 1056): Large outgoing transaction of 325884 bytes, interface descriptor <uncached descriptor>, code 4
+11-24 17:33:38.519 W/BugleRcsEngine( 2537): [43] bgdi.e: RcsProvisioningManager: ProvisioningEngineAdapter not found for SIM redacted-pii:sim_id[chars:20,last3:897]
+11-24 17:33:38.522 W/BugleRcsEngine( 2537): [54] bemz.x: Unable to send diagnostic log
+11-24 17:33:38.522 W/BugleAction( 2537): Null config in BugleSharedPrefs
+11-24 17:33:38.522 W/BugleAction( 2537): Failed to get msisdn from Bugle
+11-24 17:33:38.555 W/TimedProcessReaper( 1556): Scheduling killing of process to refresh configuration
+11-24 17:33:38.562 W/BugleRcsEngine( 2892): [72] bemz.x: Unable to send diagnostic log
+11-24 17:33:38.568 W/BugleRcsEngine( 2537): [44] bfvz.c: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: 1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false]
+11-24 17:33:38.569 W/BugleRcsEngine( 2537): [43] bfvz.c: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: 1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false]
+11-24 17:33:38.573 W/BugleRcsEngine( 2537): [50] bemz.x: Unable to send diagnostic log
+11-24 17:33:38.573 W/BugleRcsEngine( 2537): [78] bemz.x: Unable to send diagnostic log
+11-24 17:33:38.574 W/BugleRcsEngine( 2537): [78] bemz.x: Unable to send diagnostic log
+11-24 17:33:38.591 W/BugleRcsEngine( 2892): [48] bghl.i: No config URL source available.
+11-24 17:33:38.593 W/BugleRcsEngine( 2892): [72] bemz.x: Unable to send diagnostic log
+11-24 17:33:38.604 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:38.615 W/unduz.yazboz101( 6279): Accessing hidden method Landroid/media/AudioManager;->getOutputLatency(I)I (unsupported, reflection, allowed)
+11-24 17:33:38.617 W/cr_media( 6279): BLUETOOTH_CONNECT permission is missing.
+11-24 17:33:38.617 W/cr_media( 6279): registerBluetoothIntentsIfNeeded: Requires BLUETOOTH permission
+11-24 17:33:38.639 W/CarrierServices( 2530): [48] dta.w: Unable to send diagnostic log
+11-24 17:33:38.641 W/SystemServiceRegistry( 6330): No service published for: uimode
+11-24 17:33:38.654 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:38.668 W/TimedProcessReaper( 1556): Scheduling killing of process to refresh configuration
+11-24 17:33:38.675 W/enyb    ( 1056): [{0}] Failed to resolve name. status={1}
+11-24 17:33:38.678 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:38.706 W/enyb    ( 1056): [{0}] Failed to resolve name. status={1}
+11-24 17:33:38.717 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:38.721 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:38.729 W/BugleRcsEngine( 2537): [77] RcsProfileService.g: Result is null when getting value for id:4
+11-24 17:33:38.729 W/Bugle   ( 2537): SubscriptionMetadataUtils get: invalid subId = -2
+11-24 17:33:38.733 W/Bugle   ( 2537): SubscriptionMetadataUtils get: invalid subId = -2
+11-24 17:33:38.745 W/Parcel  ( 6279): Expecting binder but got null!
+11-24 17:33:38.751 W/Bugle   ( 2537): SubscriptionMetadataUtils get: invalid subId = -2
+11-24 17:33:38.799 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:38.804 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:38.805 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:38.807 W/Bugle   ( 2537): SubscriptionMetadataUtils get: invalid subId = -2
+11-24 17:33:38.807 W/Bugle   ( 2537): SubscriptionUtilsAsOfLMR1: getSelfRawNumber: subInfo is null for subscription{id:-1}
+11-24 17:33:38.814 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:38.816 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:38.882 E/WorkSourceUtil( 1265): Could not find package: com.google.android.gms.westworld
+11-24 17:33:38.893 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:38.903 W/BugleAction( 2537): No default number, returning empty msisdn
+11-24 17:33:38.904 W/BugleTachygram( 2537): Not using Tachygram because PEv3 is disabled
+11-24 17:33:38.918 W/enyb    ( 1056): [{0}] Failed to resolve name. status={1}
+11-24 17:33:38.935 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:38.950 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.017 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.019 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:39.029 W/OpenGLRenderer( 6279): Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-24 17:33:39.073 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.107 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.122 W/Gralloc4( 6279): allocator 4.x is not supported
+11-24 17:33:39.152 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.178 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.184 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:39.199 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.218 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:39.222 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.235 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.244 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.248 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.258 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:39.276 W/BugleAction( 2537): Null config in BugleSharedPrefs
+11-24 17:33:39.276 W/BugleAction( 2537): Failed to get msisdn from Bugle
+11-24 17:33:39.277 W/BugleRcsEngine( 2537): [55] bgdi.e: RcsProvisioningManager: ProvisioningEngineAdapter not found for SIM redacted-pii:sim_id[chars:20,last3:897]
+11-24 17:33:39.278 W/BugleRcsEngine( 2537): [55] bemz.x: Unable to send diagnostic log
+11-24 17:33:39.282 W/BpBinder( 1056): Large outgoing transaction of 325908 bytes, interface descriptor <uncached descriptor>, code 4
+11-24 17:33:39.301 W/BugleRcsEngine( 2537): [43] RcsProfileService.g: Result is null when getting value for id:4
+11-24 17:33:39.301 W/Bugle   ( 2537): SubscriptionMetadataUtils get: invalid subId = -2
+11-24 17:33:39.301 W/Bugle   ( 2537): SubscriptionMetadataUtils get: invalid subId = -2
+11-24 17:33:39.306 W/Bugle   ( 2537): SubscriptionMetadataUtils get: invalid subId = -2
+11-24 17:33:39.307 W/Bugle   ( 2537): SubscriptionMetadataUtils get: invalid subId = -2
+11-24 17:33:39.307 W/Bugle   ( 2537): SubscriptionUtilsAsOfLMR1: getSelfRawNumber: subInfo is null for subscription{id:-1}
+11-24 17:33:39.328 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.329 W/BugleAction( 2537): No default number, returning empty msisdn
+11-24 17:33:39.330 W/BugleTachygram( 2537): Not using Tachygram because PEv3 is disabled
+11-24 17:33:39.338 E/MobileVisionBase( 6279): Error preloading model resource
+11-24 17:33:39.338 E/MobileVisionBase( 6279): com.google.mlkit.common.MlKitException: Waiting for the text optional module to be downloaded. Please wait.
+11-24 17:33:39.338 E/MobileVisionBase( 6279): 	at com.google.mlkit.vision.text.internal.zzd.zzb(com.google.android.gms:play-services-mlkit-text-recognition-common@@19.1.0:45)
+11-24 17:33:39.338 E/MobileVisionBase( 6279): 	at com.google.mlkit.vision.text.internal.TextRecognizerTaskWithResource.load(com.google.android.gms:play-services-mlkit-text-recognition-common@@19.1.0:1)
+11-24 17:33:39.338 E/MobileVisionBase( 6279): 	at com.google.mlkit.common.sdkinternal.ModelResource.zza(com.google.mlkit:common@@18.11.0:4)
+11-24 17:33:39.338 E/MobileVisionBase( 6279): 	at com.google.mlkit.common.sdkinternal.zzn.run(Unknown Source:10)
+11-24 17:33:39.338 E/MobileVisionBase( 6279): 	at com.google.mlkit.common.sdkinternal.zzt.run(com.google.mlkit:common@@18.11.0:2)
+11-24 17:33:39.338 E/MobileVisionBase( 6279): 	at com.google.mlkit.common.sdkinternal.MlKitThreadPool.zze(com.google.mlkit:common@@18.11.0:4)
+11-24 17:33:39.338 E/MobileVisionBase( 6279): 	at com.google.mlkit.common.sdkinternal.MlKitThreadPool.zzc(com.google.mlkit:common@@18.11.0:1)
+11-24 17:33:39.338 E/MobileVisionBase( 6279): 	at com.google.mlkit.common.sdkinternal.zzi.run(Unknown Source:2)
+11-24 17:33:39.338 E/MobileVisionBase( 6279): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+11-24 17:33:39.338 E/MobileVisionBase( 6279): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+11-24 17:33:39.338 E/MobileVisionBase( 6279): 	at com.google.mlkit.common.sdkinternal.MlKitThreadPool.zzd(com.google.mlkit:common@@18.11.0:2)
+11-24 17:33:39.338 E/MobileVisionBase( 6279): 	at com.google.mlkit.common.sdkinternal.zzk.run(Unknown Source:2)
+11-24 17:33:39.338 E/MobileVisionBase( 6279): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:33:39.405 W/TimedProcessReaper( 1556): Scheduling killing of process to refresh configuration
+11-24 17:33:39.432 W/ziparchive(  482): Unable to open '/data/app/~~_a5eyfkdpvJ0cvb6PpsfXw==/com.aygunduz.yazboz101-o1lVFSm-jpVjPiMfCQSEWg==/base.dm': No such file or directory
+11-24 17:33:39.437 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.489 W/InputManager-JNI(  482): Input channel object 'b1d0932 Splash Screen com.aygunduz.yazboz101 (client)' was disposed without first being removed with the input manager!
+11-24 17:33:39.497 W/TransactionTracing(  367): Could not find layer handle 0x785d7d159fd0
+11-24 17:33:39.502 W/TransactionTracing(  367): Could not find layer handle 0x785d7d15a6f0
+11-24 17:33:39.506 W/TransactionTracing(  367): Could not find layer handle 0x785d7d15c130
+11-24 17:33:39.542 W/Looper  (  482): Slow dispatch took 142ms android.fg h=android.os.Handler c=com.android.server.wm.ActivityMetricsLogger$$ExternalSyntheticLambda5@4895360 m=0
+11-24 17:33:39.610 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.617 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.621 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.659 W/BugleAction( 2537): Null config in BugleSharedPrefs
+11-24 17:33:39.659 W/BugleAction( 2537): Failed to get msisdn from Bugle
+11-24 17:33:39.660 W/BugleRcsEngine( 2537): [77] bgdi.e: RcsProvisioningManager: ProvisioningEngineAdapter not found for SIM redacted-pii:sim_id[chars:20,last3:897]
+11-24 17:33:39.663 W/BugleRcsEngine( 2537): [77] bemz.x: Unable to send diagnostic log
+11-24 17:33:39.698 W/TransactionTracing(  367): Could not find layer handle 0x785d7d15b890
+11-24 17:33:39.700 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.723 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.726 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:39.730 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.745 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.762 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.768 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.783 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.792 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.809 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.823 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.830 W/BugleRcsEngine( 2537): [66] RcsProfileService.g: Result is null when getting value for id:4
+11-24 17:33:39.830 W/Bugle   ( 2537): SubscriptionMetadataUtils get: invalid subId = -2
+11-24 17:33:39.831 W/Bugle   ( 2537): SubscriptionMetadataUtils get: invalid subId = -2
+11-24 17:33:39.831 W/Bugle   ( 2537): SubscriptionMetadataUtils get: invalid subId = -2
+11-24 17:33:39.831 W/Bugle   ( 2537): SubscriptionMetadataUtils get: invalid subId = -2
+11-24 17:33:39.831 W/Bugle   ( 2537): SubscriptionUtilsAsOfLMR1: getSelfRawNumber: subInfo is null for subscription{id:-1}
+11-24 17:33:39.840 W/BugleAction( 2537): No default number, returning empty msisdn
+11-24 17:33:39.841 W/BugleTachygram( 2537): Not using Tachygram because PEv3 is disabled
+11-24 17:33:39.846 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.856 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.866 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.873 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.882 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:39.891 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.905 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.910 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:39.910 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:39.911 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:39.915 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.920 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.932 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.934 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.947 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.951 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.960 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.976 W/TimedProcessReaper( 2892): Scheduling killing of process to refresh configuration
+11-24 17:33:39.989 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:39.992 W/TimedProcessReaper( 2892): Scheduling killing of process to refresh configuration
+11-24 17:33:40.006 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.068 W/TimedProcessReaper( 1675): Scheduling killing of process to refresh configuration
+11-24 17:33:40.082 W/TimedProcessReaper( 1675): Scheduling killing of process to refresh configuration
+11-24 17:33:40.089 W/TimedProcessReaper( 1675): Scheduling killing of process to refresh configuration
+11-24 17:33:40.110 W/TimedProcessReaper( 2537): Scheduling killing of process to refresh configuration
+11-24 17:33:40.111 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.112 W/TimedProcessReaper( 2537): Scheduling killing of process to refresh configuration
+11-24 17:33:40.125 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:40.128 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.138 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:40.144 W/TimedProcessReaper( 1614): Scheduling killing of process to refresh configuration
+11-24 17:33:40.146 W/TimedProcessReaper( 1614): Scheduling killing of process to refresh configuration
+11-24 17:33:40.150 W/TimedProcessReaper( 2537): Scheduling killing of process to refresh configuration
+11-24 17:33:40.153 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.159 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.178 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.179 W/TimedProcessReaper( 2537): Scheduling killing of process to refresh configuration
+11-24 17:33:40.204 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.212 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:40.214 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.219 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:40.254 W/enyb    ( 1056): [{0}] Failed to resolve name. status={1}
+11-24 17:33:40.254 W/enyb    ( 1056): [{0}] Failed to resolve name. status={1}
+11-24 17:33:40.261 W/TimedProcessReaper( 1434): Scheduling killing of process to refresh configuration
+11-24 17:33:40.262 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.271 W/TimedProcessReaper( 1434): Scheduling killing of process to refresh configuration
+11-24 17:33:40.274 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.299 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.310 W/TimedProcessReaper( 1434): Scheduling killing of process to refresh configuration
+11-24 17:33:40.343 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.343 W/enyb    ( 1056): [{0}] Failed to resolve name. status={1}
+11-24 17:33:40.357 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.380 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.405 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.534 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.540 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.547 W/Looper  (  482): Slow dispatch took 105ms main h=com.android.server.notification.NotificationManagerService$WorkerHandler c=null m=8
+11-24 17:33:40.548 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.548 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.689 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.712 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.782 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.794 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.853 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.873 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.879 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.898 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.904 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.921 W/Role    ( 5337): Default holder doesn't have required signing certificate: com.google.android.apps.work.clouddpc:23962F4B43B9857638EA66F4D419518EAE282491ACDA4B94707BD59003C45E58
+11-24 17:33:40.928 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.940 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.958 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.969 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:40.996 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.007 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.022 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.038 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.061 W/ChimeraUtils( 1056): Module com.google.android.gms.location__nonwearable missing resource location_module_display_name(0)
+11-24 17:33:41.062 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:41.079 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.088 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.094 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.115 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.141 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:41.149 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.227 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:41.235 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:41.359 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.369 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.377 W/BroadcastQueue(  482): Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.stats.service.DropBoxEntryAddedReceiver
+11-24 17:33:41.380 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.380 W/BroadcastQueue(  482): Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+11-24 17:33:41.443 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.472 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.515 W/JobScheduler(  482): Job didn't exist in JobStore: 911d19c #u0a121/7 com.google.android.contacts/com.google.android.apps.contacts.shortcut.ShortcutJobService
+11-24 17:33:41.520 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.526 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.536 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.547 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.558 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.564 W/ChimeraUtils( 1056): Module com.google.android.gms.nearby_en missing resource null(0)
+11-24 17:33:41.565 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.585 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.598 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.602 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.606 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.637 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.659 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.695 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.698 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.713 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.719 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.734 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.734 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.735 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.801 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.811 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.826 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:41.840 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.845 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.861 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.891 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.925 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.938 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.974 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:41.999 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.005 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.020 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.039 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.055 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.067 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.081 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.091 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.116 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.130 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.147 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.172 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.172 W/gle.android.gms( 1265): Long monitor contention with owner lowpool[2] (2690) at void asac.d()(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2) waiters=0 in void asac.a(asae) for 158ms
+11-24 17:33:42.183 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.203 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.219 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:42.271 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.292 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.313 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.329 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.368 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.392 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.425 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.451 W/enyb    ( 1056): [{0}] Failed to resolve name. status={1}
+11-24 17:33:42.528 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.533 W/enyb    ( 1056): [{0}] Failed to resolve name. status={1}
+11-24 17:33:42.549 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.554 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.559 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.569 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.576 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.581 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.585 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.613 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.677 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.715 W/enyb    ( 1056): [{0}] Failed to resolve name. status={1}
+11-24 17:33:42.757 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.912 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.921 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.942 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.949 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:42.951 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.961 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.972 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.977 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:42.999 W/enyb    ( 1265): [{0}] Failed to resolve name. status={1}
+11-24 17:33:43.005 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.010 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.021 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.025 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.034 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.039 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.051 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.061 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.072 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.077 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.082 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.088 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.098 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.105 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.112 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.119 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.127 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.145 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.161 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.171 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.186 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.198 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.210 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.223 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.235 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.247 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.264 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.276 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.282 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.289 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.296 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.315 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.359 W/ecovery_process( 6440): Unexpected CPU variant for x86: x86_64.
+11-24 17:33:43.359 W/ecovery_process( 6440): Known variants: atom, sandybridge, silvermont, kabylake, default
+11-24 17:33:43.368 E/SettingsToPropertiesMapper(  482): com.yelp.android,0,com.yy.biu,0,com.groupme.android,0,air.tv.douyu.android,0,com.baidu.mbaby,0,com.vlocker.locker,0,com.znxh.hyhuo,0,com.yixia.xiaokaxiu,0 exceeds system property max length.
+11-24 17:33:43.387 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.388 W/Looper  (  482): Slow dispatch took 109ms main h=android.os.Handler c=com.android.server.PackageWatchdog$$ExternalSyntheticLambda2@b1efd4f m=0
+11-24 17:33:43.767 W/ProcessState( 6457): Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-24 17:33:43.882 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.888 E/StatsCompanionService(  482): Could not get installer for package: com.google.android.trichromelibrary
+11-24 17:33:43.888 E/StatsCompanionService(  482): android.content.pm.PackageManager$NameNotFoundException: com.google.android.trichromelibrary
+11-24 17:33:43.888 E/StatsCompanionService(  482): 	at android.app.ApplicationPackageManager.getInstallSourceInfo(ApplicationPackageManager.java:2541)
+11-24 17:33:43.888 E/StatsCompanionService(  482): 	at com.android.server.stats.StatsCompanionService.getInstallerPackageName(Unknown Source:1)
+11-24 17:33:43.888 E/StatsCompanionService(  482): 	at com.android.server.stats.StatsCompanionService.lambda$informAllUids$0(Unknown Source:107)
+11-24 17:33:43.888 E/StatsCompanionService(  482): 	at com.android.server.stats.StatsCompanionService.$r8$lambda$VOiYvFUkZmZjyfB0dWDMf-akDT0(Unknown Source:0)
+11-24 17:33:43.888 E/StatsCompanionService(  482): 	at com.android.server.stats.StatsCompanionService$$ExternalSyntheticLambda1.run(Unknown Source:6)
+11-24 17:33:43.888 E/StatsCompanionService(  482): 	at android.os.Handler.handleCallback(Handler.java:942)
+11-24 17:33:43.888 E/StatsCompanionService(  482): 	at android.os.Handler.dispatchMessage(Handler.java:99)
+11-24 17:33:43.888 E/StatsCompanionService(  482): 	at android.os.Looper.loopOnce(Looper.java:201)
+11-24 17:33:43.888 E/StatsCompanionService(  482): 	at android.os.Looper.loop(Looper.java:288)
+11-24 17:33:43.888 E/StatsCompanionService(  482): 	at android.os.HandlerThread.run(HandlerThread.java:67)
+11-24 17:33:43.904 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.921 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.931 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.971 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:43.988 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.010 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.046 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.064 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.077 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.085 W/Zygote  (  285): forkRepeatedly terminated due to non-simple command
+11-24 17:33:44.114 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.125 W/SoundTriggerService(  482): error onStop(): Model 9f6ad62a-1f0b-11e7-87c5-40a8f03d3f15 has no stats available
+11-24 17:33:44.136 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.158 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.172 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.207 W/TrainerGrpcBindableService( 3172): Cancelling training failed [population=aiai/sense/ambientmusic/, session=ambientmusic]
+11-24 17:33:44.207 W/TrainerGrpcBindableService( 3172): kg: 17: InAppTraining API not enabled!
+11-24 17:33:44.207 W/TrainerGrpcBindableService( 3172): 	at vi.e(PG:2)
+11-24 17:33:44.207 W/TrainerGrpcBindableService( 3172): 	at b.C(PG:1)
+11-24 17:33:44.207 W/TrainerGrpcBindableService( 3172): 	at te.b(PG:2)
+11-24 17:33:44.207 W/TrainerGrpcBindableService( 3172): 	at avn.run(PG:6)
+11-24 17:33:44.207 W/TrainerGrpcBindableService( 3172): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+11-24 17:33:44.207 W/TrainerGrpcBindableService( 3172): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+11-24 17:33:44.207 W/TrainerGrpcBindableService( 3172): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:33:44.209 W/AiAiFed ( 1598): [Now Playing Recognitions FA] Canceling training failed [mode=FEDERATION, population=aiai/sense/ambientmusic/, session=ambientmusic]
+11-24 17:33:44.209 W/AiAiFed ( 1598): npd: UNKNOWN
+11-24 17:33:44.209 W/AiAiFed ( 1598): 	at nzw.D(PG:2)
+11-24 17:33:44.209 W/AiAiFed ( 1598): 	at nrm.a(PG:3)
+11-24 17:33:44.209 W/AiAiFed ( 1598): 	at nse.run(PG:2)
+11-24 17:33:44.209 W/AiAiFed ( 1598): 	at nwz.run(PG:2)
+11-24 17:33:44.209 W/AiAiFed ( 1598): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+11-24 17:33:44.209 W/AiAiFed ( 1598): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+11-24 17:33:44.209 W/AiAiFed ( 1598): 	at java.lang.Thread.run(Thread.java:1012)
+11-24 17:33:44.213 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.214 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.242 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.254 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.271 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.290 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.299 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.325 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.346 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.349 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.356 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.377 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.397 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.414 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.429 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.441 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.454 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.460 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.468 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.469 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.476 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.480 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.484 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.488 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.528 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.559 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.566 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.573 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.590 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.594 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.599 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.608 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.610 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.614 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.630 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.643 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.658 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.669 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.676 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.682 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.689 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.692 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.698 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.701 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.714 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.719 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.725 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.733 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.757 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.770 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.778 E/WifiVendorHal(  482): lambda$getUsableChannels$24(l.0) failed {.code = ERROR_NOT_SUPPORTED, .description = }
+11-24 17:33:44.794 W/WificondScannerImpl(  482): stopBatchedScan() is not supported
+11-24 17:33:44.815 W/android.hardware.wifi@1.0-service(  345): setScanModeInternal(0) not supported
+11-24 17:33:44.815 E/WifiVendorHal(  482): setScanMode(l.14) failed {.code = ERROR_NOT_SUPPORTED, .description = }
+11-24 17:33:44.827 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.843 E/WifiScanningService(  482): wifi driver loaded received while already loaded
+11-24 17:33:44.878 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 17:33:44.883 E/WifiVendorHal(  482): setMultiStaUseCase(l.24) failed {.code = ERROR_NOT_SUPPORTED, .description = }
+11-24 17:33:44.884 E/WifiVendorHal(  482): setMultiStaPrimaryConnection(l.31) failed {.code = ERROR_NOT_SUPPORTED, .description = }
+11-24 17:33:44.895 W/Bugle   ( 2537): TextClassifierLibManagerImpl: Reclaiming memory at level: 40

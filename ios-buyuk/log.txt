@@ -1,0 +1,206 @@
+getpwuid_r did not find a match for uid 501
+Timestamp               Ty Process[PID:TID]
+2026-11-24 17:34:19.343 Df CoreSimulatorBridge[2828:7d66] Requesting launch of com.aygunduz.yazboz101 with options: {
+    environment =     {
+        "YAZBOZ_TEST" = "// Yazboz 101 otomatik deneme senaryosu.\134n// Uygulaman\134U0131n i\134U00e7inde (Android WebView / iPhone WKWebView) \134U00e7al\134U0131\134U015f\134U0131r; ilk a\134U00e7\134U0131l\134U0131\134U015ftan bir oyunun birka\134U00e7 eline kadar\134n// ger\134U00e7ek kullan\134U0131c\134U0131 gibi d\134U00fc\134U011fmelere basar, her ad\134U0131mda ekran g\134U00f6r\134U00fcnt\134U00fcs\134U00fc ister ve sonucu JSON metni olarak d\134U00f6nd\134U00fcr\134U00fcr.\134n// S\134U00fcr\134U00fcc\134U00fcler: test/android.mjs (em\134U00fclat\134U00f6r) ve WebViewController.swift'teki DEBUG b\134U00f6l\134U00fcm\134U00fc (sim\134U00fclat\134U00f6r).\134n(function () {\134n  const sleep = ms => new Promise(r => setTimeout(r, ms));\134n  const $ = q => document.querySelector(q);\134n  const vis = el => !!el && !el.hidden && el.getClientRects().length > 0 && getComputedStyle(el).visibility !== 'hidden';\134n  const S = '#sheetRoot .ov:not([hidden]) ';\134n\134n  async function waitFor(fn, ms, label) {\134n    const t = Date.now();\134n    while (Date.now() - t < ms) {
+2026-11-24 17:34:19.418 Df runningboardd[2801:5b4c] [com.apple.runningboard:job_oversize] 'app<com.aygunduz.yazboz101((null))>' Constructed job description:
+<dictionary: 0x1091b5aa0> { count = 20, transaction: 0, voucher = 0x0, contents =
+	"ProcessType" => <string: 0x1091ca2e0> { string cache = 0x0, length = 3, contents = "App" }
+	"EnableTransactions" => <bool: 0x1e6e64560>: false
+	"_ManagedBy" => <string: 0x1091c88d0> { string cache = 0x0, length = 22, contents = "com.apple.runningboard" }
+	"RootedSimulatorPath" => <bool: 0x1e6e64540>: true
+	"CFBundleIdentifier" => <string: 0x1091ca3a0> { string cache = 0x0, length = 22, contents = "com.aygunduz.yazboz101" }
+	"_ResourceCoalition" => <string: 0x1091c9a40> { string cache = 0x0, length = 35, contents = "app<com.aygunduz.yazboz101((null))>" }
+	"_POSIXSpawnTelemetryPageIn" => <bool: 0x1e6e64540>: true
+	"ThrottleInterval" => <int64: 0xb064eaee33ca124f>: 2147483647
+	"MachServices" => <dictionary: 0x1091b5080> { count = 0, transaction: 0, voucher = 0x0, contents =
+	}
+	"EnablePressuredExit" => <bool: 0x1e6e64560>: false
+	"InitialTaskRole" => <int64: 0xb064eaedcc35edbf>: 1
+	"UserName" => <string: 0x1091cb600> { string cache = 0x0, length = 6, contents = "mobile" }
+	"EnvironmentVariables" => <dictionary: 0x1091b52c0> { count = 4, transaction: 0, voucher = 0x0, contents =
+		"TMPDIR" => <string: 0x1091cb060> { string cache = 0x0, length = 164, contents = "/Users/runner/Library/Developer/CoreSimulator/Devices/8EBAA496-5654-45BF-897F-3C4FD73935F1/data/Containers/Data/Application/D3375E21-736B-4043-9276-3D434F8B453D/tmp" }
+		"HOME" => <string: 0x1091c8330> { string cache = 0x0, length = 160, contents = "/Users/runner/Library/Developer/CoreSimulator/Devices/8EBAA496-5654-45BF-897F-3C4FD73935F1/data/Containers/Data/Application/D3375E21-736B-4043-9276-3D434F8B453D" }
+		"CFFIXED_USER_HOME" => <string: 0x1091cae50> { string cache = 0x0, length = 160, contents = "/Users/runner/Library/Developer/CoreSimulator/Devices/8EBAA496-5654-45BF-897F-3C4FD73935F1/data/Containers/Data/Application/D3375E21-736B-4043-9276-3D434F8B453D" }
+		"YAZBOZ_TEST" => <string: 0x1091c87b0> { string cache = 0x0, length = 5980, contents = "// Yazboz 101 otomatik deneme senaryosu.
+// Uygulamanın içinde (Android WebView / iPhone WKWebView) çalışır; ilk açılıştan bir oyunun birkaç eline kadar
+// gerçek kullanıcı gibi düğmelere basar, her adımda ekran görüntüsü ister ve sonucu JSON metni olarak döndürür.
+// Sürücüler: test/android.mjs (emülatör) ve WebViewController.swift'teki DEBUG bölümü (simülatör).
+(function () {
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const $ = q => document.querySelector(q);
+  const vis = el => !!el && !el.hidden && el.getClientRects().length > 0 && getComputedStyle(el).visibility !== 'hidden';
+  const S = '#sheetRoot .ov:not([hidden]) ';
+
+  async function waitFor(fn, ms, label) {
+    const t = Date.now();
+    while (Date.now() - t < ms) {
+      try { const v = fn(); if (v) return v; } catch (e) { /* tekrar dene */ }
+      await sleep(100);
+    }
+    throw new Error('bekleme süresi doldu: ' + label);
+  }
+  async function tap(q, label) {
+    const el = await waitFor(() => { const e = $(q); return vis(e) && e; }, 6000, label || q);
+    el.click();
+    await sleep(200);
+    return el;
+  }
+
+  window.__ybShotWait = {};
+  window.__ybShotDone = n => { const r = window.__ybShotWait[n]; delete window.__ybShotWait[n]; if (r) r(); };
+
+  window.__ybRun = async function (platform, shotFn) {
+    const R = { platform, ok: true, adimlar: [], hatalar: [], bilgi: {} };
+    const t0 = performance.now();
+    const ce = console.error;
+    console.error = function () { R.hatalar.push(Array.prototype.map.call(arguments, String).join(' ')); return ce.apply(console, arguments); };
+    window.addEventListener('error', e => R.hatalar.push('hata: ' + e.message + ' @' + e.filename + ':' + e.lineno));
+
+    const adim = (ad, ek) => R.adimlar.push(Object.assign({ ad, ms: Math.round(performance.now() - t0) }, ek || {}));
+    const shot = name => new Promise(res => {
+      window.__ybShotWait[name] = res;
+      try { shotFn(name); } catch (e) { res(); }
+      setTimeout(res, 8000);
+    });
+    const run = async (ad, fn) => {
+      try { await fn(); adim(ad); }
+      catch (e) { R.ok = false; adim(ad, { hata: String((e && e.message) || e) }); }
+    };
+
+    R.bilgi.tarayici = navigator.userAgent;
+    R.bilgi.ekran = innerWidth + 'x' + innerHeight + ' @' + devicePixelRatio + 'x';
+
+    await run('ilk ekran geldi', () => waitFor(() => vis($('#onb')) || $('[data-act=newgame]') || $('[data-act=resume]'), 15000, 'ilk ekran'));
+    R.bilgi.ilkEkranMs = Math.round(performance.now()); // sayfanın yüklenmeye başlamasından beri
+    await shot('01-acilis');
+
+    if (vis($('#onb'))) {
+      await run('tanıtım', async () => {
+        for (let i = 0; i < 8 && vis($('#onb')); i++) {
+          const nx = $('#onb [data-o=next]');
+          if (!nx) break;
+          nx.click();
+          await sleep(350);
+          if (i === 0) await shot('02-tanitim');
+        }
+      });
+    }
+
+    await run('ana sayfa', () => waitFor(() => $('[data-act=newgame]'), 6000, 'yeni oyun düğmesi'));
+    await shot('03-ana-sayfa');
+
+    await run('yeni oyun kurulumu', async () => {
+      await tap('[data-act=newgame]');
+      ['Ali', 'Ayşe', 'Mehmet', 'Zeynep'].forEach((n, i) => {
+        const f = $('#nm-' + i);
+        if (f) { f.value = n; f.dispatchEvent(new Event('input', { bubbles: true })); }
+      });
+    });
+    await shot('04-kurulum');
+
+    await run('oyunu başlat', () => tap('[data-act=start]'));
+    await sleep(500);
+    if (vis($('#coach'))) {
+      await shot('05-ipucu');
+      await run('ipucunu geç', () => tap('#coach [data-c=skip]'));
+    }
+
+    const eller = [[-101, 87, 202, 54], [63, 0, 41, 118], [-202, 72, 95, 38]];
+    for (let h = 0; h < eller.length; h++) {
+      await run((h + 1) + '. el girişi', async () => {
+        await tap('[data-act=el]');
+        for (const v of eller[h]) {
+          for (const ch of String(Math.abs(v))) await tap(S + `.kp [data-k="${ch}"]`);
+          if (v < 0) await tap(S + '.kp [data-k=pm]');
+          await tap(S + '.kp [data-k=go]');
+        }
+        if (h === 0) await shot('06-el-gir');
+        await tap(S + '[data-a=save]');
+        await sleep(300);
+      });
+    }
+    await shot('07-oyun');
+    await sleep(1500);
+    try { R.bilgi.canli = window.ybDurum ? window.ybDurum() : { hata: 'ybDurum yok (eski sürüm)' }; }
+    catch (e) { R.bilgi.canli = { hata: 'okunamadı: ' + e.message }; }
+
+    await run('ceza penceresi', async () => {
+      await tap('[data-act=ceza]');
+      await sleep(300);
+      await shot('08-ceza');
+      closeAll();
+      await sleep(300);
+    });
+
+    await run('paylaş penceresi', async () => {
+      await tap('[data-act=share]');
+      const t = Date.now();
+      R.bilgi.canliPaylasim = await waitFor(() => $(S + '.qrbox svg') ? 'açık' : null, 10000, 'QR kodu').catch(() => 'yok');
+      R.bilgi.canliPaylasimMs = Date.now() - t;
+      await shot('09-paylas');
+      closeAll();
+      await sleep(300);
+    });
+
+    await run('ayarlar', async () => {
+      await tap('[data-act=menu]');
+      await tap(S + '[data-a=settings]');
+      await sleep(300);
+      await shot('10-ayarlar');
+      closeAll();
+    });
+
+    await run('oyunu erken bitir', async () => {
+      await tap('[data-act=menu]');
+      await tap(S + '[data-a=end]');
+      await tap(S + '[data-a=yes]');
+      await waitFor(() => vis($('#win')), 4000, 'kazanan ekranı');
+      await sleep(900);
+      await shot('11-kazanan');
+      await tap('#win [data-w=ok]');
+      await sleep(400);
+      closeAll();
+    });
+
+    await run('oyun geçmişi', async () => {
+      await tap('[data-act=home]');
+      await tap('[data-act=hist]');
+      await sleep(300);
+      await shot('12-gecmis');
+      await tap('[data-act=htab][data-v=stats]');
+      await sleep(300);
+      await shot('13-istatistik');
+      await tap('[data-act=home]');
+    });
+
+    R.bilgi.toplamMs = Math.round(performance.now() - t0);
+    console.error = ce;
+    return JSON.stringify(R);
+  };
+})();" }
+	}
+	"_AdditionalProperties" => <dictionary: 0x1091b5b00> { count = 1, transaction: 0, voucher = 0x0, contents =
+		"RunningBoard" => <dictionary: 0x1091b5a40> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"Managed" => <bool: 0x1e6e64540>: true
+			"RunningBoardLaunchedIdentity" => <dictionary: 0x1091b59e0> { count = 2, transaction: 0, voucher = 0x0, contents =
+				"TYPE" => <int64: 0xb064eaedcc35eda7>: 2
+				"EAI" => <string: 0x1091ca3d0> { string cache = 0x0, length = 22, contents = "com.aygunduz.yazboz101" }
+			}
+			"RunningBoardLaunched" => <bool: 0x1e6e64540>: true
+		}
+	}
+	"ExitTimeOut" => <int64: 0xb064eaedcc35edbf>: 1
+	"Label" => <string: 0x1091c8780> { string cache = 0x0, length = 56, contents = "UIKitApplication:com.aygunduz.yazboz101[46de][rb-legacy]" }
+	"MaterializeDatalessFiles" => <bool: 0x1e6e64540>: true
+	"_LaunchType" => <int64: 0xb064eaedcc35edaf>: 3
+	"ProgramArguments" => <array: 0x1091cb1b0> { count = 1, capacity = 8, contents =
+		0: <string: 0x1091c99b0> { string cache = 0x0, length = 186, contents = "/Users/runner/Library/Developer/CoreSimulator/Devices/8EBAA496-5654-45BF-897F-3C4FD73935F1/data/Containers/Bundle/Application/EF3118BF-7007-4B66-9BB2-C90E212D0003/Yazboz101.app/Yazboz101" }
+	}
+	"Program" => <string: 0x1091c8d50> { string cache = 0x0, length = 186, contents = "/Users/runner/Library/Developer/CoreSimulator/Devices/8EBAA496-5654-45BF-897F-3C4FD73935F1/data/Containers/Bundle/Application/EF3118BF-7007-4B66-9BB2-C90E212D0003/Yazboz101.app/Yazboz101" }
+}
+2026-11-24 17:34:19.856 F  Yazboz101[9841:8223] [com.apple.runtime-issues:UIKit App Config] `UIScene` lifecycle will soon be required. Failure to adopt will result in an assert in the future.
+2026-11-24 17:35:05.800 F  Yazboz101[11384:9080] [com.apple.runtime-issues:UIKit App Config] `UIScene` lifecycle will soon be required. Failure to adopt will result in an assert in the future.
+2026-11-24 17:35:26.369 F  Yazboz101[12050:9788] [com.apple.runtime-issues:UIKit App Config] `UIScene` lifecycle will soon be required. Failure to adopt will result in an assert in the future.
+2026-11-24 17:35:45.677 F  Yazboz101[13063:a17c] [com.apple.runtime-issues:UIKit App Config] `UIScene` lifecycle will soon be required. Failure to adopt will result in an assert in the future.
+2026-11-24 17:35:56.861 Df log[13562:0] [com.apple.log:] log run noninteractively, parent: 2788 (launchd_sim), args: 'log' 'show' '--last' '15m' '--style' 'compact' '--predicate' 'eventMessage CONTAINS "YAZBOZ" OR (process == "Yazboz101" AND messageType == fault)'
